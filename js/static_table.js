@@ -138,22 +138,18 @@ function createTable(structureJson, containerSelector) {
 
 
 
+const excludeLigands = new Set([
+  "C14", "D10", "D12", "R16", "OLB", "OCT", "CLR", "ACE", "ACT", "PLM", "C8E", "LDA", "PEF", "4E6",
+  "HTG", "ZN", "BGL", "BMA", "NAG", "HG", "MAN", "BOG", "OLA", "OLC", "PEG", "LFA", "LYR", "NA",
+  "MPG", "1WV", "DGA", "TRS", "PEE", "GLY", "CL", "BR", "22B", "BNG", "L3B", "L2P", "NO3", "1PE",
+  "P6G", "YCM", "2CV", "MHA", "Y01", "SOG", "TRE", "TLA", "PGE", "HTO", "PG4", "SQU", "LI1", "TRD",
+  "UND", "GAL", "GLC", "L1P", "L3P", "L4P", "K", "DD9", "HP6", "PH1", "SGA", "XE", "SQL", "GOL",
+  "PCA", "ARC", "MC3", "LMT", "STE", "SO4", "12P", "ACM", "BU1", "N9S", "DMS", "PO4", "CCS", "DGN",
+  "NH2", "FLC", "TAR", "CIT", "SXN", "UNL", "LME", "TWT", "MSE", "LPP", "MAL", "HEX", "CPS", "BXC",
+  "2DP", "DPG", "EDT", "BGC", "P5E", "AZI", "NLE"
+]);
 
 function ligandHtml(ligands){
-  // const ligstr = ligands.map((l) => l.name).join(", ");
-  // if (ligstr.length > 40) {
-  //   return ligstr.substr(0,36)+" ...";
-  // } else {
-  //   return ligstr;
-  // }
-  const excludeLigands = new Set([
-    "C14", "D10", "D12", "R16", "OLB", "OCT", "CLR",
-    "ACE", "ACT", "PLM", "C8E", "LDA", "PEF", "4E6",
-    "HTG", "ZN", "BGL", "BMA", "NAG", "HG", "MAN",
-    "BOG", "OLA", "OLC", "PEG", "LFA", "LYR", "NA",
-    "MPG", "1WV", "DGA", "TRS"
-  ]);
-
   return ligands.filter((l) => !excludeLigands.has(l))
     .map(function(l){
     return "<span class='hoverlink' onmouseenter='showLigandTooltip(\""+l+"\")' onmouseleave='hideLigandTooltip()'>"+
