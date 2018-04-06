@@ -9,12 +9,12 @@ function createTable(structureJson, containerSelector) {
 
     const headData = [
       {id: "select", text: ""},
-      {id: "pdb_code", text: "PDB"},
-      {id: "protein", text: "Receptor"},
+      {id: "protein", text: "Protein"},
+      {id: "pdb", text: "PDB"},
       {id: "species", text: "Species"},
       {id: "type", text: "Method"},
       {id: "resolution", text: "Resolution"},
-      {id: "publication_date", text: "Pub. date"},
+      {id: "date", text: "Pub. date"},
       {id: "ligands", text: "Ligands"},
       {id: "gotoSingle", text: ""}
     ];
@@ -31,7 +31,7 @@ function createTable(structureJson, containerSelector) {
         return d.text;
       })
       .on("click", function (d) {
-        if (d3.select(this).classed("col-ascending") || d3.select(this).classed("col-ascending")) {
+        if (d3.select(this).classed("col-ascending") || d3.select(this).classed("col-descending")) {
           sortAscending = !sortAscending;
         } else {
           sortAscending = true;
@@ -87,23 +87,24 @@ function createTable(structureJson, containerSelector) {
         d3.select("#compare-button").classed("btn-inactive", numChecked == 0);
       });
     rows.append("td").html(function (d) {
-      return d.pdb_code;
+      return d.protein;
     });
     rows.append("td").html(function (d) {
-      return proteinHtml(d.protein);
+      const linktext = d.pdbid+'.'+d.chain.toLowerCase();
+      return "<a href='https://www.rcsb.org/structure/"+d.pdbid+"' target='_new'>"+linktext+"</a>";
     });
     rows.append("td").html(function (d) {
       return d.species;
     });
     rows.append("td").html(function (d) {
-      return typeHtml(d.type);
+      return d.method;
     });
     rows.append("td").html(function (d) {
       return d.resolution;
     });
 //        rows.append("td").html(function(d){ return publicationHtml(d.publication); });
     rows.append("td").html(function (d) {
-      return d.publication_date;
+      return d.date;
     });
     rows.append("td").html(function (d) {
       return ligandHtml(d.ligands);
@@ -139,28 +140,49 @@ function createTable(structureJson, containerSelector) {
 
 
 function ligandHtml(ligands){
-  const ligstr = ligands.map((l) => l.name).join(", ");
-  if (ligstr.length > 40) {
-    return ligstr.substr(0,36)+" ...";
-  } else {
-    return ligstr;
-  }
+  // const ligstr = ligands.map((l) => l.name).join(", ");
+  // if (ligstr.length > 40) {
+  //   return ligstr.substr(0,36)+" ...";
+  // } else {
+  //   return ligstr;
+  // }
+  const excludeLigands = new Set([
+    "C14", "D10", "D12", "R16", "OLB", "OCT", "CLR",
+    "ACE", "ACT", "PLM", "C8E", "LDA", "PEF", "4E6",
+    "HTG", "ZN", "BGL", "BMA", "NAG", "HG", "MAN",
+    "BOG", "OLA", "OLC", "PEG", "LFA", "LYR", "NA",
+    "MPG", "1WV", "DGA", "TRS"
+  ]);
+
+  return ligands.filter((l) => !excludeLigands.has(l))
+    .map(function(l){
+    return "<span class='hoverlink' onmouseenter='showLigandTooltip(\""+l+"\")' onmouseleave='hideLigandTooltip()'>"+
+      l+
+      "</span>";
+  }).join(", ");
 }
 
-function proteinHtml(protein){
-  return protein.split("_")[0].toUpperCase();
+function showLigandTooltip(ligandName){
+  const firstLetter = ligandName[0];
+  const contents = "<img width='200px' src='https://cdn.rcsb.org/etl/ligand/img/"+firstLetter+"/"+ligandName+"/"+ligandName+"-large.png'>";
+  d3.select("body")
+    .append("div")
+    .attr("id", "tooltip")
+    .style("position", "absolute")
+    .style("right", (document.body.clientWidth-event.pageX+10)+"px")
+    .style("top", (event.pageY+10)+"px")
+    .html(contents);
+
 }
 
-function typeHtml(type){
-  if (type.indexOf("X-ray") > -1) { return "XC"; }
-  if (type.indexOf("Electron microscopy") > -1) { return "EM"; }
-  return "??";
+function hideLigandTooltip(){
+  d3.select("#tooltip").remove();
 }
 
 /** Extract selected structures and go to comparison page */
 function navigateToComparison(structures){
   var sel_pdbs = structures.filter((s) => s.selected)
-    .map((s) => (s.protein + "_" + s.pdb_code + "_" + s.preferred_chain).toUpperCase())
+    .map((s) => (s.pdbid + "_" + s.chain).toUpperCase())
     .join(",");
   window.location.href="static_compare.html?structure_ids="+sel_pdbs;
 }

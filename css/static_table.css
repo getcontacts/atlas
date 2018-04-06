@@ -26,7 +26,7 @@ th.col-descending:after {
     content: " \25b4";
 }
 
-table .col-publication_date {
+table .col-date {
     min-width: 100px;
 }
 
@@ -54,4 +54,8 @@ table .col-publication_date {
 }
 .btn-inactive:hover {
     background-color: #969596;
+}
+
+.hoverlink{
+    text-decoration: underline dashed gray;
 }
