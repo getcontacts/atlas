@@ -10,9 +10,10 @@ function createTable(structureJson, containerSelector) {
     const headData = [
       {id: "select", text: ""},
       {id: "protein", text: "Protein"},
-      {id: "pdb", text: "PDB"},
+      {id: "pdbid", text: "PDB"},
+      {id: "chain", text: "Chain"},
       {id: "species", text: "Species"},
-      {id: "type", text: "Method"},
+      {id: "method", text: "Method"},
       {id: "resolution", text: "Resolution"},
       {id: "date", text: "Pub. date"},
       {id: "ligands", text: "Ligands"},
@@ -88,10 +89,17 @@ function createTable(structureJson, containerSelector) {
       });
     rows.append("td").html(function (d) {
       return d.protein;
+
     });
     rows.append("td").html(function (d) {
-      const linktext = d.pdbid+'.'+d.chain.toLowerCase();
-      return "<a href='https://www.rcsb.org/structure/"+d.pdbid+"' target='_new'>"+linktext+"</a>";
+      const text = d.pdbid;
+
+      return text + " <a href='https://www.rcsb.org/structure/"+d.pdbid+"' target='_new'>" +
+        "<i class=\"fas fa-external-link-alt\"></i>" +
+        "</a>";
+    });
+    rows.append("td").html(function (d) {
+      return d.chain;
     });
     rows.append("td").html(function (d) {
       return d.species;
@@ -104,9 +112,19 @@ function createTable(structureJson, containerSelector) {
     });
 //        rows.append("td").html(function(d){ return publicationHtml(d.publication); });
     rows.append("td").html(function (d) {
-      return d.date;
+      const text = d.date;
+
+      if (d.doi) {
+        return text + " <a href='http://dx.doi.org/" + d.doi + "' target='_new'>" +
+          "<i class=\"fas fa-external-link-alt\"></i>" +
+          "</a>";
+      } else {
+        return text;
+      }
     });
     rows.append("td").html(function (d) {
+      console.log(d.pdbid);
+      console.log(d.ligands);
       return ligandHtml(d.ligands);
     });
 //        rows.append("td").html(function(d){ return preferred_chain; });
@@ -146,28 +164,43 @@ const excludeLigands = new Set([
   "UND", "GAL", "GLC", "L1P", "L3P", "L4P", "K", "DD9", "HP6", "PH1", "SGA", "XE", "SQL", "GOL",
   "PCA", "ARC", "MC3", "LMT", "STE", "SO4", "12P", "ACM", "BU1", "N9S", "DMS", "PO4", "CCS", "DGN",
   "NH2", "FLC", "TAR", "CIT", "SXN", "UNL", "LME", "TWT", "MSE", "LPP", "MAL", "HEX", "CPS", "BXC",
-  "2DP", "DPG", "EDT", "BGC", "P5E", "AZI", "NLE"
+  "2DP", "DPG", "EDT", "BGC", "P5E", "AZI", "NLE", "PE5", "MG", "MN", "CAC", "CA", "MLY", "DAO",
+  "CS", "SO3", "CO", "CSS"
 ]);
 
 function ligandHtml(ligands){
   return ligands.filter((l) => !excludeLigands.has(l))
     .map(function(l){
-    return "<span class='hoverlink' onmouseenter='showLigandTooltip(\""+l+"\")' onmouseleave='hideLigandTooltip()'>"+
-      l+
-      "</span>";
-  }).join(", ");
+      let displayedName = l;
+      if(l.length > 20){
+        displayedName = displayedName.substr(0,19) + "&hellip;";
+      }
+
+      return "<span class='hoverlink' onmouseenter='showLigandTooltip(\"" + l + "\")' onmouseleave='hideLigandTooltip()'>" +
+        displayedName +
+        "</span>";
+  }).join("<br>");
 }
 
 function showLigandTooltip(ligandName){
-  const firstLetter = ligandName[0];
-  const contents = "<img width='200px' src='https://cdn.rcsb.org/etl/ligand/img/"+firstLetter+"/"+ligandName+"/"+ligandName+"-large.png'>";
+  let img = "";
+  if(ligandName.length == 3) {
+    const firstLetter = ligandName[0];
+    img = "<img width='200px' src='https://cdn.rcsb.org/etl/ligand/img/" +
+      firstLetter + "/" + ligandName + "/" + ligandName + "-large.png'>";
+  } else {
+    img = "<img width='200px' src='https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + ligandName + "/PNG?" +
+      "record_type=2d&image_size=300x300'>";
+  }
+  console.log('showLigandTooltip');
+  console.log(img);
   d3.select("body")
     .append("div")
     .attr("id", "tooltip")
     .style("position", "absolute")
     .style("right", (document.body.clientWidth-event.pageX+10)+"px")
     .style("top", (event.pageY+10)+"px")
-    .html(contents);
+    .html(img);
 
 }
 

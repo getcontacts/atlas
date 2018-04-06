@@ -59,3 +59,11 @@ table .col-date {
 .hoverlink{
     text-decoration: underline dashed gray;
 }
+
+.fa-external-link-alt{
+    font-size: 0.8rem;
+}
+.fa-external-link-alt:hover{
+    color: black;
+}
+
