@@ -13,7 +13,7 @@ pdbids.txt: gpcrdb_dump.json
 
 structures/dummy: pdbids.txt
 	mkdir -p structures
-	cat $< | while read line; do bash ../curl_pdb_chain.sh $$line structures; done
+	bash ../curl_pdbs.sh $< structures
 	touch $@
 
 annotations.json: gpcrdb_dump.json

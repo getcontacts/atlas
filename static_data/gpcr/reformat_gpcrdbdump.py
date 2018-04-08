@@ -8,12 +8,26 @@ with open(sys.argv[1]) as f:
 
 def reformat(gpcrdb_entry):
     pdbid = gpcrdb_entry['pdb_code'],
-    sys.err.write('Reformating ' + pdbid + '\n')
+    sys.stderr.write('Reformating ' + str(pdbid) + '\n')
     protid = gpcrdb_entry['protein']
     url = 'http://gpcrdb.org/services/protein/'+protid+'/'
     response = requests.get(url)
     protein_data = response.json()
     protein = protein_data['name']
+    acc = protein_data['accession']
+
+    response = requests.get('https://www.ebi.ac.uk/proteins/api/proteins/'+acc+'/')
+    ebidata = response.json()
+    #protein = ebidata['protein']['recommendedName']['fullName']['value']
+    for spec_obj in ebidata['organism']['names']:
+        if spec_obj['type'] == 'scientific':
+            species_sci = spec_obj['value']
+        elif spec_obj['type'] == 'common':
+            species_com = spec_obj['value']
+    species = species_sci
+    if species_com:
+        species += " (" + species_com + ")"
+
     
     method = gpcrdb_entry['type']
     if method == "X-ray diffraction":
@@ -34,7 +48,7 @@ def reformat(gpcrdb_entry):
             'chain': gpcrdb_entry['preferred_chain'][0],
             'protein': protein,
             'protid': protid,
-            'species': gpcrdb_entry['species'],
+            'species': species,
             'date': gpcrdb_entry['publication_date'],
             'method': method,
             'resolution': gpcrdb_entry['resolution'],
