@@ -2,10 +2,10 @@
   {
     "pdbid": "1AGR",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1997-06-16",
     "doi": "",
     "method": "XC",
@@ -20,10 +20,10 @@
   {
     "pdbid": "1AS0",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1997-11-12",
     "doi": "10.1021/bi971912p",
     "method": "XC",
@@ -37,10 +37,10 @@
   {
     "pdbid": "1AS2",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1997-11-12",
     "doi": "10.1021/bi971912p",
     "method": "XC",
@@ -53,10 +53,10 @@
   {
     "pdbid": "1AS3",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1997-11-12",
     "doi": "10.1021/bi971912p",
     "method": "XC",
@@ -69,10 +69,10 @@
   {
     "pdbid": "1AZS",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [36-383]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1998-02-25",
     "doi": "",
     "method": "XC",
@@ -85,10 +85,10 @@
   {
     "pdbid": "1AZT",
     "chain": "A",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [35-383]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1998-02-25",
     "doi": "",
     "method": "XC",
@@ -102,10 +102,10 @@
   {
     "pdbid": "1BH2",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
+    "protein": "G(t) subunit alpha-1",
+    "protid": "GNAT1_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1998-11-04",
     "doi": "",
     "method": "XC",
@@ -118,10 +118,10 @@
   {
     "pdbid": "1BOF",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1999-01-06",
     "doi": "10.1021/bi9810306",
     "method": "XC",
@@ -135,10 +135,10 @@
   {
     "pdbid": "1CIP",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1999-04-09",
     "doi": "",
     "method": "XC",
@@ -151,10 +151,10 @@
   {
     "pdbid": "1CJK",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1999-08-31",
     "doi": "",
     "method": "XC",
@@ -168,10 +168,10 @@
   {
     "pdbid": "1CJT",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(t) subunit alpha-1",
+    "protid": "GNAT1_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1999-08-31",
     "doi": "",
     "method": "XC",
@@ -185,10 +185,10 @@
   {
     "pdbid": "1CJU",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(t) subunit alpha-1",
+    "protid": "GNAT1_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1999-08-31",
     "doi": "",
     "method": "XC",
@@ -202,10 +202,10 @@
   {
     "pdbid": "1CJV",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "subunit alpha-12",
+    "protid": "GNA12_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "1999-08-31",
     "doi": "",
     "method": "XC",
@@ -220,10 +220,10 @@
   {
     "pdbid": "1CS4",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2001-01-10",
     "doi": "",
     "method": "XC",
@@ -237,10 +237,10 @@
   {
     "pdbid": "1CUL",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(k) subunit alpha",
+    "protid": "GNAI3_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2001-01-10",
     "doi": "",
     "method": "XC",
@@ -254,10 +254,10 @@
   {
     "pdbid": "1FQJ",
     "chain": "A",
-    "protein": "GNAT1 Gnai1 Gnai-1",
-    "species": "Bos taurus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [28-339]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2001-02-28",
     "doi": "10.1038/35059138",
     "method": "XC",
@@ -271,10 +271,10 @@
   {
     "pdbid": "1FQK",
     "chain": "A",
-    "protein": "GNAT1 Gnai1 Gnai-1",
-    "species": "Bos taurus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [28-339]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2001-02-28",
     "doi": "10.1038/35059138",
     "method": "XC",
@@ -288,10 +288,10 @@
   {
     "pdbid": "1GDD",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1995-11-27",
     "doi": "",
     "method": "XC",
@@ -304,10 +304,10 @@
   {
     "pdbid": "1GFI",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1995-03-31",
     "doi": "",
     "method": "XC",
@@ -321,10 +321,10 @@
   {
     "pdbid": "1GG2",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1997-02-12",
     "doi": "",
     "method": "XC",
@@ -336,10 +336,10 @@
   {
     "pdbid": "1GIA",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [34-343]",
+    "protein": "G(o) subunit alpha",
+    "protid": "GNAO_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "1994-09-30",
     "doi": "",
     "method": "XC",
@@ -352,10 +352,10 @@
   {
     "pdbid": "1GIL",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [34-343]",
+    "protein": "subunit alpha-13",
+    "protid": "GNA13_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "1995-02-14",
     "doi": "",
     "method": "XC",
@@ -368,10 +368,10 @@
   {
     "pdbid": "1GIT",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1997-02-12",
     "doi": "",
     "method": "XC",
@@ -384,10 +384,10 @@
   {
     "pdbid": "1GOT",
     "chain": "A",
-    "protein": "GNAT1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [10-339]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1997-03-12",
     "doi": "10.1038/379311a0",
     "method": "XC",
@@ -399,10 +399,10 @@
   {
     "pdbid": "1GP2",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "1997-02-12",
     "doi": "",
     "method": "XC",
@@ -414,10 +414,10 @@
   {
     "pdbid": "1KJY",
     "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(q) subunit alpha",
+    "protid": "GNAQ_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "2002-05-08",
     "doi": "10.1038/416878a",
     "method": "XC",
@@ -430,10 +430,10 @@
   {
     "pdbid": "1SHZ",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1 Gna13 Gna-13",
-    "species": "Mus musculus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [46-365]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2005-01-18",
     "doi": "10.1038/nsmb888",
     "method": "XC",
@@ -447,10 +447,10 @@
   {
     "pdbid": "1SVK",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "2004-06-01",
     "doi": "10.1073/pnas.0304091101",
     "method": "XC",
@@ -464,10 +464,10 @@
   {
     "pdbid": "1SVS",
     "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
+    "protein": "G(t) subunit alpha-1",
+    "protid": "GNAT1_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
     "date": "2004-06-01",
     "doi": "10.1073/pnas.0304091101",
     "method": "XC",
@@ -480,10 +480,10 @@
   {
     "pdbid": "1TAD",
     "chain": "A",
-    "protein": "GNAT1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [28-339]",
+    "protein": "G(q) subunit alpha",
+    "protid": "GNAQ_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "1995-05-08",
     "doi": "10.1038/372276a0",
     "method": "XC",
@@ -498,10 +498,10 @@
   {
     "pdbid": "1TAG",
     "chain": "A",
-    "protein": "GNAT1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [28-339]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "1995-02-07",
     "doi": "10.1038/369621a0",
     "method": "XC",
@@ -514,10 +514,10 @@
   {
     "pdbid": "1TL7",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "2004-12-14",
     "doi": "10.1074/jbc.M409076200",
     "method": "XC",
@@ -531,10 +531,10 @@
   {
     "pdbid": "1TND",
     "chain": "A",
-    "protein": "GNAT1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [28-339]",
+    "protein": "G(q) subunit alpha",
+    "protid": "GNAQ_MOUSE",
+    "species": "Mus musculus (Mouse)",
+    "pfamid": "PF00503",
     "date": "1994-07-31",
     "doi": "10.1038/366654a0",
     "method": "XC",
@@ -548,10 +548,10 @@
   {
     "pdbid": "1U0H",
     "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2004-12-14",
     "doi": "10.1074/jbc.M409076200",
     "method": "XC",
@@ -565,10 +565,10 @@
   {
     "pdbid": "1Y3A",
     "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [34-343]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_RAT",
+    "species": "Rattus norvegicus (Rat)",
+    "pfamid": "PF00503",
     "date": "2005-07-12",
     "doi": "10.1016/j.str.2005.04.007",
     "method": "XC",
@@ -580,1052 +580,16 @@
   {
     "pdbid": "1ZCA",
     "chain": "A",
-    "protein": "Gna12 Gna-12",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [54-368]",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
+    "pfamid": "PF00503",
     "date": "2005-11-15",
     "doi": "10.1021/bi051729t",
     "method": "XC",
     "resolution": "2.9",
     "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "1ZCB",
-    "chain": "A",
-    "protein": "Gna13 Gna-13",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [46-366]",
-    "date": "2005-11-15",
-    "doi": "10.1021/bi051729t",
-    "method": "XC",
-    "resolution": "2.0",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "2BCJ",
-    "chain": "Q",
-    "protein": "Gnai1 Gnai-1 Gnaq",
-    "species": "Mus musculus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [38-348]",
-    "date": "2005-12-20",
-    "doi": "10.1126/science.1118890",
-    "method": "XC",
-    "resolution": "3.06",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2G83",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2006-10-10",
-    "doi": "10.1021/bi0613832",
-    "method": "XC",
-    "resolution": "2.8",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2GTP",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2006-05-23",
-    "doi": "10.1073/pnas.0801508105",
-    "method": "XC",
-    "resolution": "2.55",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2GVD",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-382]",
-    "date": "2006-07-04",
-    "doi": "10.1124/mol.106.026427",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MN"
-    ]
-  },
-  {
-    "pdbid": "2GVZ",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
-    "date": "2006-07-04",
-    "doi": "10.1124/mol.106.026427",
-    "method": "XC",
-    "resolution": "3.27",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MN"
-    ]
-  },
-  {
-    "pdbid": "2IHB",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2006-11-21",
-    "doi": "10.1073/pnas.0801508105",
-    "method": "XC",
-    "resolution": "2.71",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2IK8",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2006-11-21",
-    "doi": "10.1073/pnas.0801508105",
-    "method": "XC",
-    "resolution": "2.71",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "2ODE",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2007-02-06",
-    "doi": "10.1073/pnas.0801508105",
-    "method": "XC",
-    "resolution": "1.9",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2OM2",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2007-07-10",
-    "doi": "10.1016/j.jmb.2007.05.096",
-    "method": "XC",
-    "resolution": "2.2",
-    "ligands": [
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2RGN",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1 Gnaq",
-    "species": "Mus musculus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [35-348]",
-    "date": "2008-01-15",
-    "doi": "10.1126/science.1147554",
-    "method": "XC",
-    "resolution": "3.5",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2V4Z",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2008-11-04",
-    "doi": "10.1074/jbc.M109.024711",
-    "method": "XC",
-    "resolution": "2.8",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2XNS",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2011-06-08",
-    "doi": "10.1021/ja110296z",
-    "method": "XC",
-    "resolution": "3.41",
-    "ligands": [
-      "GDP",
-      "SRT"
-    ]
-  },
-  {
-    "pdbid": "2XTZ",
-    "chain": "A",
-    "protein": "GPA1 At2g26300 T1D16.6",
-    "species": "Arabidopsis thaliana",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [40-371]",
-    "date": "2011-02-16",
-    "doi": "10.1126/scisignal.2001446",
-    "method": "XC",
-    "resolution": "2.34",
-    "ligands": [
-      "CL",
-      "CSS",
-      "GSP",
-      "MG",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "2ZJY",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2009-03-24",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.8",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "2ZJZ",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [30-343]",
-    "date": "2009-03-24",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.6",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "3AB3",
-    "chain": "A",
-    "protein": "Gna13 Gna-13",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [47-366]",
-    "date": "2010-12-29",
-    "doi": "10.1074/jbc.M110.201392",
-    "method": "XC",
-    "resolution": "2.4",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3AH8",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1 Gnaq",
-    "species": "Mus musculus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [21-348]",
-    "date": "2010-07-21",
-    "doi": "10.1073/pnas.1003553107",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "3C14",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
-    "date": "2009-02-03",
-    "doi": "10.1021/bi802122k",
-    "method": "XC",
-    "resolution": "2.68",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3C15",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [36-383]",
-    "date": "2009-02-03",
-    "doi": "10.1021/bi802122k",
-    "method": "XC",
-    "resolution": "2.78",
-    "ligands": [
-      "CL",
-      "GSP"
-    ]
-  },
-  {
-    "pdbid": "3C16",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [36-361]",
-    "date": "2009-02-03",
-    "doi": "10.1021/bi802122k",
-    "method": "XC",
-    "resolution": "2.87",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3C7K",
-    "chain": "A",
-    "protein": "Gnao1 Gna0 Gnao",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [35-343]",
-    "date": "2008-05-06",
-    "doi": "10.1073/pnas.0801569105",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3CX6",
-    "chain": "A",
-    "protein": "Gna13 Gna-13",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [47-366]",
-    "date": "2008-10-28",
-    "doi": "10.1016/j.str.2008.07.009",
-    "method": "XC",
-    "resolution": "2.5",
-    "ligands": [
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3CX7",
-    "chain": "A",
-    "protein": "Gna13 Gna-13",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [47-366]",
-    "date": "2008-10-28",
-    "doi": "10.1016/j.str.2008.07.009",
-    "method": "XC",
-    "resolution": "2.25",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3CX8",
-    "chain": "A",
-    "protein": "Gna13 Gna-13",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [47-366]",
-    "date": "2008-10-28",
-    "doi": "10.1016/j.str.2008.07.009",
-    "method": "XC",
-    "resolution": "2.0",
-    "ligands": [
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3D7M",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [34-343]",
-    "date": "2009-03-03",
-    "doi": "10.1021/bi801853a",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3FFA",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2009-10-06",
-    "doi": "10.1016/j.jmb.2009.08.043",
-    "method": "XC",
-    "resolution": "2.3",
-    "ligands": [
-      "GSP",
-      "MG",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3FFB",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2009-10-06",
-    "doi": "10.1016/j.jmb.2009.08.043",
-    "method": "XC",
-    "resolution": "2.57",
-    "ligands": [
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3G82",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
-    "date": "2010-02-16",
-    "doi": "",
-    "method": "XC",
-    "resolution": "3.11",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3MAA",
-    "chain": "C",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [39-383]",
-    "date": "2010-04-07",
-    "doi": "10.1021/bi802122k",
-    "method": "XC",
-    "resolution": "3.0",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3OHM",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [37-348]",
-    "date": "2010-10-27",
-    "doi": "10.1126/science.1193438",
-    "method": "XC",
-    "resolution": "2.7",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3ONW",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2010-11-24",
-    "doi": "10.1074/jbc.M110.190496",
-    "method": "XC",
-    "resolution": "2.38",
-    "ligands": [
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3QE0",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2012-01-25",
-    "doi": "10.1371/journal.ppat.1002553",
-    "method": "XC",
-    "resolution": "3.0",
-    "ligands": [
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "3QI2",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [31-343]",
-    "date": "2012-02-01",
-    "doi": "10.1371/journal.ppat.1002553",
-    "method": "XC",
-    "resolution": "2.8",
-    "ligands": [
-      "GDP",
-      "GOL",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3RBQ",
-    "chain": "L",
-    "protein": "GNAT1 GNATR",
-    "species": "Homo sapiens",
-    "pfamid": "null",
-    "pfamaccession": "null",
-    "date": "2011-06-08",
-    "doi": "10.1038/nn.2835",
-    "method": "XC",
-    "resolution": "2.0",
-    "ligands": [
-      "DAO"
-    ]
-  },
-  {
-    "pdbid": "3SN6",
-    "chain": "A",
-    "protein": "GNAS GNAS1",
-    "species": "Bos taurus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [21-383]",
-    "date": "2011-07-20",
-    "doi": "10.1038/nature10361",
-    "method": "XC",
-    "resolution": "3.2",
-    "ligands": []
-  },
-  {
-    "pdbid": "3UMR",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2012-10-24",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.04",
-    "ligands": [
-      "CL",
-      "GDP",
-      "GOL",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3UMS",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2012-02-08",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.34",
-    "ligands": [
-      "CL",
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "3V00",
-    "chain": "A",
-    "protein": "GNAT1 Gnai1 Gnai-1",
-    "species": "Bos taurus#Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [10-339]",
-    "date": "2012-04-18",
-    "doi": "10.1021/bi3001984",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "4EKC",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [37-348]",
-    "date": "2013-01-30",
-    "doi": "10.1016/j.str.2012.12.016",
-    "method": "XC",
-    "resolution": "7.4",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4EKD",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [37-348]",
-    "date": "2013-01-30",
-    "doi": "10.1016/j.str.2012.12.016",
-    "method": "XC",
-    "resolution": "2.71",
-    "ligands": [
-      "ALF",
-      "CL",
-      "CO",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4FID",
-    "chain": "A",
-    "protein": "EHI_140350",
-    "species": "Entamoeba histolytica",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [22-343]",
-    "date": "2012-11-28",
-    "doi": "10.1371/journal.ppat.1003040",
-    "method": "XC",
-    "resolution": "2.62",
-    "ligands": [
-      "GDP",
-      "MLY",
-      "MSE"
-    ]
-  },
-  {
-    "pdbid": "4G5O",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [31-343]",
-    "date": "2012-09-05",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "CIT",
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "4G5Q",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [31-343]",
-    "date": "2012-09-05",
-    "doi": "",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "4G5R",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2012-09-05",
-    "doi": "",
-    "method": "XC",
-    "resolution": "3.48",
-    "ligands": [
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "4G5S",
-    "chain": "A",
-    "protein": "GNAI3",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2012-09-05",
-    "doi": "",
-    "method": "XC",
-    "resolution": "3.62",
-    "ligands": [
-      "CIT",
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "4GNK",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [20-348]",
-    "date": "2013-02-06",
-    "doi": "10.1038/nsmb.2497",
-    "method": "XC",
-    "resolution": "4.0",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4N0D",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2014-03-12",
-    "doi": "10.1074/jbc.M113.539064",
-    "method": "XC",
-    "resolution": "1.55",
-    "ligands": [
-      "GSP",
-      "MG",
-      "SO3"
-    ]
-  },
-  {
-    "pdbid": "4N0E",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2014-03-12",
-    "doi": "10.1074/jbc.M113.539064",
-    "method": "XC",
-    "resolution": "2.1",
-    "ligands": [
-      "GDP",
-      "SO4"
-    ]
-  },
-  {
-    "pdbid": "4PAM",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2014-07-30",
-    "doi": "10.1074/jbc.M114.572875",
-    "method": "XC",
-    "resolution": "2.1",
-    "ligands": [
-      "CL",
-      "GDP",
-      "SO3"
-    ]
-  },
-  {
-    "pdbid": "4PAN",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2014-07-30",
-    "doi": "10.1074/jbc.M114.572875",
-    "method": "XC",
-    "resolution": "2.4",
-    "ligands": [
-      "CL",
-      "GDP",
-      "SO3"
-    ]
-  },
-  {
-    "pdbid": "4PAO",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2014-07-30",
-    "doi": "10.1074/jbc.M114.572875",
-    "method": "XC",
-    "resolution": "2.0",
-    "ligands": [
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4PAQ",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-343]",
-    "date": "2014-07-30",
-    "doi": "10.1074/jbc.M114.572875",
-    "method": "XC",
-    "resolution": "2.0",
-    "ligands": [
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4QJ3",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [37-348]",
-    "date": "2014-10-22",
-    "doi": "10.1016/j.str.2014.10.008",
-    "method": "XC",
-    "resolution": "3.0",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4QJ4",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [35-348]",
-    "date": "2014-10-22",
-    "doi": "10.1016/j.str.2014.10.008",
-    "method": "XC",
-    "resolution": "3.3",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "4QJ5",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [36-348]",
-    "date": "2014-10-22",
-    "doi": "10.1016/j.str.2014.10.008",
-    "method": "XC",
-    "resolution": "3.41",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "5DO9",
-    "chain": "A",
-    "protein": "Gnaq",
-    "species": "Mus musculus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [38-348]",
-    "date": "2016-01-20",
-    "doi": "10.1074/jbc.M115.712075",
-    "method": "XC",
-    "resolution": "2.6",
-    "ligands": [
-      "ALF",
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "5G53",
-    "chain": "C",
-    "protein": "GNAS GNAS1 GSP",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [208-383]",
-    "date": "2016-08-03",
-    "doi": "10.1038/nature18966",
-    "method": "XC",
-    "resolution": "3.4",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "5JS7",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2016-06-29",
-    "doi": "10.1073/pnas.1604125113",
-    "method": "NMR",
-    "resolution": "-",
-    "ligands": []
-  },
-  {
-    "pdbid": "5JS8",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [32-343]",
-    "date": "2016-06-29",
-    "doi": "10.1073/pnas.1604125113",
-    "method": "NMR",
-    "resolution": "-",
-    "ligands": []
-  },
-  {
-    "pdbid": "5KDL",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [33-341]",
-    "date": "2016-08-03",
-    "doi": "10.1074/jbc.M116.745513",
-    "method": "XC",
-    "resolution": "2.66",
-    "ligands": [
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "5KDO",
-    "chain": "A",
-    "protein": "Gnai1 Gnai-1",
-    "species": "Rattus norvegicus",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-341]",
-    "date": "2016-08-03",
-    "doi": "10.1074/jbc.M116.745513",
-    "method": "XC",
-    "resolution": "1.9",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "5TDH",
-    "chain": "A",
-    "protein": "GNAI1",
-    "species": "Homo sapiens",
-    "pfamid": "G-alpha",
-    "pfamaccession": "PF00503 [15-343]",
-    "date": "2016-11-09",
-    "doi": "10.1038/aps.2016.69",
-    "method": "XC",
-    "resolution": "3.0",
-    "ligands": [
-      "GDP"
+      "ALF"
     ]
   }
 ]

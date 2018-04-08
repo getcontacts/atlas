@@ -11,11 +11,12 @@ pdbmap.txt:
 	rm pdbmap
 
 pdbids.txt: pdbmap.txt
-	grep -e "$(PFAMIDS)" $< | cut -f 1,2 | sort | rev | uniq -f 1 | rev > $@
+	grep -e "$(PFAMIDS)" $< | sort | rev | uniq -f 5 | rev > $@
 
 structures/dummy: pdbids.txt
 	mkdir -p structures
-	cat $< | while read line; do bash ../curl_pdb_chain.sh $$line structures; done
+	bash ../curl_pdbs.sh $< structures
+#	cat $< | while read line; do bash ../curl_pdb_chain.sh $$line structures; done
 	touch $@
 
 annotations.json: pdbids.txt
