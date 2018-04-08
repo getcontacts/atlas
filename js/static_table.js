@@ -62,10 +62,7 @@ function createTable(structureJson, containerSelector) {
       .enter()
       .append("tr")
       .sort(function (a, b) {
-        if (a.family === b.family) {
-          return d3.ascending(a.species, b.species);
-        }
-        return d3.ascending(a.family, b.family);
+        return d3.ascending(a.protid, b.protid);
       })
       .style("cursor", "pointer")
       .on("click", function (d) {
