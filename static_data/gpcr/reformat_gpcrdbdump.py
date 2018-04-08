@@ -1,4 +1,5 @@
 
+import requests
 import json
 import sys
 
@@ -6,6 +7,14 @@ with open(sys.argv[1]) as f:
     db = json.load(f)
 
 def reformat(gpcrdb_entry):
+    pdbid = gpcrdb_entry['pdb_code'],
+    sys.err.write('Reformating ' + pdbid + '\n')
+    protid = gpcrdb_entry['protein']
+    url = 'http://gpcrdb.org/services/protein/'+protid+'/'
+    response = requests.get(url)
+    protein_data = response.json()
+    protein = protein_data['name']
+    
     method = gpcrdb_entry['type']
     if method == "X-ray diffraction":
         method = "XC"
@@ -23,7 +32,8 @@ def reformat(gpcrdb_entry):
     return {
             'pdbid': gpcrdb_entry['pdb_code'],
             'chain': gpcrdb_entry['preferred_chain'][0],
-            'protein': gpcrdb_entry['protein'].upper(),
+            'protein': protein,
+            'protid': protid,
             'species': gpcrdb_entry['species'],
             'date': gpcrdb_entry['publication_date'],
             'method': method,

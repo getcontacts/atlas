@@ -2,7 +2,8 @@
   {
     "pdbid": "5NX2",
     "chain": "A",
-    "protein": "GLP1R_HUMAN",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
     "species": "Homo sapiens",
     "date": "2017-06-14",
     "method": "XC",
@@ -15,7 +16,8 @@
   {
     "pdbid": "5L7D",
     "chain": "B",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2016-07-20",
     "method": "XC",
@@ -26,7 +28,8 @@
   {
     "pdbid": "5X33",
     "chain": "A",
-    "protein": "Q9WTK1_CAVPO",
+    "protein": "BLT<sub>1</sub> receptor",
+    "protid": "q9wtk1_cavpo",
     "species": "Cavia porcellus",
     "date": "2018-01-03",
     "method": "XC",
@@ -39,7 +42,8 @@
   {
     "pdbid": "5WS3",
     "chain": "A",
-    "protein": "OX2R_HUMAN",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
     "species": "Homo sapiens",
     "date": "2017-12-13",
     "method": "XC",
@@ -52,7 +56,8 @@
   {
     "pdbid": "3SN6",
     "chain": "R",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2011-07-20",
     "method": "XC",
@@ -65,7 +70,8 @@
   {
     "pdbid": "5X93",
     "chain": "A",
-    "protein": "EDNRB_HUMAN",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
     "species": "Homo sapiens",
     "date": "2017-08-16",
     "method": "XC",
@@ -78,7 +84,8 @@
   {
     "pdbid": "4XNW",
     "chain": "A",
-    "protein": "P2RY1_HUMAN",
+    "protein": "P2Y<sub>1</sub> receptor",
+    "protid": "p2ry1_human",
     "species": "Homo sapiens",
     "date": "2015-04-01",
     "method": "XC",
@@ -91,7 +98,8 @@
   {
     "pdbid": "5XRA",
     "chain": "A",
-    "protein": "CNR1_HUMAN",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
     "species": "Homo sapiens",
     "date": "2017-07-12",
     "method": "XC",
@@ -104,7 +112,8 @@
   {
     "pdbid": "5TGZ",
     "chain": "A",
-    "protein": "CNR1_HUMAN",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
     "species": "Homo sapiens",
     "date": "2016-11-02",
     "method": "XC",
@@ -117,7 +126,8 @@
   {
     "pdbid": "5JQH",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2016-07-13",
     "method": "XC",
@@ -130,7 +140,8 @@
   {
     "pdbid": "3VW7",
     "chain": "A",
-    "protein": "PAR1_HUMAN",
+    "protein": "PAR1",
+    "protid": "par1_human",
     "species": "Homo sapiens",
     "date": "2012-12-12",
     "method": "XC",
@@ -143,7 +154,8 @@
   {
     "pdbid": "4N6H",
     "chain": "A",
-    "protein": "OPRD_HUMAN",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
     "species": "Homo sapiens",
     "date": "2013-12-25",
     "method": "XC",
@@ -156,7 +168,8 @@
   {
     "pdbid": "5G53",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-08-03",
     "method": "XC",
@@ -169,7 +182,8 @@
   {
     "pdbid": "5T04",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2016-12-21",
     "method": "XC",
@@ -182,7 +196,8 @@
   {
     "pdbid": "5CXV",
     "chain": "A",
-    "protein": "ACM1_HUMAN",
+    "protein": "M<sub>1</sub> receptor",
+    "protid": "acm1_human",
     "species": "Homo sapiens",
     "date": "2016-03-09",
     "method": "XC",
@@ -195,7 +210,8 @@
   {
     "pdbid": "4OO9",
     "chain": "A",
-    "protein": "GRM5_HUMAN",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
     "species": "Homo sapiens",
     "date": "2014-07-02",
     "method": "XC",
@@ -208,7 +224,8 @@
   {
     "pdbid": "5XSZ",
     "chain": "A",
-    "protein": "Q08BG4_DANRE",
+    "protein": "LPA<sub>6</sub> receptor",
+    "protid": "q08bg4_danre",
     "species": "Danio rerio",
     "date": "2017-08-16",
     "method": "XC",
@@ -219,7 +236,8 @@
   {
     "pdbid": "5C1M",
     "chain": "A",
-    "protein": "OPRM_MOUSE",
+    "protein": "&mu; receptor",
+    "protid": "oprm_mouse",
     "species": "Mus musculus",
     "date": "2015-08-05",
     "method": "XC",
@@ -232,7 +250,8 @@
   {
     "pdbid": "4MQT",
     "chain": "A",
-    "protein": "ACM2_HUMAN",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
     "species": "Homo sapiens",
     "date": "2013-11-27",
     "method": "XC",
@@ -246,7 +265,8 @@
   {
     "pdbid": "5TZY",
     "chain": "A",
-    "protein": "FFAR1_HUMAN",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
     "species": "Homo sapiens",
     "date": "2017-06-07",
     "method": "XC",
@@ -260,7 +280,8 @@
   {
     "pdbid": "3UON",
     "chain": "A",
-    "protein": "ACM2_HUMAN",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
     "species": "Homo sapiens",
     "date": "2012-02-01",
     "method": "XC",
@@ -273,7 +294,8 @@
   {
     "pdbid": "5UNG",
     "chain": "B",
-    "protein": "AGTR2_HUMAN",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
     "species": "Homo sapiens",
     "date": "2017-04-05",
     "method": "XC",
@@ -286,7 +308,8 @@
   {
     "pdbid": "4DJH",
     "chain": "A",
-    "protein": "OPRK_HUMAN",
+    "protein": "&kappa; receptor",
+    "protid": "oprk_human",
     "species": "Homo sapiens",
     "date": "2012-03-21",
     "method": "XC",
@@ -299,7 +322,8 @@
   {
     "pdbid": "5DSG",
     "chain": "B",
-    "protein": "ACM4_HUMAN",
+    "protein": "M<sub>4</sub> receptor",
+    "protid": "acm4_human",
     "species": "Homo sapiens",
     "date": "2016-03-16",
     "method": "XC",
@@ -312,7 +336,8 @@
   {
     "pdbid": "5GLH",
     "chain": "A",
-    "protein": "EDNRB_HUMAN",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
     "species": "Homo sapiens",
     "date": "2016-09-07",
     "method": "XC",
@@ -325,7 +350,8 @@
   {
     "pdbid": "5DHG",
     "chain": "A",
-    "protein": "OPRX_HUMAN",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
     "species": "Homo sapiens",
     "date": "2015-10-21",
     "method": "XC",
@@ -336,7 +362,8 @@
   {
     "pdbid": "3RZE",
     "chain": "A",
-    "protein": "HRH1_HUMAN",
+    "protein": "H<sub>1</sub> receptor",
+    "protid": "hrh1_human",
     "species": "Homo sapiens",
     "date": "2011-06-15",
     "method": "XC",
@@ -349,7 +376,8 @@
   {
     "pdbid": "5TUD",
     "chain": "D",
-    "protein": "5HT2B_HUMAN",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
     "species": "Homo sapiens",
     "date": "2017-07-26",
     "method": "XC",
@@ -362,7 +390,8 @@
   {
     "pdbid": "5NDD",
     "chain": "A",
-    "protein": "PAR2_HUMAN",
+    "protein": "PAR2",
+    "protid": "par2_human",
     "species": "Homo sapiens",
     "date": "2017-05-03",
     "method": "XC",
@@ -375,7 +404,8 @@
   {
     "pdbid": "4UHR",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2015-04-08",
     "method": "XC",
@@ -388,7 +418,8 @@
   {
     "pdbid": "4U15",
     "chain": "B",
-    "protein": "ACM3_RAT",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
     "species": "Rattus norvegicus",
     "date": "2014-11-26",
     "method": "XC",
@@ -401,7 +432,8 @@
   {
     "pdbid": "5T1A",
     "chain": "A",
-    "protein": "CCR2_HUMAN",
+    "protein": "CCR2",
+    "protid": "ccr2_human",
     "species": "Homo sapiens",
     "date": "2016-12-14",
     "method": "XC",
@@ -415,7 +447,8 @@
   {
     "pdbid": "2Z73",
     "chain": "A",
-    "protein": "OPSD_TODPA",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
     "species": "Todarodes pacificus",
     "date": "2008-05-13",
     "method": "XC",
@@ -428,7 +461,8 @@
   {
     "pdbid": "5DYS",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2016-08-10",
     "method": "XC",
@@ -441,7 +475,8 @@
   {
     "pdbid": "5VEW",
     "chain": "A",
-    "protein": "GLP1R_HUMAN",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
@@ -454,7 +489,8 @@
   {
     "pdbid": "5UEN",
     "chain": "B",
-    "protein": "AA1R_HUMAN",
+    "protein": "A<sub>1</sub> receptor",
+    "protid": "aa1r_human",
     "species": "Homo sapiens",
     "date": "2017-03-01",
     "method": "XC",
@@ -467,7 +503,8 @@
   {
     "pdbid": "4Z35",
     "chain": "A",
-    "protein": "LPAR1_HUMAN",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
     "species": "Homo sapiens",
     "date": "2015-06-03",
     "method": "XC",
@@ -480,7 +517,8 @@
   {
     "pdbid": "5LWE",
     "chain": "B",
-    "protein": "CCR9_HUMAN",
+    "protein": "CCR9",
+    "protid": "ccr9_human",
     "species": "Homo sapiens",
     "date": "2016-12-07",
     "method": "XC",
@@ -493,7 +531,8 @@
   {
     "pdbid": "3ODU",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2010-10-27",
     "method": "XC",
@@ -506,7 +545,8 @@
   {
     "pdbid": "5XEZ",
     "chain": "B",
-    "protein": "GLR_HUMAN",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
@@ -519,7 +559,8 @@
   {
     "pdbid": "3PBL",
     "chain": "A",
-    "protein": "DRD3_HUMAN",
+    "protein": "D<sub>3</sub> receptor",
+    "protid": "drd3_human",
     "species": "Homo sapiens",
     "date": "2010-11-03",
     "method": "XC",
@@ -532,7 +573,8 @@
   {
     "pdbid": "5VBL",
     "chain": "B",
-    "protein": "APJ_HUMAN",
+    "protein": "apelin receptor",
+    "protid": "apj_human",
     "species": "Homo sapiens",
     "date": "2017-05-31",
     "method": "XC",
@@ -545,7 +587,8 @@
   {
     "pdbid": "5WIV",
     "chain": "A",
-    "protein": "DRD4_HUMAN",
+    "protein": "D<sub>4</sub> receptor",
+    "protid": "drd4_human",
     "species": "Homo sapiens",
     "date": "2017-10-18",
     "method": "XC",
@@ -558,7 +601,8 @@
   {
     "pdbid": "5VAI",
     "chain": "R",
-    "protein": "G1SGD4_RABIT",
+    "protein": "GLP-1 receptor",
+    "protid": "g1sgd4_rabit",
     "species": "Oryctolagus cuniculus",
     "date": "2017-05-24",
     "method": "EM",
@@ -571,7 +615,8 @@
   {
     "pdbid": "4Z9G",
     "chain": "A",
-    "protein": "CRFR1_HUMAN",
+    "protein": "CRF<sub>1</sub> receptor",
+    "protid": "crfr1_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -584,7 +629,8 @@
   {
     "pdbid": "4NTJ",
     "chain": "A",
-    "protein": "P2Y12_HUMAN",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
     "species": "Homo sapiens",
     "date": "2014-03-26",
     "method": "XC",
@@ -597,7 +643,8 @@
   {
     "pdbid": "1GZM",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2003-11-20",
     "method": "XC",
@@ -610,7 +657,8 @@
   {
     "pdbid": "4ZUD",
     "chain": "A",
-    "protein": "AGTR1_HUMAN",
+    "protein": "AT<sub>1</sub> receptor",
+    "protid": "agtr1_human",
     "species": "Homo sapiens",
     "date": "2015-10-07",
     "method": "XC",
@@ -623,7 +671,8 @@
   {
     "pdbid": "4XES",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2015-07-29",
     "method": "XC",
@@ -636,7 +685,8 @@
   {
     "pdbid": "4ZJ8",
     "chain": "A",
-    "protein": "OX1R_HUMAN",
+    "protein": "OX<sub>1</sub> receptor",
+    "protid": "ox1r_human",
     "species": "Homo sapiens",
     "date": "2016-03-09",
     "method": "XC",
@@ -649,7 +699,8 @@
   {
     "pdbid": "4BUO",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2014-01-29",
     "method": "XC",
@@ -662,7 +713,8 @@
   {
     "pdbid": "4EJ4",
     "chain": "A",
-    "protein": "OPRD_MOUSE",
+    "protein": "&delta; receptor",
+    "protid": "oprd_mouse",
     "species": "Mus musculus",
     "date": "2012-05-16",
     "method": "XC",
@@ -675,7 +727,8 @@
   {
     "pdbid": "5UZ7",
     "chain": "R",
-    "protein": "CALCR_HUMAN",
+    "protein": "CT receptor",
+    "protid": "calcr_human",
     "species": "Homo sapiens",
     "date": "2017-05-03",
     "method": "EM",
@@ -686,7 +739,8 @@
   {
     "pdbid": "4XT1",
     "chain": "A",
-    "protein": "US28_HCMVA",
+    "protein": "US28",
+    "protid": "us28_hcmva",
     "species": "Human cytomegalovirus",
     "date": "2015-03-04",
     "method": "XC",
@@ -699,7 +753,8 @@
   {
     "pdbid": "5UIW",
     "chain": "A",
-    "protein": "CCR5_HUMAN",
+    "protein": "CCR5",
+    "protid": "ccr5_human",
     "species": "Homo sapiens",
     "date": "2017-06-28",
     "method": "XC",
@@ -712,7 +767,8 @@
   {
     "pdbid": "3V2Y",
     "chain": "A",
-    "protein": "S1PR1_HUMAN",
+    "protein": "S1P<sub>1</sub> receptor",
+    "protid": "s1pr1_human",
     "species": "Homo sapiens",
     "date": "2012-02-15",
     "method": "XC",
@@ -725,7 +781,8 @@
   {
     "pdbid": "4IB4",
     "chain": "A",
-    "protein": "5HT2B_HUMAN",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
     "species": "Homo sapiens",
     "date": "2013-03-13",
     "method": "XC",
@@ -738,7 +795,8 @@
   {
     "pdbid": "4OR2",
     "chain": "A",
-    "protein": "GRM1_HUMAN",
+    "protein": "mGlu<sub>1</sub> receptor",
+    "protid": "grm1_human",
     "species": "Homo sapiens",
     "date": "2014-03-19",
     "method": "XC",
@@ -751,7 +809,8 @@
   {
     "pdbid": "4IAQ",
     "chain": "A",
-    "protein": "5HT1B_HUMAN",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
     "species": "Homo sapiens",
     "date": "2013-03-13",
     "method": "XC",
@@ -764,7 +823,8 @@
   {
     "pdbid": "3VG9",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2012-02-01",
     "method": "XC",
@@ -777,7 +837,8 @@
   {
     "pdbid": "4DKL",
     "chain": "A",
-    "protein": "OPRM_MOUSE",
+    "protein": "&mu; receptor",
+    "protid": "oprm_mouse",
     "species": "Mus musculus",
     "date": "2012-03-21",
     "method": "XC",
@@ -790,7 +851,8 @@
   {
     "pdbid": "4ZWJ",
     "chain": "A",
-    "protein": "OPSD_HUMAN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
     "species": "Homo sapiens",
     "date": "2015-07-29",
     "method": "XC",
@@ -801,7 +863,8 @@
   {
     "pdbid": "4AMJ",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2012-05-23",
     "method": "XC",
@@ -814,7 +877,8 @@
   {
     "pdbid": "4J4Q",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2013-10-30",
     "method": "XC",
@@ -825,7 +889,8 @@
   {
     "pdbid": "1L9H",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2002-05-15",
     "method": "XC",
@@ -838,7 +903,8 @@
   {
     "pdbid": "2PED",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2007-10-30",
     "method": "XC",
@@ -851,7 +917,8 @@
   {
     "pdbid": "1HZX",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2001-07-04",
     "method": "XC",
@@ -864,7 +931,8 @@
   {
     "pdbid": "3UZC",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2012-03-21",
     "method": "XC",
@@ -877,7 +945,8 @@
   {
     "pdbid": "2RH1",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2007-10-30",
     "method": "XC",
@@ -890,7 +959,8 @@
   {
     "pdbid": "5K2C",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-09-21",
     "method": "XC",
@@ -903,7 +973,8 @@
   {
     "pdbid": "4RWD",
     "chain": "A",
-    "protein": "OPRD_HUMAN",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
     "species": "Homo sapiens",
     "date": "2015-01-14",
     "method": "XC",
@@ -916,7 +987,8 @@
   {
     "pdbid": "5WQC",
     "chain": "A",
-    "protein": "OX2R_HUMAN",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
     "species": "Homo sapiens",
     "date": "2017-11-29",
     "method": "XC",
@@ -929,7 +1001,8 @@
   {
     "pdbid": "5VRA",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-12-13",
     "method": "XC",
@@ -942,7 +1015,8 @@
   {
     "pdbid": "2Y00",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-01-12",
     "method": "XC",
@@ -955,7 +1029,8 @@
   {
     "pdbid": "3PDS",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2011-01-12",
     "method": "XC",
@@ -968,7 +1043,8 @@
   {
     "pdbid": "2Y04",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-01-12",
     "method": "XC",
@@ -981,7 +1057,8 @@
   {
     "pdbid": "5IU8",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -994,7 +1071,8 @@
   {
     "pdbid": "5IUB",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -1007,7 +1085,8 @@
   {
     "pdbid": "3NY8",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2010-08-11",
     "method": "XC",
@@ -1020,7 +1099,8 @@
   {
     "pdbid": "5L7I",
     "chain": "B",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2016-07-20",
     "method": "XC",
@@ -1033,7 +1113,8 @@
   {
     "pdbid": "5TE3",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2017-03-15",
     "method": "XC",
@@ -1044,7 +1125,8 @@
   {
     "pdbid": "5N2R",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-07-26",
     "method": "XC",
@@ -1057,7 +1139,8 @@
   {
     "pdbid": "4EIY",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2012-07-25",
     "method": "XC",
@@ -1070,7 +1153,8 @@
   {
     "pdbid": "2Y03",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-01-12",
     "method": "XC",
@@ -1083,7 +1167,8 @@
   {
     "pdbid": "3AYM",
     "chain": "A",
-    "protein": "OPSD_TODPA",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
     "species": "Todarodes pacificus",
     "date": "2011-08-17",
     "method": "XC",
@@ -1096,7 +1181,8 @@
   {
     "pdbid": "4K5Y",
     "chain": "C",
-    "protein": "CRFR1_HUMAN",
+    "protein": "CRF<sub>1</sub> receptor",
+    "protid": "crfr1_human",
     "species": "Homo sapiens",
     "date": "2013-07-17",
     "method": "XC",
@@ -1109,7 +1195,8 @@
   {
     "pdbid": "2YCX",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-06-01",
     "method": "XC",
@@ -1122,7 +1209,8 @@
   {
     "pdbid": "5D5A",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2016-01-13",
     "method": "XC",
@@ -1135,7 +1223,8 @@
   {
     "pdbid": "3ZEV",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2014-01-29",
     "method": "XC",
@@ -1148,7 +1237,8 @@
   {
     "pdbid": "5F8U",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2015-12-23",
     "method": "XC",
@@ -1161,7 +1251,8 @@
   {
     "pdbid": "5XR8",
     "chain": "A",
-    "protein": "CNR1_HUMAN",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
     "species": "Homo sapiens",
     "date": "2017-07-12",
     "method": "XC",
@@ -1174,7 +1265,8 @@
   {
     "pdbid": "2YDV",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-05-18",
     "method": "XC",
@@ -1187,7 +1279,8 @@
   {
     "pdbid": "2VT4",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2008-06-24",
     "method": "XC",
@@ -1200,7 +1293,8 @@
   {
     "pdbid": "3OE9",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2010-10-27",
     "method": "XC",
@@ -1213,7 +1307,8 @@
   {
     "pdbid": "4AMI",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2012-05-23",
     "method": "XC",
@@ -1226,7 +1321,8 @@
   {
     "pdbid": "3REY",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-09-07",
     "method": "XC",
@@ -1239,7 +1335,8 @@
   {
     "pdbid": "4PY0",
     "chain": "A",
-    "protein": "P2Y12_HUMAN",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
     "species": "Homo sapiens",
     "date": "2014-04-30",
     "method": "XC",
@@ -1252,7 +1349,8 @@
   {
     "pdbid": "2R4R",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2007-11-06",
     "method": "XC",
@@ -1263,7 +1361,8 @@
   {
     "pdbid": "4LDE",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2013-09-25",
     "method": "XC",
@@ -1276,7 +1375,8 @@
   {
     "pdbid": "4PXF",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2014-09-17",
     "method": "XC",
@@ -1287,7 +1387,8 @@
   {
     "pdbid": "5MZJ",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-07-26",
     "method": "XC",
@@ -1300,7 +1401,8 @@
   {
     "pdbid": "4L6R",
     "chain": "A",
-    "protein": "GLR_HUMAN",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
     "species": "Homo sapiens",
     "date": "2013-07-24",
     "method": "XC",
@@ -1311,7 +1413,8 @@
   {
     "pdbid": "3OAX",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2011-01-19",
     "method": "XC",
@@ -1324,7 +1427,8 @@
   {
     "pdbid": "4WW3",
     "chain": "A",
-    "protein": "OPSD_TODPA",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
     "species": "Todarodes pacificus",
     "date": "2015-06-17",
     "method": "XC",
@@ -1337,7 +1441,8 @@
   {
     "pdbid": "5MZP",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-07-26",
     "method": "XC",
@@ -1350,7 +1455,8 @@
   {
     "pdbid": "2YDO",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-05-18",
     "method": "XC",
@@ -1363,7 +1469,8 @@
   {
     "pdbid": "3PQR",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2011-03-09",
     "method": "XC",
@@ -1376,7 +1483,8 @@
   {
     "pdbid": "5JTB",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-05-31",
     "method": "XC",
@@ -1389,7 +1497,8 @@
   {
     "pdbid": "5IUA",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -1402,7 +1511,8 @@
   {
     "pdbid": "3NYA",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2010-08-11",
     "method": "XC",
@@ -1415,7 +1525,8 @@
   {
     "pdbid": "4BEZ",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2013-04-24",
     "method": "XC",
@@ -1426,7 +1537,8 @@
   {
     "pdbid": "4MQS",
     "chain": "A",
-    "protein": "ACM2_HUMAN",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
     "species": "Homo sapiens",
     "date": "2013-11-27",
     "method": "XC",
@@ -1439,7 +1551,8 @@
   {
     "pdbid": "2I35",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2006-10-17",
     "method": "XC",
@@ -1452,7 +1565,8 @@
   {
     "pdbid": "4U14",
     "chain": "A",
-    "protein": "ACM3_RAT",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
     "species": "Rattus norvegicus",
     "date": "2014-11-26",
     "method": "XC",
@@ -1465,7 +1579,8 @@
   {
     "pdbid": "3VGA",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2012-02-01",
     "method": "XC",
@@ -1478,7 +1593,8 @@
   {
     "pdbid": "4QKX",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2014-07-23",
     "method": "XC",
@@ -1491,7 +1607,8 @@
   {
     "pdbid": "5WIU",
     "chain": "A",
-    "protein": "DRD4_HUMAN",
+    "protein": "D<sub>4</sub> receptor",
+    "protid": "drd4_human",
     "species": "Homo sapiens",
     "date": "2017-10-18",
     "method": "XC",
@@ -1504,7 +1621,8 @@
   {
     "pdbid": "2G87",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2006-09-02",
     "method": "XC",
@@ -1517,7 +1635,8 @@
   {
     "pdbid": "3EML",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2008-10-14",
     "method": "XC",
@@ -1530,7 +1649,8 @@
   {
     "pdbid": "4GRV",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2012-10-17",
     "method": "XC",
@@ -1543,7 +1663,8 @@
   {
     "pdbid": "4XT3",
     "chain": "A",
-    "protein": "US28_HCMVA",
+    "protein": "US28",
+    "protid": "us28_hcmva",
     "species": "Human cytomegalovirus",
     "date": "2015-03-04",
     "method": "XC",
@@ -1556,7 +1677,8 @@
   {
     "pdbid": "5K2B",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-09-21",
     "method": "XC",
@@ -1569,7 +1691,8 @@
   {
     "pdbid": "3D4S",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2008-06-17",
     "method": "XC",
@@ -1582,7 +1705,8 @@
   {
     "pdbid": "4RWA",
     "chain": "A",
-    "protein": "OPRD_HUMAN",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
     "species": "Homo sapiens",
     "date": "2015-01-14",
     "method": "XC",
@@ -1595,7 +1719,8 @@
   {
     "pdbid": "3UZA",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2012-03-21",
     "method": "XC",
@@ -1608,7 +1733,8 @@
   {
     "pdbid": "5W0P",
     "chain": "D",
-    "protein": "OPSD_HUMAN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
     "species": "Homo sapiens",
     "date": "2017-08-09",
     "method": "XC",
@@ -1619,7 +1745,8 @@
   {
     "pdbid": "4XNV",
     "chain": "A",
-    "protein": "P2RY1_HUMAN",
+    "protein": "P2Y<sub>1</sub> receptor",
+    "protid": "p2ry1_human",
     "species": "Homo sapiens",
     "date": "2015-04-01",
     "method": "XC",
@@ -1632,7 +1759,8 @@
   {
     "pdbid": "4Z34",
     "chain": "A",
-    "protein": "LPAR1_HUMAN",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
     "species": "Homo sapiens",
     "date": "2015-06-03",
     "method": "XC",
@@ -1645,7 +1773,8 @@
   {
     "pdbid": "4BEY",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2013-05-08",
     "method": "XC",
@@ -1656,7 +1785,8 @@
   {
     "pdbid": "2ZIY",
     "chain": "A",
-    "protein": "OPSD_TODPA",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
     "species": "Todarodes pacificus",
     "date": "2008-05-06",
     "method": "XC",
@@ -1669,7 +1799,8 @@
   {
     "pdbid": "2HPY",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2006-08-22",
     "method": "XC",
@@ -1682,7 +1813,8 @@
   {
     "pdbid": "3V2W",
     "chain": "A",
-    "protein": "S1PR1_HUMAN",
+    "protein": "S1P<sub>1</sub> receptor",
+    "protid": "s1pr1_human",
     "species": "Homo sapiens",
     "date": "2012-02-15",
     "method": "XC",
@@ -1695,7 +1827,8 @@
   {
     "pdbid": "2J4Y",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2007-09-25",
     "method": "XC",
@@ -1708,7 +1841,8 @@
   {
     "pdbid": "5NJ6",
     "chain": "A",
-    "protein": "PAR2_HUMAN",
+    "protein": "PAR2",
+    "protid": "par2_human",
     "species": "Homo sapiens",
     "date": "2017-05-03",
     "method": "XC",
@@ -1719,7 +1853,8 @@
   {
     "pdbid": "4PHU",
     "chain": "A",
-    "protein": "FFAR1_HUMAN",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
     "species": "Homo sapiens",
     "date": "2014-07-16",
     "method": "XC",
@@ -1732,7 +1867,8 @@
   {
     "pdbid": "5IU4",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -1745,7 +1881,8 @@
   {
     "pdbid": "4MBS",
     "chain": "A",
-    "protein": "CCR5_HUMAN",
+    "protein": "CCR5",
+    "protid": "ccr5_human",
     "species": "Homo sapiens",
     "date": "2013-09-11",
     "method": "XC",
@@ -1758,7 +1895,8 @@
   {
     "pdbid": "4Z36",
     "chain": "A",
-    "protein": "LPAR1_HUMAN",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
     "species": "Homo sapiens",
     "date": "2015-06-03",
     "method": "XC",
@@ -1771,7 +1909,8 @@
   {
     "pdbid": "1F88",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2000-08-04",
     "method": "XC",
@@ -1784,7 +1923,8 @@
   {
     "pdbid": "2YCY",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-06-08",
     "method": "XC",
@@ -1797,7 +1937,8 @@
   {
     "pdbid": "5TZR",
     "chain": "A",
-    "protein": "FFAR1_HUMAN",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
     "species": "Homo sapiens",
     "date": "2017-06-07",
     "method": "XC",
@@ -1810,7 +1951,8 @@
   {
     "pdbid": "5CGC",
     "chain": "A",
-    "protein": "GRM5_HUMAN",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
     "species": "Homo sapiens",
     "date": "2015-08-12",
     "method": "XC",
@@ -1823,7 +1965,8 @@
   {
     "pdbid": "3QAK",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-03-09",
     "method": "XC",
@@ -1836,7 +1979,8 @@
   {
     "pdbid": "5D6L",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2016-08-17",
     "method": "XC",
@@ -1849,7 +1993,8 @@
   {
     "pdbid": "3PWH",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-09-07",
     "method": "XC",
@@ -1862,7 +2007,8 @@
   {
     "pdbid": "5NLX",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-09-27",
     "method": "XC",
@@ -1873,7 +2019,8 @@
   {
     "pdbid": "5UNF",
     "chain": "A",
-    "protein": "AGTR2_HUMAN",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
     "species": "Homo sapiens",
     "date": "2017-04-05",
     "method": "XC",
@@ -1886,7 +2033,8 @@
   {
     "pdbid": "3P0G",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2011-01-19",
     "method": "XC",
@@ -1899,7 +2047,8 @@
   {
     "pdbid": "4JKV",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2013-04-24",
     "method": "XC",
@@ -1912,7 +2061,8 @@
   {
     "pdbid": "5XF1",
     "chain": "B",
-    "protein": "GLR_HUMAN",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
@@ -1925,7 +2075,8 @@
   {
     "pdbid": "2Y02",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-01-12",
     "method": "XC",
@@ -1938,7 +2089,8 @@
   {
     "pdbid": "5D5B",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2016-01-13",
     "method": "XC",
@@ -1951,7 +2103,8 @@
   {
     "pdbid": "5WKT",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2017-12-13",
     "method": "XC",
@@ -1962,7 +2115,8 @@
   {
     "pdbid": "5CGD",
     "chain": "A",
-    "protein": "GRM5_HUMAN",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
     "species": "Homo sapiens",
     "date": "2015-08-12",
     "method": "XC",
@@ -1975,7 +2129,8 @@
   {
     "pdbid": "5DGY",
     "chain": "A",
-    "protein": "OPSD_HUMAN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
     "species": "Homo sapiens",
     "date": "2016-03-23",
     "method": "XC",
@@ -1986,7 +2141,8 @@
   {
     "pdbid": "4NC3",
     "chain": "A",
-    "protein": "5HT2B_HUMAN",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
     "species": "Homo sapiens",
     "date": "2013-12-18",
     "method": "XC",
@@ -1999,7 +2155,8 @@
   {
     "pdbid": "3OE0",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2010-10-27",
     "method": "XC",
@@ -2012,7 +2169,8 @@
   {
     "pdbid": "2I37",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2006-10-17",
     "method": "XC",
@@ -2025,7 +2183,8 @@
   {
     "pdbid": "5NDZ",
     "chain": "A",
-    "protein": "PAR2_HUMAN",
+    "protein": "PAR2",
+    "protid": "par2_human",
     "species": "Homo sapiens",
     "date": "2017-05-03",
     "method": "XC",
@@ -2038,7 +2197,8 @@
   {
     "pdbid": "3OE8",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2010-10-27",
     "method": "XC",
@@ -2051,7 +2211,8 @@
   {
     "pdbid": "4X1H",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2015-11-04",
     "method": "XC",
@@ -2064,7 +2225,8 @@
   {
     "pdbid": "4BWB",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2014-01-29",
     "method": "XC",
@@ -2077,7 +2239,8 @@
   {
     "pdbid": "5TE5",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2017-03-15",
     "method": "XC",
@@ -2090,7 +2253,8 @@
   {
     "pdbid": "2X72",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2011-03-16",
     "method": "XC",
@@ -2103,7 +2267,8 @@
   {
     "pdbid": "2YCW",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-06-01",
     "method": "XC",
@@ -2116,7 +2281,8 @@
   {
     "pdbid": "5K2A",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-09-21",
     "method": "XC",
@@ -2129,7 +2295,8 @@
   {
     "pdbid": "4BVN",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2014-04-02",
     "method": "XC",
@@ -2142,7 +2309,8 @@
   {
     "pdbid": "5UVI",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
@@ -2155,7 +2323,8 @@
   {
     "pdbid": "3ZPR",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2013-04-03",
     "method": "XC",
@@ -2168,7 +2337,8 @@
   {
     "pdbid": "5TVN",
     "chain": "A",
-    "protein": "5HT2B_HUMAN",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
     "species": "Homo sapiens",
     "date": "2017-02-01",
     "method": "XC",
@@ -2181,7 +2351,8 @@
   {
     "pdbid": "5UIG",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-02-08",
     "method": "XC",
@@ -2194,7 +2365,8 @@
   {
     "pdbid": "5N2S",
     "chain": "A",
-    "protein": "AA1R_HUMAN",
+    "protein": "A<sub>1</sub> receptor",
+    "protid": "aa1r_human",
     "species": "Homo sapiens",
     "date": "2017-07-26",
     "method": "XC",
@@ -2207,7 +2379,8 @@
   {
     "pdbid": "4EA3",
     "chain": "A",
-    "protein": "OPRX_HUMAN",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
     "species": "Homo sapiens",
     "date": "2012-04-25",
     "method": "XC",
@@ -2220,7 +2393,8 @@
   {
     "pdbid": "5VEX",
     "chain": "B",
-    "protein": "GLP1R_HUMAN",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
     "species": "Homo sapiens",
     "date": "2017-05-17",
     "method": "XC",
@@ -2233,7 +2407,8 @@
   {
     "pdbid": "5EE7",
     "chain": "A",
-    "protein": "GLR_HUMAN",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
     "species": "Homo sapiens",
     "date": "2016-04-20",
     "method": "XC",
@@ -2246,7 +2421,8 @@
   {
     "pdbid": "3RFM",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2011-09-07",
     "method": "XC",
@@ -2259,7 +2435,8 @@
   {
     "pdbid": "5X7D",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2017-08-16",
     "method": "XC",
@@ -2273,7 +2450,8 @@
   {
     "pdbid": "3KJ6",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2010-02-16",
     "method": "XC",
@@ -2284,7 +2462,8 @@
   {
     "pdbid": "5DHH",
     "chain": "A",
-    "protein": "OPRX_HUMAN",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
     "species": "Homo sapiens",
     "date": "2015-10-21",
     "method": "XC",
@@ -2295,7 +2474,8 @@
   {
     "pdbid": "4LDL",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2013-09-25",
     "method": "XC",
@@ -2308,7 +2488,8 @@
   {
     "pdbid": "3AYN",
     "chain": "A",
-    "protein": "OPSD_TODPA",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
     "species": "Todarodes pacificus",
     "date": "2011-08-17",
     "method": "XC",
@@ -2321,7 +2502,8 @@
   {
     "pdbid": "4DAJ",
     "chain": "A",
-    "protein": "ACM3_RAT",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
     "species": "Rattus norvegicus",
     "date": "2012-02-22",
     "method": "XC",
@@ -2334,7 +2516,8 @@
   {
     "pdbid": "5UNH",
     "chain": "B",
-    "protein": "AGTR2_HUMAN",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
     "species": "Homo sapiens",
     "date": "2017-04-05",
     "method": "XC",
@@ -2347,7 +2530,8 @@
   {
     "pdbid": "2YCZ",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-06-01",
     "method": "XC",
@@ -2360,7 +2544,8 @@
   {
     "pdbid": "2Y01",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2011-03-30",
     "method": "XC",
@@ -2373,7 +2558,8 @@
   {
     "pdbid": "4A4M",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2012-01-25",
     "method": "XC",
@@ -2386,7 +2572,8 @@
   {
     "pdbid": "3C9M",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2008-08-05",
     "method": "XC",
@@ -2399,7 +2586,8 @@
   {
     "pdbid": "3OE6",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2010-10-27",
     "method": "XC",
@@ -2412,7 +2600,8 @@
   {
     "pdbid": "4GPO",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2013-02-27",
     "method": "XC",
@@ -2423,7 +2612,8 @@
   {
     "pdbid": "2R4S",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2007-11-06",
     "method": "XC",
@@ -2434,7 +2624,8 @@
   {
     "pdbid": "3NY9",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2010-08-11",
     "method": "XC",
@@ -2447,7 +2638,8 @@
   {
     "pdbid": "4GBR",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2012-10-24",
     "method": "XC",
@@ -2460,7 +2652,8 @@
   {
     "pdbid": "4XEE",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2015-07-29",
     "method": "XC",
@@ -2473,7 +2666,8 @@
   {
     "pdbid": "5NM2",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-09-27",
     "method": "XC",
@@ -2486,7 +2680,8 @@
   {
     "pdbid": "4QIM",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2014-07-23",
     "method": "XC",
@@ -2499,7 +2694,8 @@
   {
     "pdbid": "5GLI",
     "chain": "A",
-    "protein": "EDNRB_HUMAN",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
     "species": "Homo sapiens",
     "date": "2016-09-07",
     "method": "XC",
@@ -2510,7 +2706,8 @@
   {
     "pdbid": "4QIN",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2014-07-23",
     "method": "XC",
@@ -2523,7 +2720,8 @@
   {
     "pdbid": "3PXO",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2011-03-09",
     "method": "XC",
@@ -2536,7 +2734,8 @@
   {
     "pdbid": "3C9L",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2008-08-05",
     "method": "XC",
@@ -2549,7 +2748,8 @@
   {
     "pdbid": "5U09",
     "chain": "A",
-    "protein": "CNR1_HUMAN",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
     "species": "Homo sapiens",
     "date": "2016-12-07",
     "method": "XC",
@@ -2562,7 +2762,8 @@
   {
     "pdbid": "5XPR",
     "chain": "A",
-    "protein": "EDNRB_HUMAN",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
     "species": "Homo sapiens",
     "date": "2017-08-16",
     "method": "XC",
@@ -2573,7 +2774,8 @@
   {
     "pdbid": "3ZPQ",
     "chain": "B",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2013-04-03",
     "method": "XC",
@@ -2586,7 +2788,8 @@
   {
     "pdbid": "4ZJC",
     "chain": "A",
-    "protein": "OX1R_HUMAN",
+    "protein": "OX<sub>1</sub> receptor",
+    "protid": "ox1r_human",
     "species": "Homo sapiens",
     "date": "2016-03-09",
     "method": "XC",
@@ -2599,7 +2802,8 @@
   {
     "pdbid": "4N4W",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2014-01-22",
     "method": "XC",
@@ -2612,7 +2816,8 @@
   {
     "pdbid": "4S0V",
     "chain": "A",
-    "protein": "OX2R_HUMAN",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
     "species": "Homo sapiens",
     "date": "2015-01-14",
     "method": "XC",
@@ -2625,7 +2830,8 @@
   {
     "pdbid": "4BV0",
     "chain": "A",
-    "protein": "NTR1_RAT",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
     "species": "Rattus norvegicus",
     "date": "2014-01-29",
     "method": "XC",
@@ -2638,7 +2844,8 @@
   {
     "pdbid": "4IAR",
     "chain": "A",
-    "protein": "5HT1B_HUMAN",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
     "species": "Homo sapiens",
     "date": "2013-03-13",
     "method": "XC",
@@ -2651,7 +2858,8 @@
   {
     "pdbid": "4U16",
     "chain": "B",
-    "protein": "ACM3_RAT",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
     "species": "Rattus norvegicus",
     "date": "2014-11-26",
     "method": "XC",
@@ -2664,7 +2872,8 @@
   {
     "pdbid": "2I36",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2006-10-17",
     "method": "XC",
@@ -2677,7 +2886,8 @@
   {
     "pdbid": "5EN0",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2016-08-10",
     "method": "XC",
@@ -2690,7 +2900,8 @@
   {
     "pdbid": "4UG2",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2015-04-08",
     "method": "XC",
@@ -2703,7 +2914,8 @@
   {
     "pdbid": "3DQB",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2008-09-23",
     "method": "XC",
@@ -2714,7 +2926,8 @@
   {
     "pdbid": "4O9R",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2014-03-05",
     "method": "XC",
@@ -2727,7 +2940,8 @@
   {
     "pdbid": "4YAY",
     "chain": "A",
-    "protein": "AGTR1_HUMAN",
+    "protein": "AT<sub>1</sub> receptor",
+    "protid": "agtr1_human",
     "species": "Homo sapiens",
     "date": "2015-04-22",
     "method": "XC",
@@ -2740,7 +2954,8 @@
   {
     "pdbid": "5NM4",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2017-09-27",
     "method": "XC",
@@ -2753,7 +2968,8 @@
   {
     "pdbid": "4PXZ",
     "chain": "A",
-    "protein": "P2Y12_HUMAN",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
     "species": "Homo sapiens",
     "date": "2014-04-30",
     "method": "XC",
@@ -2766,7 +2982,8 @@
   {
     "pdbid": "1U19",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2004-10-12",
     "method": "XC",
@@ -2779,7 +2996,8 @@
   {
     "pdbid": "5A8E",
     "chain": "A",
-    "protein": "ADRB1_MELGA",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
     "species": "Meleagris gallopavo",
     "date": "2015-09-30",
     "method": "XC",
@@ -2792,7 +3010,8 @@
   {
     "pdbid": "5K2D",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-09-21",
     "method": "XC",
@@ -2805,7 +3024,8 @@
   {
     "pdbid": "4LDO",
     "chain": "A",
-    "protein": "ADRB2_HUMAN",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
     "species": "Homo sapiens",
     "date": "2013-09-25",
     "method": "XC",
@@ -2818,7 +3038,8 @@
   {
     "pdbid": "4RWS",
     "chain": "A",
-    "protein": "CXCR4_HUMAN",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
     "species": "Homo sapiens",
     "date": "2015-02-11",
     "method": "XC",
@@ -2831,7 +3052,8 @@
   {
     "pdbid": "5IU7",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2016-06-29",
     "method": "XC",
@@ -2844,7 +3066,8 @@
   {
     "pdbid": "3CAP",
     "chain": "A",
-    "protein": "OPSD_BOVIN",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
     "species": "Bos taurus",
     "date": "2008-06-24",
     "method": "XC",
@@ -2855,7 +3078,8 @@
   {
     "pdbid": "6BQH",
     "chain": "A",
-    "protein": "5HT2C_HUMAN",
+    "protein": "5-HT<sub>2C</sub> receptor",
+    "protid": "5ht2c_human",
     "species": "Homo sapiens",
     "date": "2018-02-14",
     "method": "XC",
@@ -2868,7 +3092,8 @@
   {
     "pdbid": "6FFI",
     "chain": "A",
-    "protein": "GRM5_HUMAN",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
     "species": "Homo sapiens",
     "date": "2018-03-07",
     "method": "XC",
@@ -2881,7 +3106,8 @@
   {
     "pdbid": "6B73",
     "chain": "A",
-    "protein": "OPRK_HUMAN",
+    "protein": "&kappa; receptor",
+    "protid": "oprk_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -2894,7 +3120,8 @@
   {
     "pdbid": "6B3J",
     "chain": "A",
-    "protein": "GLP1R_HUMAN",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
     "species": "Homo sapiens",
     "date": "2018-02-21",
     "method": "EM",
@@ -2907,7 +3134,8 @@
   {
     "pdbid": "5OLO",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -2920,7 +3148,8 @@
   {
     "pdbid": "6AQF",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-10",
     "method": "XC",
@@ -2933,7 +3162,8 @@
   {
     "pdbid": "5OLH",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -2946,7 +3176,8 @@
   {
     "pdbid": "6BQG",
     "chain": "A",
-    "protein": "5HT2C_HUMAN",
+    "protein": "5-HT<sub>2C</sub> receptor",
+    "protid": "5ht2c_human",
     "species": "Homo sapiens",
     "date": "2018-02-14",
     "method": "XC",
@@ -2959,7 +3190,8 @@
   {
     "pdbid": "5YQZ",
     "chain": "R",
-    "protein": "GLR_HUMAN",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -2972,7 +3204,8 @@
   {
     "pdbid": "5WF5",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-02-21",
     "method": "XC",
@@ -2985,7 +3218,8 @@
   {
     "pdbid": "5OLV",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -2998,7 +3232,8 @@
   {
     "pdbid": "5OM1",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -3011,7 +3246,8 @@
   {
     "pdbid": "6FFH",
     "chain": "A",
-    "protein": "GRM5_HUMAN",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
     "species": "Homo sapiens",
     "date": "2018-03-07",
     "method": "XC",
@@ -3024,7 +3260,8 @@
   {
     "pdbid": "5OLG",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -3037,7 +3274,8 @@
   {
     "pdbid": "5WF6",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-02-21",
     "method": "XC",
@@ -3050,7 +3288,8 @@
   {
     "pdbid": "5O9H",
     "chain": "A",
-    "protein": "C5AR1_HUMAN",
+    "protein": "C5a<sub>1</sub> receptor",
+    "protid": "c5ar1_human",
     "species": "Homo sapiens",
     "date": "2018-01-10",
     "method": "XC",
@@ -3065,7 +3304,8 @@
   {
     "pdbid": "5V54",
     "chain": "A",
-    "protein": "5HT1B_HUMAN",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
     "species": "Homo sapiens",
     "date": "2018-02-07",
     "method": "XC",
@@ -3078,7 +3318,8 @@
   {
     "pdbid": "5OLZ",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -3091,7 +3332,8 @@
   {
     "pdbid": "5OM4",
     "chain": "A",
-    "protein": "AA2AR_HUMAN",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
     "species": "Homo sapiens",
     "date": "2018-01-17",
     "method": "XC",
@@ -3104,7 +3346,8 @@
   {
     "pdbid": "6CM4",
     "chain": "A",
-    "protein": "DRD2_HUMAN",
+    "protein": "D<sub>2</sub> receptor",
+    "protid": "drd2_human",
     "species": "Homo sapiens",
     "date": "2018-03-14",
     "method": "XC",
@@ -3117,7 +3360,8 @@
   {
     "pdbid": "5V56",
     "chain": "B",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
@@ -3130,7 +3374,8 @@
   {
     "pdbid": "5V57",
     "chain": "A",
-    "protein": "SMO_HUMAN",
+    "protein": "SMO",
+    "protid": "smo_human",
     "species": "Homo sapiens",
     "date": "2017-05-24",
     "method": "XC",
