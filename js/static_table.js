@@ -1,18 +1,16 @@
 
 function createTable(structureJson, containerSelector) {
-  console.log("createTable " + structureJson);
 
   d3.json(structureJson).then(function (structures) {
-    console.log(structures);
     const table = d3.select(containerSelector)
       .append("table");
 
     const headData = [
       {id: "select", text: ""},
       {id: "protein", text: "Protein"},
+      {id: "species", text: "Species"},
       {id: "pdbid", text: "PDB"},
       {id: "chain", text: "Chain"},
-      {id: "species", text: "Species"},
       {id: "method", text: "Method"},
       {id: "resolution", text: "Resolution"},
       {id: "date", text: "Pub. date"},
@@ -89,7 +87,9 @@ function createTable(structureJson, containerSelector) {
       });
     rows.append("td").html(function (d) {
       return d.protein;
-
+    });
+    rows.append("td").html(function (d) {
+      return d.species;
     });
     rows.append("td").html(function (d) {
       const text = d.pdbid;
@@ -100,9 +100,6 @@ function createTable(structureJson, containerSelector) {
     });
     rows.append("td").html(function (d) {
       return d.chain;
-    });
-    rows.append("td").html(function (d) {
-      return d.species;
     });
     rows.append("td").html(function (d) {
       return d.method;
@@ -123,8 +120,6 @@ function createTable(structureJson, containerSelector) {
       }
     });
     rows.append("td").html(function (d) {
-      console.log(d.pdbid);
-      console.log(d.ligands);
       return ligandHtml(d.ligands);
     });
 //        rows.append("td").html(function(d){ return preferred_chain; });
@@ -192,8 +187,6 @@ function showLigandTooltip(ligandName){
     img = "<img width='200px' src='https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + ligandName + "/PNG?" +
       "record_type=2d&image_size=300x300'>";
   }
-  console.log('showLigandTooltip');
-  console.log(img);
   d3.select("body")
     .append("div")
     .attr("id", "tooltip")
