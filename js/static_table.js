@@ -109,7 +109,7 @@ function createTable(structureJson, containerSelector) {
       const text = d.date;
 
       if (d.doi) {
-        return text + " <a href='http://dx.doi.org/" + d.doi + "' target='_new'>" +
+        return text + " <a href='https://doi.org/" + d.doi + "' target='_new'>" +
           "<i class=\"fas fa-external-link-alt\"></i>" +
           "</a>";
       } else {
