@@ -2,6 +2,7 @@
 import requests
 import json
 import sys
+import re
 
 with open(sys.argv[1]) as f:
     db = json.load(f)
@@ -37,7 +38,7 @@ def reformat(gpcrdb_entry):
 
     doi = gpcrdb_entry['publication']
     if doi:
-        doi = doi.replace('http://dx.doi.org/', '')
+        doi = re.sub(r"^https?://(dx\.)?doi.org/", "", doi)
     else:
         doi = ''
 
