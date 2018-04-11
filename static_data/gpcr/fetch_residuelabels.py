@@ -5,6 +5,7 @@ from ftplib import FTP
 import gzip
 from lxml import etree
 import os.path
+import re
 
 
 with open(sys.argv[1]) as f:
@@ -72,16 +73,48 @@ for prot in annotations:
                     pdb_chain = db.get('dbChainId')
                     pdb_resn = db.get('dbResName')
             if res_of_interest and pdb_resi != "null" and uniprot_resi != "null":
-                gene_to_pdb_res[int(uniprot_resi)] = {"resi": pdb_resi, "chain": pdb_chain, "resn": pdb_resn}
-
+                gene_to_pdb_res[int(uniprot_resi)] = ":".join([pdb_resi, pdb_chain, pdb_resn])
+        except StopIteration:
+            pass
+     
     resi_mapping = []
     for resi in residue_data:
         if not resi['display_generic_number']:
             continue
         seq_number = resi['sequence_number']
         gpcrdb_id = resi['display_generic_number']
+        if seq_number not in gene_to_pdb_res:
+            continue
+        gpcrdb_tokens = re.split(r'[.x]', gpcrdb_id)
+        gpcrdb_id = 'h' + gpcrdb_tokens[0] + '.' + gpcrdb_tokens[0] + 'x' + gpcrdb_tokens[2]
+
+        if gpcrdb_tokens[0] == '1':
+            color = "#78C5D5"
+        elif gpcrdb_tokens[0] == '2':
+            color = "#459BA8"
+        elif gpcrdb_tokens[0] == '3':
+            color = "#79C268"
+        elif gpcrdb_tokens[0] == '4':
+            color = "#C5D846"
+        elif gpcrdb_tokens[0] == '5':
+            color = "#F5D63D"
+        elif gpcrdb_tokens[0] == '6':
+            color = "#F18B32"
+        elif gpcrdb_tokens[0] == '7':
+            color = "#E868A1"
+        elif gpcrdb_tokens[0] == '8':
+            color = "#C063A6"
+        else:
+            color = "white"
+
         pdb_res = gene_to_pdb_res[seq_number]
-        pdb_res_str = pdb_res['chain'] + pdb_res['resn'] + pdb_res['resi']
-        resi_mapping.append([gene_to_pdb_resi[seq_number], gpcrdb_id])
+                
+        resi_mapping.append(pdb_res + "\t" + gpcrdb_id + "\t" + color + "\n")
+
+    chain = prot['chain'].upper()
+    label_file = 'residuelabels/'+pdbid.upper()+'_'+chain+'.tsv'
+    print('Writing label file '+label_file+' .. ')
+    with open(label_file, 'w') as f:
+        f.writelines(resi_mapping)
 
 
