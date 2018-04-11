@@ -7,8 +7,10 @@ from lxml import etree
 import os.path
 import re
 
+annotation_file = sys.argv[1]
+output_dir = sys.argv[2]
 
-with open(sys.argv[1]) as f:
+with open(annotation_file) as f:
     annotations = json.loads(f.read())
 
 ftp = FTP('ftp.ebi.ac.uk')
@@ -112,7 +114,7 @@ for prot in annotations:
         resi_mapping.append(pdb_res + "\t" + gpcrdb_id + "\t" + color + "\n")
 
     chain = prot['chain'].upper()
-    label_file = 'residuelabels/'+pdbid.upper()+'_'+chain+'.tsv'
+    label_file = output_dir+'/'+pdbid.upper()+'_'+chain+'.tsv'
     print('Writing label file '+label_file+' .. ')
     with open(label_file, 'w') as f:
         f.writelines(resi_mapping)
