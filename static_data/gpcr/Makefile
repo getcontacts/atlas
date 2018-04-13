@@ -1,5 +1,5 @@
 
-all: annotations.json structures/dummy residuelabels/dummy
+all: annotations.json structures/dummy residuelabels/dummy contacts/dummy
 
 gpcrdb_dump.json:
 	curl -X GET --header 'Accept: application/json' 'http://gpcrdb.org/services/structure/' > $@
@@ -15,11 +15,11 @@ structures/dummy: pdbids.txt
 
 structures_protonated/dummy: structures/dummy
 	mkdir -p $(dir $@)
-	for f in $(dir $<)/*.pdb; do \
+	for f in $(dir $<)*.pdb; do \
 	  out_file=$(dir $@)$$(basename -- $$f); \
 	  if [ ! -e $$out_file ]; then \
-	    echo "reduce $$f"; \
-	    reduce $$f > $$out_file 2> /dev/null; \
+	    echo "h_add $$f"; \
+	    pymol -c $$f -d "h_add; save $$out_file; quit" > /dev/null; \
 	  fi \
 	done
 	touch $@
@@ -30,11 +30,14 @@ residuelabels/dummy: annotations.json
 	python fetch_residuelabels.py $< residuelabels
 	touch $@
 
-contacts/dummy: structures/dummy
+contacts/dummy: structures_protonated/dummy
 	mkdir -p $(dir $@)
-	for f in $(dir $<)/*.pdb; do \
-	  out_file=$(dir $@)/$$(basename -- $$f); \
+	for f in $(dir $<)*.pdb; do \
+	  out_file=$$(basename -- $$f); \
+	  out_file=$${out_file%%.*}; \
+	  out_file=$(dir $@)$$out_file.tsv; \
 	  if [ ! -e $$out_file ]; then \
+	    echo get_static_contacts.py --topology $$f --itype all --output $$out_file; \
 	    get_static_contacts.py --topology $$f --itype all --output $$out_file; \
 	  fi \
 	done
