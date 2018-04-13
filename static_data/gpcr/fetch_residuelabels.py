@@ -20,25 +20,26 @@ generic_numbers = {}
 for prot in annotations:
     protid = prot['protid']
 
-    # Fill in generic_numbers if it isn't already
-    if protid not in generic_numbers:
-        json_file = "gpcrdb_generic_numbers/"+protid+".json"
-        if not os.path.isfile(json_file):
-            print("Fetching " + protid + " generic residue numbers from GPCRdb ..")
-            url = 'http://gpcrdb.org/services/residues/extended/'+protid+'/'
-            response = requests.get(url)
-            residue_data = response.json() 
-            with open(json_file, "w") as f:
-                f.write(json.dumps(residue_data, indent=2))
-        else:
-            with open(json_file) as f:
-                residue_data = json.load(f)
+    json_file = "gpcrdb_generic_numbers/"+protid+".json"
+    if not os.path.isfile(json_file):
+        print("Fetching " + protid + " generic residue numbers from GPCRdb ..")
+        url = 'http://gpcrdb.org/services/residues/extended/'+protid+'/'
+        response = requests.get(url)
+        residue_data = response.json() 
+        with open(json_file, "w") as f:
+            f.write(json.dumps(residue_data, indent=2))
+    else:
+        with open(json_file) as f:
+            residue_data = json.load(f)
 
-        generic_numbers[protid] = {}
-        for residue in residue_data:
-            gen_number = residue['display_generic_number']
-            if gen_number:
-                generic_numbers[protid][residue['sequence_number']] = gen_number
+    ## Fill in generic_numbers if it isn't already
+    #if protid not in generic_numbers:
+    #    generic_numbers[protid] = {}
+    #    for residue in residue_data:
+    #        gen_number = residue['display_generic_number']
+    #        if gen_number:
+    #            generic_numbers[protid][residue['sequence_number']] = gen_number
+
 
     pdbid = prot['pdbid'].lower()
     xml_file = 'sifts_mapping/'+pdbid+'.xml.gz'
@@ -118,5 +119,10 @@ for prot in annotations:
     print('Writing label file '+label_file+' .. ')
     with open(label_file, 'w') as f:
         f.writelines(resi_mapping)
+
+    if pdbid.upper() == "5DF1":
+        print(gene_to_pdb_res)
+        print(resi_mapping)
+        sys.exit(-1)
 
 
