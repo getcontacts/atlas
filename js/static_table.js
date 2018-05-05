@@ -157,7 +157,9 @@ const excludeLigands = new Set([
   "PCA", "ARC", "MC3", "LMT", "STE", "SO4", "12P", "ACM", "BU1", "N9S", "DMS", "PO4", "CCS", "DGN",
   "NH2", "FLC", "TAR", "CIT", "SXN", "UNL", "LME", "TWT", "MSE", "LPP", "MAL", "HEX", "CPS", "BXC",
   "2DP", "DPG", "EDT", "BGC", "P5E", "AZI", "NLE", "PE5", "MG", "MN", "CAC", "CA", "MLY", "DAO",
-  "CS", "SO3", "CO", "CSS"
+  "CS", "SO3", "CO", "CSS", "EDO", "MOH", "NI", "PTL", "BU3", "MG8", "PGO", "TPO", "SEP", "CME",
+  "PTR", "KCX", "MRD", "CSD", "CSO", "TAM", "OCY", "TFA", "UNX", "SR", "CSO", "PG4", "null", "UNK",
+    "IPA", "IMD", 
 ]);
 
 function ligandHtml(ligands){
@@ -176,7 +178,7 @@ function ligandHtml(ligands){
 
 function showLigandTooltip(ligandName){
   let img = "";
-  if(ligandName.length == 3) {
+  if(ligandName.length <= 3) {
     const firstLetter = ligandName[0];
     img = "<img width='200px' src='https://cdn.rcsb.org/etl/ligand/img/" +
       firstLetter + "/" + ligandName + "/" + ligandName + "-large.png'>";
