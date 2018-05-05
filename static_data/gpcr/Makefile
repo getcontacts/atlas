@@ -7,6 +7,8 @@ gpcrdb_dump.json:
 pdbids.txt: gpcrdb_dump.json
 	python pdbids_from_gpcrdbdump.py > $@
 
+annotations.json: gpcrdb_dump.json
+	python reformat_gpcrdbdump.py $< > $@
 
 structures/dummy: pdbids.txt
 	mkdir -p $(dir $@)
@@ -43,5 +45,3 @@ contacts/dummy: structures_protonated/dummy
 	done
 	touch $@
 
-annotations.json: gpcrdb_dump.json
-	python reformat_gpcrdbdump.py $< > $@
