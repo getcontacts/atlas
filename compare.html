@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <script src="vendor/d3v5.2/d3.js"></script>
+  <script src="vendor/d3_5.2.0/d3.js"></script>
   <script>
     var flareplot = undefined;
   </script>
@@ -12,34 +12,12 @@
 
 <div id="flareplotcontainer"></div>
 <script type="module">
-  import * as fp from './js/flareplot/flareplot.js';
+  import {update} from './js/compare.js';
 
-  // d3.json('static_data/')
-
-  function buildGraph(contacts){
-
-  }
-
-  function update(contactFiles, itypes) {
-
-    const contactFilePromises = contactFiles.map(function (cf) {
-      return new Promise((res, rej) => {
-        d3.text(cf, function (err, data){
-          err ? rej(err) : res(data);
-        });
-      });
-    });
-
-    Promise.all(contactFilePromises)
-      .then(function (contactsData) {
-
-
-      });
-
-    d3.select("#flareplotcontainer").text("");
-
-    flareplot = new fp.Flareplot(graph, 300, "#flareplotcontainer");
-  }
+  update(
+    ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
+    ['hbbb', 'hbss', 'hbsb']
+  );
 
 </script>
 </body>
