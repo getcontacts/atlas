@@ -2,9 +2,34 @@ import * as fp from './flareplot/flareplot.js';
 
 function buildMultiFlareGraph(contacts, labels){
 
+  console.log('buildMultiFlareGraph');
+  console.log(contacts)
+  console.log(labels)
+
   const ret = {
     edges : [],
-  }
+    trees: []
+  };
+
+  const tree = {
+    treeLabel: "default",
+    treeProperties: []
+  };
+  ret.trees.push(tree);
+
+  // Build tree
+  const paths = new Set();
+  labels.forEach(function(labelList){
+    labelList.forEach(function(label){
+      if (!paths.has(label[1])){
+        paths.add(label[1]);
+        tree.treeProperties.push({path: label[1]})
+      }
+    })
+  });
+
+
+  return ret;
 }
 
 
@@ -17,7 +42,6 @@ export function update(contactFiles, labelFiles, itypes) {
     .then(function (data) {
       let contactsData = data.slice(0, contactFiles.length);
 
-      console.log(contactFiles);
       // Split data into lines, lines into fields, and filter on interaction types
       contactsData = contactsData.map(function(cd){
         // return cd.split("\n");
@@ -25,12 +49,15 @@ export function update(contactFiles, labelFiles, itypes) {
           .map((line) => line.split("\t"))
           .filter((row)=>itypes.includes(row[1]));
       });
-      console.log(contactsData);
 
       let labelsData = data.slice(contactFiles.length);
-      labelsData =
+      labelsData = labelsData.map(function(ld){
+        return ld.split("\n")
+          .map((line) => line.split("\t"))
+          .filter((row) => row.length >= 2);
+      });
 
-      const graph = buildMultiFlareGraph(contactsData);
+      const graph = buildMultiFlareGraph(contactsData, labelsData);
       console.log(graph);
 
     });
