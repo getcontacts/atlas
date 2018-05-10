@@ -19,6 +19,7 @@ generic_numbers = {}
 
 for prot in annotations:
     protid = prot['protid']
+    chain = prot['chain'].upper()
 
     json_file = "gpcrdb_generic_numbers/"+protid+".json"
     if not os.path.isfile(json_file):
@@ -67,16 +68,18 @@ for prot in annotations:
     for resi_element in sifts_xml.iter('{*}residue'):
         try:
             res_of_interest = False
+            chain_of_interest = False
             for db in resi_element.iter('{*}crossRefDb'):
                 if db.get('dbSource') == 'UniProt' and db.get('dbAccessionId') == accession:
                     res_of_interest = True
                     uniprot_resi = db.get('dbResNum')
-                elif db.get('dbSource') == 'PDB':
+                elif db.get('dbSource') == 'PDB' and db.get('dbChainId') == chain:
                     pdb_resi = db.get('dbResNum')
                     pdb_chain = db.get('dbChainId')
                     pdb_resn = db.get('dbResName')
-            if res_of_interest and pdb_resi != "null" and uniprot_resi != "null":
-                gene_to_pdb_res[int(uniprot_resi)] = ":".join([pdb_resi, pdb_chain, pdb_resn])
+                    chain_of_interest = True
+            if res_of_interest and chain_of_interest and pdb_resi != "null" and uniprot_resi != "null":
+                gene_to_pdb_res[int(uniprot_resi)] = ":".join([pdb_chain, pdb_resn, pdb_resi])
         except StopIteration:
             pass
      
@@ -114,15 +117,14 @@ for prot in annotations:
                 
         resi_mapping.append(pdb_res + "\t" + gpcrdb_id + "\t" + color + "\n")
 
-    chain = prot['chain'].upper()
     label_file = output_dir+'/'+pdbid.upper()+'_'+chain+'.tsv'
     print('Writing label file '+label_file+' .. ')
     with open(label_file, 'w') as f:
         f.writelines(resi_mapping)
 
-    if pdbid.upper() == "5DF1":
-        print(gene_to_pdb_res)
-        print(resi_mapping)
-        sys.exit(-1)
+    #if pdbid.upper() == "1F88":
+    #    print(gene_to_pdb_res)
+    #    print(resi_mapping)
+    #    sys.exit(-1)
 
 
