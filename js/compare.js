@@ -5,21 +5,16 @@ function buildMultiFlareGraph(contacts, labels){
   console.log('buildMultiFlareGraph');
   console.log(contacts)
   console.log(labels)
+  const n = contacts.length;
 
   const ret = {
     edges : [],
-    trees: []
+    trees: [{treeLabel: "default", treeProperties: []}],
+    tracks: [{trackLabel: "default", trackProperties: []}]
   };
-
-  const tree = {
-    treeLabel: "default",
-    treeProperties: []
-  };
-  ret.trees.push(tree);
-
-  const n = contacts.length;
 
   // Build tree
+  const tree = ret.trees[0];
   const paths = new Set();
   labels.forEach(function(labelDict){
     for (const labelKey in labelDict){
@@ -28,6 +23,14 @@ function buildMultiFlareGraph(contacts, labels){
         paths.add(labelVal);
         tree.treeProperties.push({path: labelVal})
       }
+    }
+  });
+
+  // Build track
+  const track = ret.tracks[0];
+  labels.forEach(function(labelDict){
+    for (const labelKey in labelDict){
+
     }
   });
 
@@ -54,13 +57,16 @@ function buildMultiFlareGraph(contacts, labels){
     contacts[i].forEach(function(contact){
       const resi1 = contact[2].substr(0,contact[2].lastIndexOf(":"));
       const resi2 = contact[3].substr(0,contact[3].lastIndexOf(":"));
-      const n1 = labels[i][resi1];
-      const n2 = labels[i][resi2];
-      const edge = findEdge(n1, n2);
-      edge.frames.push(i);
+      let n1 = labels[i][resi1];
+      let n2 = labels[i][resi2];
+      if (n1 !== undefined && n2 !== undefined) {
+        n1 = n1[0].substring(n1[0].lastIndexOf(".")+1);
+        n2 = n2[0].substring(n2[0].lastIndexOf(".")+1);
+        const edge = findEdge(n1, n2);
+        edge.frames.push(i);
+      }
     });
   }
-
 
   return ret;
 }
@@ -94,7 +100,8 @@ export function update(contactFiles, labelFiles, itypes) {
       const graph = buildMultiFlareGraph(contactsData, labelsData);
       console.log(graph);
 
+      d3.select("#flareplotcontainer").text("");
+      new fp.Flareplot(graph, 600, "#flareplotcontainer");
     });
 
-  // flareplot = new fp.Flareplot(graph, 300, "#flareplotcontainer");
 }
