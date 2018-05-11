@@ -66,7 +66,8 @@ export class Flareplot {
       .attr('d', arc);
 
     // Create hierarchy based on the flareModel (innerRadius must be set)
-    this.hierarchy = this._createHierarchy();
+    // this.hierarchy = this._createHierarchy();
+    // .. moved to _updateVertices
 
     this.flareModel.addVertexChangeListener(this);
     this.flareModel.addFrameListener(this);
@@ -112,6 +113,8 @@ export class Flareplot {
   }
 
   _updateVertices() {
+    // Create hierarchy based on the flareModel (innerRadius must be set)
+    this.hierarchy = this._createHierarchy();
     const leaves = this.hierarchy.leaves();
     const textHeight = this._computeVertexTextHeight();
 

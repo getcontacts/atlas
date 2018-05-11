@@ -76,7 +76,12 @@ function buildMultiFlareGraph(contacts, labels){
 
 
 
-export function update(contactFiles, labelFiles, itypes) {
+export function update(pdbIds, itypes) {
+  // console.log('update')
+  // console.log(pdbIds);
+  // console.log(itypes);
+  const contactFiles = pdbIds.map((pdb) => "static_data/gpcr/contacts/"+pdb+".tsv");
+  const labelFiles = pdbIds.map((pdb) => "static_data/gpcr/residuelabels/"+pdb+".tsv");
   const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
   const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
 
@@ -101,10 +106,12 @@ export function update(contactFiles, labelFiles, itypes) {
       });
 
       const graph = buildMultiFlareGraph(contactsData, labelsData);
-      console.log(graph);
 
-      d3.select("#flareDiv").text("");
-      window.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
+      if (window.flareplot) {
+        window.flareplot.getModel().setGraph(graph);
+      } else {
+        window.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
+      }
     });
 
 }

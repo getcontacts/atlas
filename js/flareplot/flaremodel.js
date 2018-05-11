@@ -11,18 +11,6 @@ export class Flaremodel {
    * in any way. It must follow the format specified at https://github.com/getcontacts/flareplot/tree/master/input
    */
   constructor(inputGraph) {
-    this.setGraph(inputGraph);
-  }
-
-  setGraph(inputGraph) {
-    // Immutable set of flare properties that wont change after initialization
-    this.allVertices = new Map(); // vertex-name (string) to Vertex
-    this.allEdges = []; // list of Edge
-    this.allTrees = []; // list of {treeLabel: string, root: TreeNode}
-    this.allTracks = []; // list of {trackLabel: string, trackProps}
-    this.frameInfo = undefined;
-    this.lastFrame = 0;
-
     // Modifiable set of flare properties that can be modified through setters
     this.curTree = 0;
     this.curTrack = 0;
@@ -38,6 +26,18 @@ export class Flaremodel {
       ['vertexToggle', []],
       ['framesChange', []]
     ]);
+
+    this.setGraph(inputGraph);
+  }
+
+  setGraph(inputGraph) {
+    // Immutable set of flare properties that wont change after initialization
+    this.allVertices = new Map(); // vertex-name (string) to Vertex
+    this.allEdges = []; // list of Edge
+    this.allTrees = []; // list of {treeLabel: string, root: TreeNode}
+    this.allTracks = []; // list of {trackLabel: string, trackProps}
+    this.frameInfo = undefined;
+    this.lastFrame = 0;
 
     // Preprocess the inputGraph and populate the static properties
     if (typeof inputGraph === 'string') {
@@ -218,6 +218,8 @@ export class Flaremodel {
         });
       });
     }
+
+    this._fireListeners('vertexChange', this.getVertices());
   }
 
   // ==================== getters ==================== \\

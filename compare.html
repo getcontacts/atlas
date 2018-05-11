@@ -111,11 +111,7 @@
 <script type="module">
   import {update} from './js/compare.js';
 
-  update(
-    ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
-    ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
-    ['hbss']
-  );
+  update(['1F88_A', '1GZM_A'], ['hbss']);
 
   // ---------------------------------------
   // Set up interaction selector
@@ -124,12 +120,12 @@
     ["H-bond: sidechain - sidechain", "hbss", true],
     ["H-bond: sidechain - backbone", "hbsb", false],
     ["H-bond: backbone - backbone", "hbbb", false],
-    ["H-bond: ligand - sidechain", "hbls", false],
-    ["H-bond: ligand - backbone", "hblb", false],
-    ["H-bond: water mediated", "hbw", false],
-    ["H-bond: extended water mediated", "hbww", false],
-    ["H-bond: water mediated - ligand", "hbwl", false],
-    ["H-bond: extended water mediated - ligand", "hbwwl", false],
+    ["H-bond: ligand - sidechain", "hls", false],
+    ["H-bond: ligand - backbone", "hlb", false],
+    ["H-bond: water mediated", "wb", false],
+    ["H-bond: extended water mediated", "wb2", false],
+    ["H-bond: water mediated - ligand", "lwb", false],
+    ["H-bond: extended water mediated - ligand", "lwb2", false],
     ["Salt bridges", "sb", false],
     ["Pi-cation", "pc", false],
     ["Pi-stacking", "ps", false],
@@ -141,7 +137,7 @@
     const label = form.append("div")
       .attr("class", "checkbox");
 
-    const checkbox = label.append("input")
+    label.append("input")
       .attr("type", "checkbox")
       .attr("id", "itypecheckbox_" + i)
       .attr("checked", itype[2]?true:null)
@@ -150,11 +146,7 @@
         itype[2] = !itype[2];
         const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
         console.log(activeItypes);
-        update(
-          ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
-          ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
-          activeItypes
-        );
+        update(['1F88_A', '1GZM_A'], activeItypes);
       });
 
     label.append("label")
@@ -162,11 +154,11 @@
       .text(itype[0]);
   });
   window.updateInteractions = function(itypes){
-    update(
-      ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
-      ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
-      itypes
-    );
+    update(['1F88_A', '1GZM_A'], itypes);
+  }
+  window.updateStructures = function(pdbids){
+    const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
+    update(pdbids, activeItypes);
   }
 </script>
 </body>
