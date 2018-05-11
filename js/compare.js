@@ -30,7 +30,10 @@ function buildMultiFlareGraph(contacts, labels){
   const track = ret.tracks[0];
   labels.forEach(function(labelDict){
     for (const labelKey in labelDict){
-
+      let labelVal = labelDict[labelKey][0];
+      labelVal = labelVal.substr(labelVal.lastIndexOf(".")+1);
+      const labelCol = labelDict[labelKey][1];
+      track.trackProperties.push({nodeName: labelVal, color: labelCol, size: 1.0});
     }
   });
 
@@ -100,8 +103,8 @@ export function update(contactFiles, labelFiles, itypes) {
       const graph = buildMultiFlareGraph(contactsData, labelsData);
       console.log(graph);
 
-      d3.select("#flareplotcontainer").text("");
-      new fp.Flareplot(graph, 600, "#flareplotcontainer");
+      d3.select("#flareDiv").text("");
+      window.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
     });
 
 }

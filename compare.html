@@ -1,25 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact comparison atlas</title>
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
   <script src="vendor/d3_5.2.0/d3.js"></script>
   <script>
     var flareplot = undefined;
   </script>
+  <style>
+    h1{
+      text-align: center;
+    }
+
+    /*From https://css-tricks.com/examples/hrs/*/
+    hr.style-two {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+
+    #pvDiv{
+      overflow: visible;
+    }
+
+    /*.structure-dropdown{*/
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*top: 90px;*/
+    /*}*/
+
+    #picked-atom-name {
+      text-align:center;
+    }
+
+    #num-interactions {
+      text-align:center;
+    }
+
+    .row {
+      display: table;
+    }
+
+    /*[class*="col-"] {*/
+    /*float: none;*/
+    /*display: table-cell;*/
+    /*vertical-align: top;*/
+    /*}*/
+    .checkbox{
+      margin-bottom: 3px;
+      border-bottom: 1px solid #E8E8E8;
+    }
+    .checkbox label{
+      padding-left: 0px;
+      font-weight: 200;
+      font-size: 12px;
+    }
+
+    #flareDiv svg{
+      /*position:absolute;*/
+      /*top: 50%;*/
+      /*transform: translateY(-50%);*/
+      font-family: Verdana;
+
+    }
+
+  </style>
 </head>
 <body>
 
-<div id="flareplotcontainer"></div>
+
+<div class="container-fluid">
+  <!--<h1 style="text-align:center">Comparison of non-covalent contacts</h1>-->
+  <h1>GPCR Contact Atlas <small>Contacts in Structures</small></h1>
+  <div class="row-fluid">
+    <div class="col-sm-2" id="panelDiv">
+      <p>Select interaction type:</p>
+
+      <form id="itypeform" action="#"></form>
+      <script>
+      </script>
+
+      <hr class="style-two">
+
+      <div id="fingerprintDiv">
+        <p>Contact fingerprints:</p>
+      </div>
+
+    </div>
+
+    <div class="col-sm-5" id="flareDiv">
+    </div>
+
+    <div class="col-sm-5" id="nglDiv">
+    </div>
+  </div>
+</div>
+
+<div id="num-interactions" style="position: absolute; bottom: 20px;left:17%;width:42%">&nbsp;</div>
+<div id="picked-atom-name" style="position: absolute; bottom: 20px;left:58%;width:42%">&nbsp;</div>
+
+
 <script type="module">
   import {update} from './js/compare.js';
 
   update(
     ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
     ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
-    ['hbbb', 'hbss', 'hbsb']
+    ['hbss']
   );
 
+  // ---------------------------------------
+  // Set up interaction selector
+  // ---------------------------------------
+  const interactions = [
+    ["H-bond: sidechain - sidechain", "hbss", true],
+    ["H-bond: sidechain - backbone", "hbsb", false],
+    ["H-bond: backbone - backbone", "hbbb", false],
+    ["H-bond: ligand - sidechain", "hbls", false],
+    ["H-bond: ligand - backbone", "hblb", false],
+    ["H-bond: water mediated", "hbw", false],
+    ["H-bond: extended water mediated", "hbww", false],
+    ["H-bond: water mediated - ligand", "hbwl", false],
+    ["H-bond: extended water mediated - ligand", "hbwwl", false],
+    ["Salt bridges", "sb", false],
+    ["Pi-cation", "pc", false],
+    ["Pi-stacking", "ps", false],
+    ["T-stacking", "ts", false],
+    ["van der Waals", "vdw", false]
+  ];
+  const form = d3.select("#itypeform");
+  interactions.forEach(function(itype, i){
+    const label = form.append("div")
+      .attr("class", "checkbox");
+
+    const checkbox = label.append("input")
+      .attr("type", "checkbox")
+      .attr("id", "itypecheckbox_" + i)
+      .attr("checked", itype[2]?true:null)
+      .on("change", function(){
+        console.log(itype);
+        itype[2] = !itype[2];
+        const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
+        console.log(activeItypes);
+        update(
+          ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
+          ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
+          activeItypes
+        );
+      });
+
+    label.append("label")
+      .attr("for", "itypecheckbox_" + i)
+      .text(itype[0]);
+  });
+  window.updateInteractions = function(itypes){
+    update(
+      ['static_data/gpcr/contacts/1F88_A.tsv', 'static_data/gpcr/contacts/1GZM_A.tsv'],
+      ['static_data/gpcr/residuelabels/1F88_A.tsv', 'static_data/gpcr/residuelabels/1GZM_A.tsv'],
+      itypes
+    );
+  }
 </script>
 </body>
 </html>
