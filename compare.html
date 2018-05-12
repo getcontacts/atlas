@@ -133,7 +133,9 @@
   if (pdbids.length === 0){
     pdbids.push("3SN6_R");
   }
-  const manager = new CompareManager(pdbids);
+  const family = parseArgFromURL("family");
+  console.log(family);
+  const manager = new CompareManager(family, pdbids);
 
 
   // ---------------------------------------

@@ -6,14 +6,15 @@ import { buildMultiFlare } from "./contact_to_flare.js";
 
 
 export class CompareManager {
-  constructor(pdbIds){
+  constructor(family, pdbIds){
+    this.family = family;
     this.pdbIds = pdbIds;
   }
 
   update(itypes) {
-    const contactFiles = this.pdbIds.map((pdb) => "static_data/gpcr/contacts/" + pdb + ".tsv");
-    const labelFiles = this.pdbIds.map((pdb) => "static_data/gpcr/residuelabels/" + pdb + ".tsv");
-    const structureFiles = this.pdbIds.map((pdb) => "static_data/gpcr/structures/" + pdb + ".pdb");
+    const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
+    const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
+    const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures/" + pdb + ".pdb");
     const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
     const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
     const that = this;

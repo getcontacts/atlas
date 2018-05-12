@@ -1,5 +1,6 @@
 
-function createTable(structureJson, containerSelector) {
+function createTable(family, containerSelector) {
+  const structureJson = "static_data/"+family+"/annotations.json";
 
   d3.json(structureJson).then(function (structures) {
     const table = d3.select(containerSelector)
@@ -129,7 +130,7 @@ function createTable(structureJson, containerSelector) {
           s.selected = false;
         });
         d.selected = true;
-        navigateToComparison(structures);
+        navigateToComparison(family, structures);
       });
 
 
@@ -141,7 +142,7 @@ function createTable(structureJson, containerSelector) {
       .classed("btn-inactive", true)
       .text("Compare selected structures")
       .on("click", function () {
-        navigateToComparison(structures);
+        navigateToComparison(family, structures);
       });
   });
 }
@@ -201,11 +202,14 @@ function hideLigandTooltip(){
 }
 
 /** Extract selected structures and go to comparison page */
-function navigateToComparison(structures){
+function navigateToComparison(family, structures){
+  console.log("navigatetocomparison")
+  console.log(family)
+  console.log(structures)
   var sel_pdbs = structures.filter((s) => s.selected)
     .map((s) => (s.pdbid + "_" + s.chain).toUpperCase())
     .join(",");
-  window.location.href="static_compare.html?structure_ids="+sel_pdbs;
+  window.location.href="compare.html?family="+family+"&pdbids="+sel_pdbs;
 }
 
 
