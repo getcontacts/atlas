@@ -220,6 +220,7 @@ export class Flaremodel {
     }
 
     this._fireListeners('vertexChange', this.getVertices());
+    this._fireListeners('framesChange', undefined);
   }
 
   // ==================== getters ==================== \\

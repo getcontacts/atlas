@@ -12,9 +12,7 @@
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
   <script src="vendor/d3_5.2.0/d3.js"></script>
-  <script>
-    var flareplot = undefined;
-  </script>
+  <script src="vendor/ngl_2.0.0/ngl.js"></script>
   <style>
     h1{
       text-align: center;
@@ -109,9 +107,34 @@
 
 
 <script type="module">
-  import {update} from './js/compare.js';
 
-  update(['1F88_A', '1GZM_A'], ['hbss']);
+  import { CompareManager } from './js/compare.js';
+
+  // update(['1F88_A', '1GZM_A'], ['hbss']);
+
+  /**
+   * Parse a url and extract a variable declared using either "?<varname>=..." or "&<varname>=" or undefined if the
+   * variable couldn't be found. For example, `parse_URL_arg("b","http://hmm.com?a=1&b=2")` will return "2".
+   * @param s variable name
+   * @returns {string|undefined}
+   */
+  function parseArgFromURL(argName) {
+    "use strict";
+    const url = window.location.href;
+    const match = url.match("[\?&]" + argName + "=([^&]*)");
+    if (match) {
+      return match[1];
+    } else {
+      return "";
+    }
+  }
+
+  const pdbids = parseArgFromURL("pdbids").split(",").filter((pdb) => pdb.length === 6);
+  if (pdbids.length === 0){
+    pdbids.push("3SN6_R");
+  }
+  const manager = new CompareManager(pdbids);
+
 
   // ---------------------------------------
   // Set up interaction selector
@@ -142,11 +165,9 @@
       .attr("id", "itypecheckbox_" + i)
       .attr("checked", itype[2]?true:null)
       .on("change", function(){
-        console.log(itype);
         itype[2] = !itype[2];
         const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
-        console.log(activeItypes);
-        update(['1F88_A', '1GZM_A'], activeItypes);
+        manager.update(activeItypes);
       });
 
     label.append("label")
@@ -154,12 +175,18 @@
       .text(itype[0]);
   });
   window.updateInteractions = function(itypes){
-    update(['1F88_A', '1GZM_A'], itypes);
-  }
-  window.updateStructures = function(pdbids){
+    manager.update(itypes);
+  };
+
+  // ---------------------------------------
+  // Set up structure selector
+  // ---------------------------------------
+  window.updateStructure = function(){
     const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
-    update(pdbids, activeItypes);
-  }
+    manager.update(activeItypes);
+  };
+
+  manager.update(['hbss']);
 </script>
 </body>
 </html>

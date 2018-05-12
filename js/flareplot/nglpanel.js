@@ -1,6 +1,7 @@
 
 // import * as d3 from '../../vendor/d3v5.2/d3.js';
-import * as NGL from '../../vendor/ngl2.0.0/ngl.js';
+// import * as NGL from '../../vendor/ngl_2.0.0/ngl.js';
+// import * as NGL from 'https://unpkg.com/ngl@0.10.4/dist/ngl.js';
 
 export class NGLPanel {
   /**
@@ -14,6 +15,7 @@ export class NGLPanel {
    *   - {string} resiLabelFile - File name of a residue label file that associates residue identifiers with labels
    */
   constructor(fname, flareModel, width, height, containerSelector, layoutOptions) {
+    console.log("NGLPanel()");
     const containerID = 'NGLviewport' + (Math.floor(Math.random() * 1e7));
     const that = this;
 
@@ -24,6 +26,7 @@ export class NGLPanel {
       .attr('id', containerID);
 
     this.flareModel = flareModel;
+
     this.stage = new NGL.Stage(containerID, { backgroundColor: 'white'});
     window.addEventListener('resize', function () { that.stage.handleResize(); }, false);
 
@@ -56,11 +59,7 @@ export class NGLPanel {
     let resiLabelPromise = Promise.resolve(undefined);
 
     if (labelFile !== undefined) {
-      resiLabelPromise = new Promise((res, rej) => {
-        d3.text(labelFile, function (err, data) {
-          err ? rej(err) : res(data);
-        });
-      });
+      resiLabelPromise = d3.text(labelFile);
     }
 
     // Set up the promise to load pdb-file into stage
@@ -216,9 +215,11 @@ export class NGLPanel {
 
     this.interactionRepresentation = this.component.addRepresentation('distance', {
       atomPair: pairs,
-      color: '#414141',
+      color: 'black',
+      useCylinder: true,
       labelVisible: false
     });
+    // color: '#414141',
   }
 
   _updateColorScheme() {
@@ -278,6 +279,10 @@ export class NGLPanel {
         break;
 
       case 'framesChange':
+        this._updateInteractions();
+        break;
+
+      case 'vertexChange':
         this._updateInteractions();
         break;
     }
