@@ -20,8 +20,8 @@ structures_protonated/dummy: structures/dummy
 	for f in $(dir $<)*.pdb; do \
 	  out_file=$(dir $@)$$(basename -- $$f); \
 	  if [ ! -e $$out_file ]; then \
-	    echo "h_add $$f"; \
-	    pymol -c $$f -d "h_add; save $$out_file; quit" > /dev/null; \
+	    echo pymol -c $$f -d "h_add; load ref.pdb; alignto ref; delete ref; save $$out_file; quit"; \
+	    pymol -c $$f -d "h_add; load ref.pdb; alignto ref; delete ref; save $$out_file; quit" > /dev/null; \
 	  fi \
 	done
 	touch $@
@@ -42,10 +42,11 @@ contacts/dummy: structures_protonated/dummy
 	    ligs=`python ../get_ligands.py $$f`; \
 	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --output $$out_file; \
 	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --output $$out_file; \
-	  fi \
+	  fi; \
 	done
 	touch $@
 
+#
 flares/dummy: contacts/dummy residuelabels/dummy
 	mkdir -p $(dir $@)
 	for f in contacts/*.tsv; do \
