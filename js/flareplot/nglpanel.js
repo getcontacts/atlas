@@ -15,7 +15,6 @@ export class NGLPanel {
    *   - {string} resiLabelFile - File name of a residue label file that associates residue identifiers with labels
    */
   constructor(fname, flareModel, width, height, containerSelector, layoutOptions) {
-    console.log("NGLPanel()");
     const containerID = 'NGLviewport' + (Math.floor(Math.random() * 1e7));
     const that = this;
 
@@ -46,10 +45,6 @@ export class NGLPanel {
    * should be called
    */
   setStructure(pdbFile, labelFile, atomicContacts, firstTime) {
-    console.log('setStructure');
-    console.log(pdbFile);
-    console.log(labelFile);
-    console.log(firstTime);
     this.atomicContacts = atomicContacts;
 
     // Clear stage
@@ -112,8 +107,10 @@ export class NGLPanel {
           quality: 'high'
         });
         if (firstTime) {
-          console.log('first time .. autoview');
-          that.component.autoView();
+          // that.component.autoView();
+          that.stage.viewerControls.center(NGL.Vector3(0,0,0));
+          that.stage.viewerControls.zoom(-0.2);
+          that.stage.mouseControls.remove('clickPick-left', NGL.MouseActions.movePick)
         }
         that._updateColorScheme();
         that._updateInteractions();
@@ -290,8 +287,6 @@ export class NGLPanel {
 
   _updateToggle() {
     const toggledNames = this.flareModel.getToggledVertices();
-    console.log('updateToggle: ');
-    console.log(toggledNames);
 
     if (this.atomicContacts) {
       const that = this;
@@ -308,7 +303,6 @@ export class NGLPanel {
       .filter(n => n !== undefined);
 
     if (this.toggleRepresentation) {
-      console.log('updateToggle removeRepr');
       this.component.removeRepresentation(this.toggleRepresentation);
     }
     if (resis.length > 0) {

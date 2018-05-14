@@ -9,12 +9,27 @@ export class CompareManager {
   constructor(family, pdbIds){
     this.family = family;
     this.pdbIds = pdbIds;
+    this.curStructure = 0;
+    this.curItypes = ['hbss'];
   }
 
-  update(itypes) {
+  updateItypes(itypes) {
+    this.curItypes = itypes;
+    this.update();
+  }
+
+  updateStructure(pdbid) {
+    //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
+    //this.update();
+    const structureFile = "static_data/" + this.family + "/structures_protonated/" + pdbid + ".pdb";
+    const labelFile = "static_data/" + this.family + "/residuelabels/" + pdbid + ".tsv";
+    this.nglpanel.setStructure(structureFile, labelFile);
+  }
+
+  update(){
     const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
     const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
-    const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures/" + pdb + ".pdb");
+    const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures_protonated/" + pdb + ".pdb");
     const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
     const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
     const that = this;
@@ -28,7 +43,7 @@ export class CompareManager {
           // return cd.split("\n");
           return cd.split("\n")
             .map((line) => line.split("\t"))
-            .filter((row) => itypes.includes(row[1]));
+            .filter((row) => that.curItypes.includes(row[1]));
         });
 
         let labelsData = data.slice(contactFiles.length);
@@ -48,12 +63,16 @@ export class CompareManager {
           that.model.setGraph(graph);
         } else {
           that.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
-          console.log(that.flareplot);
           that.model = that.flareplot.getModel();
-          that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
-          that.nglpanel = new NGLPanel(structureFiles[0], that.model, "600px", "600px", "#nglDiv",
+          that.nglpanel = new NGLPanel(structureFiles[that.curStructure], that.model, "600px", "600px", "#nglDiv",
             {resiLabelFile: labelFiles[0]});
+          that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
+          that.fingerprintpanel.addHeaderClickListener(function(pdbId){
+            that.updateStructure(pdbId);
+          })
+
         }
       });
   }
+
 }

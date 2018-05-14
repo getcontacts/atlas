@@ -67,7 +67,10 @@
       /*top: 50%;*/
       /*transform: translateY(-50%);*/
       font-family: Verdana;
-
+    }
+    #nglDiv canvas{
+      border: 1px solid #f3f3f3;
+      border-radius: 50%;
     }
 
   </style>
@@ -110,7 +113,7 @@
 
   import { CompareManager } from './js/compare.js';
 
-  // update(['1F88_A', '1GZM_A'], ['hbss']);
+  // updateItypes(['1F88_A', '1GZM_A'], ['hbss']);
 
   /**
    * Parse a url and extract a variable declared using either "?<varname>=..." or "&<varname>=" or undefined if the
@@ -134,7 +137,6 @@
     pdbids.push("3SN6_R");
   }
   const family = parseArgFromURL("family");
-  console.log(family);
   const manager = new CompareManager(family, pdbids);
 
 
@@ -169,7 +171,7 @@
       .on("change", function(){
         itype[2] = !itype[2];
         const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
-        manager.update(activeItypes);
+        manager.updateItypes(activeItypes);
       });
 
     label.append("label")
@@ -177,7 +179,7 @@
       .text(itype[0]);
   });
   window.updateInteractions = function(itypes){
-    manager.update(itypes);
+    manager.updateItypes(itypes);
   };
 
   // ---------------------------------------
@@ -185,10 +187,10 @@
   // ---------------------------------------
   window.updateStructure = function(){
     const activeItypes = interactions.filter((i) => i[2]).map((i) => i[1]);
-    manager.update(activeItypes);
+    manager.updateItypes(activeItypes);
   };
 
-  manager.update(['hbss']);
+  manager.updateItypes(['hbss']);
 </script>
 </body>
 </html>

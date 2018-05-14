@@ -2,7 +2,6 @@
 // import * as d3 from '../../vendor/d3v5.2/d3.js';
 
 export class FingerprintPanel {
-
   /**
    *
    * @param flareModel
@@ -13,6 +12,7 @@ export class FingerprintPanel {
     this.flareModel = flareModel;
     this.cellWidth = cellWidth;
     // this.clickListeners = [];
+    this.headerClickListeners = [];
     this.div = d3.select(containerSelector).append('div');
 
     this.numCols = flareModel.getNumFrames();
@@ -56,10 +56,14 @@ export class FingerprintPanel {
       })
       .text(function (d) {
         return d;
+      })
+      .on("click", (d) => {
+        this.fireHeaderClickListeners(d);
       });
 
     // Cell width hasn't been set yet, so will represent the width of the text. Compute the max width
-    const maxHeaderCellWidth = d3.max(d3.merge(headerCells), c => c.clientWidth);
+    // const maxHeaderCellWidth = d3.max(d3.merge(headerCells), c => c.clientWidth);  // d3 v3
+    const maxHeaderCellWidth = d3.max(headerCells.nodes(), c => c.clientWidth);  // d3 v4
     headerCells.style('width', cellWidth + 'px');
 
     // Use the max text width and header rotation angle to compute and set the real height of the header
@@ -230,17 +234,17 @@ export class FingerprintPanel {
     return ret;
   }
 
-  // addClickListener(cl) {
-  //   // Check if cl is a function
-  //   if(cl && {}.toString.call(cl) === '[object Function]') {
-  //     clickListeners.push(cl);
-  //   }
-  // }
-  //
-  // fireClickListeners(data) {
-  //   clickListeners.forEach(function (cl) {
-  //     cl(data);
-  //   });
-  // }
+  addHeaderClickListener(cl) {
+    // Check if cl is a function
+    if(cl && {}.toString.call(cl) === '[object Function]') {
+      this.headerClickListeners.push(cl);
+    }
+  }
+
+  fireHeaderClickListeners(data) {
+    this.headerClickListeners.forEach(function (cl) {
+      cl(data);
+    });
+  }
 
 }
