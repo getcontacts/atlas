@@ -21,9 +21,11 @@ export class CompareManager {
   updateStructure(pdbid) {
     //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
     //this.update();
+    const structureIdx = this.pdbIds.indexOf(pdbid);
+    const atomicContacts = this.contactsData[structureIdx];
     const structureFile = "static_data/" + this.family + "/structures_protonated/" + pdbid + ".pdb";
     const labelFile = "static_data/" + this.family + "/residuelabels/" + pdbid + ".tsv";
-    this.nglpanel.setStructure(structureFile, labelFile);
+    this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
   }
 
   update(){
@@ -36,15 +38,14 @@ export class CompareManager {
 
     Promise.all(contactFilePromises.concat(labelFilePromises))
       .then(function (data) {
-        let contactsData = data.slice(0, contactFiles.length);
-
         // Split data into lines, lines into fields, and filter on interaction types
-        contactsData = contactsData.map(function (cd) {
-          // return cd.split("\n");
-          return cd.split("\n")
-            .map((line) => line.split("\t"))
-            .filter((row) => that.curItypes.includes(row[1]));
-        });
+        that.contactsData = data
+          .slice(0, contactFiles.length)
+          .map(function (cd) {
+            return cd.split("\n")
+              .map((line) => line.split("\t"))
+              .filter((row) => that.curItypes.includes(row[1]));
+          });
 
         let labelsData = data.slice(contactFiles.length);
         labelsData = labelsData.map(function (ld) {
@@ -57,7 +58,7 @@ export class CompareManager {
             }, {});
         });
 
-        const graph = buildMultiFlare(contactsData, labelsData, that.pdbIds);
+        const graph = buildMultiFlare(that.contactsData, labelsData, that.pdbIds);
 
         if (that.flareplot) {
           that.model.setGraph(graph);

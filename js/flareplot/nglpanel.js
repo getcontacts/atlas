@@ -200,14 +200,25 @@ export class NGLPanel {
       this.component.removeRepresentation(this.interactionRepresentation);
     }
 
-    const pairs = this.flareModel.getEdges()
+    console.log(this.atomicContacts);
+    const edges = this.flareModel.getEdges()
       .filter(e => this.flareModel.vertexToggled(e.v1.name) || this.flareModel.vertexToggled(e.v2.name))
-      .map(e => {return {edge: e, count: this.flareModel.frameCount(e)};})
-      .filter(d => d.count > 0)
-      .map(d => [
-        this.modelToStrucResiMap.get(d.edge.v1.name) + '.CA',
-        this.modelToStrucResiMap.get(d.edge.v2.name) + '.CA'
-      ]);
+      .map(e => {
+        return {
+          resi1: this.modelToStrucResiMap.get(e.v1.name),
+          resi2: this.modelToStrucResiMap.get(e.v2.name),
+          count: this.flareModel.frameCount(e)
+        };
+      })
+      .filter(d => d.count > 0);
+
+    if(this.atomicContacts){
+      const edgeresipairs = new Set(edges.map(e => Math.min(e.resi1, e.resi2)+"-"+Math.max(e.resi1, e.resi2)));
+      let pairs = [];
+      edges.forEach()
+    } else {
+      let pairs = edges.map(d => [d.resi1 + '.CA', d.resi2 + '.CA']);
+    }
     // .map(d => [NGLPanel._resiFromName(d.edge.v1.name) + '.CA', NGLPanel._resiFromName(d.edge.v2.name) + '.CA']);
 
     this.interactionRepresentation = this.component.addRepresentation('distance', {
