@@ -1,14 +1,20 @@
-
-
+/**
+ *
+ */
 export class HoverInfo {
-  constructor(containerSelector, html, width) {
+  constructor(containerSelector, html, width, symbol) {
     console.log(containerSelector)
-    console.log(d3.select(containerSelector).node())
+    console.log(symbol)
+
+    if(symbol===undefined){
+      symbol = "far fa-lightbulb";
+    }
+
     const that = this;
     d3.select(containerSelector)
       .attr("class", "infobutton")
       .append("div")
-      .html("<i class=\"far fa-lightbulb\"></i>")
+      .html("<i class=\""+symbol+"\"></i>")
       .on("mouseenter", function(){ that.mouseEnter(); })
       .on("mouseleave", function(){ that.mouseLeave(); });
 
@@ -68,3 +74,4 @@ export class HoverInfo {
 
   }
 }
+

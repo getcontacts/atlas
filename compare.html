@@ -76,11 +76,12 @@
     }
 
     .infobutton{
-      color: #8aaee0;
+      color: #a6b8e0;
       position:absolute;
-      right: 0px;
-      top: 0px;
+      left: 30px;
+      top: 10px;
       text-shadow: 1px 1px 4px #DDD;
+      z-index: 1000;
     }
     .infobox{
       border-radius: 4px;
@@ -88,6 +89,10 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
       font-size: 0.9em;
+    }
+    #flareMenu, #nglMenu{
+      left:0px;
+      width: 20px;
     }
 
   </style>
@@ -115,10 +120,12 @@
     </div>
 
     <div class="col-sm-5" id="flareDiv">
+      <div id="flareMenu"></div>
       <div id="flareInfo"></div>
     </div>
 
     <div class="col-sm-5" id="nglDiv">
+      <div id="nglMenu"></div>
       <div id="nglInfo"></div>
     </div>
   </div>
@@ -132,6 +139,7 @@
 
   import { CompareManager } from './js/compare.js';
   import { HoverInfo } from './js/hoverinfo.js';
+  import { downloadSVG, downloadPNG } from './js/downloadFlareplot.js';
 
   // updateItypes(['1F88_A', '1GZM_A'], ['hbss']);
 
@@ -237,6 +245,39 @@
     "<p>Generic numbering consists of two numbers separated by an 'x'. The first indicates the secondary structure " +
     "element. The second number is based on a structural alignment.</p>";
   new HoverInfo("#flareInfo", flareInfoHTML, 340);
+
+  const flareMenuHTML =
+    "<div class='btn-group-vertical' role='group'>" +
+    "<button type='button' onclick='fpDownloadSVG()' class='btn btn-secondary'>Download as SVG</button>" +
+    "<button type='button' onclick='fpDownloadPNG()' class='btn btn-secondary'>Download as PNG</button>" +
+    "</div>";
+  new HoverInfo("#flareMenu", flareMenuHTML, undefined, 'fas fa-bars');
+  window.fpDownloadSVG = function() {
+    const fpSVG = manager.flareplot.svg.node();
+    downloadSVG(fpSVG);
+  };
+  window.fpDownloadPNG = function() {
+    const fpSVG = manager.flareplot.svg.node();
+    downloadPNG(fpSVG);
+  };
+
+  const nglMenuHTML =
+    "<div class='btn-group-vertical' role='group'>" +
+    "<button type='button' onclick='downloadNGLscreenshot()' class='btn btn-secondary'>Download as PNG</button>" +
+    "</div>";
+  new HoverInfo("#nglMenu", nglMenuHTML, undefined, 'fas fa-bars');
+  window.downloadNGLscreenshot = function() {
+    manager.nglpanel.stage.makeImage({
+      factor: 2,
+      antialias: true,
+      trim: false,
+      transparent: true
+    }).then(function (blob) {
+      const fname = "ngl_" + (new Date().toString().split(" ").slice(0,5)).join("_") + ".png";
+      NGL.download(blob, fname)
+    })
+  };
+
 
 </script>
 </body>
