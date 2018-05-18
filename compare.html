@@ -75,7 +75,7 @@
       border-radius: 50%;
     }
 
-    #nglInfo{
+    .infobutton{
       color: #8aaee0;
       position:absolute;
       right: 0px;
@@ -115,6 +115,7 @@
     </div>
 
     <div class="col-sm-5" id="flareDiv">
+      <div id="flareInfo"></div>
     </div>
 
     <div class="col-sm-5" id="nglDiv">
@@ -225,6 +226,17 @@
     "<li>Shift-scroll: Depth-slice</li>" +
     "</ul>"
   new HoverInfo("#nglInfo", nglInfoHTML, 250);
+
+  const flareInfoHTML =
+    "<p>Residues on the circumference are labeled using canonical numbering and contacts " +
+    "are illustrated with edges connecting them. Clicking a label will highlight its interactions and display " +
+    "them in the structure panel.</p>" +
+    "<video width=\"290\" height=\"132\" autoplay loop>" +
+    "<source src=\"images/FlareplotKap.webm\" type=\"video/webm\">" +
+    "</video>" +
+    "<p>Generic numbering consists of two numbers separated by an 'x'. The first indicates the secondary structure " +
+    "element. The second number is based on a structural alignment.</p>";
+  new HoverInfo("#flareInfo", flareInfoHTML, 340);
 
 </script>
 </body>

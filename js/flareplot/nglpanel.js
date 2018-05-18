@@ -39,7 +39,6 @@ export class NGLPanel {
    */
   setStructure(pdbFile, labelFile, atomicContacts) {
     this.atomicContacts = atomicContacts;
-    console.log(atomicContacts)
 
     // Clear stage
     this.stage.removeAllComponents();

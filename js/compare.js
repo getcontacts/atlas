@@ -63,7 +63,9 @@ export class CompareManager {
         if (that.flareplot) {
           that.model.setGraph(graph);
         } else {
-          that.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
+          that.flareplot = new fp.Flareplot(graph, 600, "#flareDiv", {
+
+          });
           that.model = that.flareplot.getModel();
           // that.nglpanel = new NGLPanel(structureFiles[that.curStructure], that.model, "600px", "600px", "#nglDiv",
           //   {resiLabelFile: labelFiles[0]});

@@ -6,6 +6,7 @@ export class HoverInfo {
     console.log(d3.select(containerSelector).node())
     const that = this;
     d3.select(containerSelector)
+      .attr("class", "infobutton")
       .append("div")
       .html("<i class=\"far fa-lightbulb\"></i>")
       .on("mouseenter", function(){ that.mouseEnter(); })
