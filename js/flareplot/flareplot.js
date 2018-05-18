@@ -35,17 +35,18 @@ export class Flareplot {
       .append('svg')
       .style('overflow', 'visible')
       .attr('width', this.width)
-      .attr('height', this.height)
+      .attr('height', this.height);
+    this.svgroot = this.svg
       .append('svg:g')
       .attr('transform', 'translate(' + this.width / 2 + ',' + this.height / 2 + ')');
 
     this.flareModel = new Flaremodel(flare);
 
-    this.svg.selectAll('text').remove();
-    this.arcBg = this.svg.append('path').attr('class', 'trackBackground');
-    this.vertexGroup = this.svg.append('g').attr('class', 'vertices');
-    this.edgeGroup = this.svg.append('g').attr('class', 'edges');
-    this.trackGroup = this.svg.append('g').attr('class', 'track');
+    this.svgroot.selectAll('text').remove();
+    this.arcBg = this.svgroot.append('path').attr('class', 'trackBackground');
+    this.vertexGroup = this.svgroot.append('g').attr('class', 'vertices');
+    this.edgeGroup = this.svgroot.append('g').attr('class', 'edges');
+    this.trackGroup = this.svgroot.append('g').attr('class', 'track');
 
     this.textWidth = this._computeVertexTextWidth(); // Width of disc that contains vertices (flareModel must be set)
     this.trackWidth = layoutOptions.trackWidth; // Width of the data track
@@ -277,17 +278,18 @@ export class Flareplot {
   }
 
   _updateHighlight(highlightedNames) {
+    const toggledAndHighlighted = new Set(this.getModel().getToggledVertices().concat(highlightedNames));
     this.vertexGroup
       .selectAll('g.vertex')
       .select('text')
       .style('font-weight', function (d) {
-        if (highlightedNames.indexOf(d.data.name) >= 0) {
+        if (toggledAndHighlighted.has(d.data.name)) {
           return 'bold';
         }
         return 'normal';
       })
       .style('fill', function (d) {
-        if (highlightedNames.indexOf(d.data.name) >= 0) {
+        if (toggledAndHighlighted.has(d.data.name)) {
           return '#4f57a5';
         }
         return null;
