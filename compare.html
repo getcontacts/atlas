@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
 
   <script src="vendor/d3_5.2.0/d3.js"></script>
   <script src="vendor/ngl_2.0.0/ngl.js"></script>
+
   <style>
     h1{
       text-align: center;
@@ -73,6 +75,21 @@
       border-radius: 50%;
     }
 
+    #nglInfo{
+      color: #8aaee0;
+      position:absolute;
+      right: 0px;
+      top: 0px;
+      text-shadow: 1px 1px 4px #DDD;
+    }
+    .infobox{
+      border-radius: 4px;
+      padding: 15px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: white;
+      font-size: 0.9em;
+    }
+
   </style>
 </head>
 <body>
@@ -101,6 +118,7 @@
     </div>
 
     <div class="col-sm-5" id="nglDiv">
+      <div id="nglInfo"></div>
     </div>
   </div>
 </div>
@@ -112,6 +130,7 @@
 <script type="module">
 
   import { CompareManager } from './js/compare.js';
+  import { HoverInfo } from './js/hoverinfo.js';
 
   // updateItypes(['1F88_A', '1GZM_A'], ['hbss']);
 
@@ -191,6 +210,22 @@
   };
 
   manager.updateItypes(['hbss']);
+
+
+
+  // ----------------------------------------
+  // Set up info buttons
+  // ----------------------------------------
+  const nglInfoHTML = "<h4>Navigations:</h4><ul>" +
+    "<li>Left-click: Toggle residue</li>" +
+    "<li>Middle-click: Center residue</li>" +
+    "<li>Left-drag: Rotate</li>" +
+    "<li>Right-drag: Pan</li>" +
+    "<li>Scroll: Zoom</li>" +
+    "<li>Shift-scroll: Depth-slice</li>" +
+    "</ul>"
+  new HoverInfo("#nglInfo", nglInfoHTML, 250);
+
 </script>
 </body>
 </html>

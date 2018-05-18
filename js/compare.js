@@ -31,7 +31,7 @@ export class CompareManager {
   update(){
     const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
     const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
-    const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures_protonated/" + pdb + ".pdb");
+    // const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures_protonated/" + pdb + ".pdb");
     const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
     const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
     const that = this;
@@ -65,9 +65,11 @@ export class CompareManager {
         } else {
           that.flareplot = new fp.Flareplot(graph, 600, "#flareDiv");
           that.model = that.flareplot.getModel();
-          that.nglpanel = new NGLPanel(structureFiles[that.curStructure], that.model, "600px", "600px", "#nglDiv",
-            {resiLabelFile: labelFiles[0]});
+          // that.nglpanel = new NGLPanel(structureFiles[that.curStructure], that.model, "600px", "600px", "#nglDiv",
+          //   {resiLabelFile: labelFiles[0]});
+          that.nglpanel = new NGLPanel(that.model, "600px", "600px", "#nglDiv");
           that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
+          that.updateStructure(that.pdbIds[0]);
           that.fingerprintpanel.addHeaderClickListener(function(pdbId){
             that.updateStructure(pdbId);
           })

@@ -6,15 +6,12 @@
 export class NGLPanel {
   /**
    *
-   * @param {string} fname - A local file-name or a 4-letter PDB-id (will download from RCSB)
    * @param {Flaremodel} flareModel - The flare model
    * @param {string} width - A CSS-style width of the NGL panel
    * @param {string} height - A CSS-style height of the NGL panel
    * @param {string} containerSelector - CSS selector of a container that has already set the width and height
-   * @param {Object=} layoutOptions - Optional options for defining layout features. Can specify
-   *   - {string} resiLabelFile - File name of a residue label file that associates residue identifiers with labels
    */
-  constructor(fname, flareModel, width, height, containerSelector, layoutOptions) {
+  constructor(flareModel, width, height, containerSelector) {
     const containerID = 'NGLviewport' + (Math.floor(Math.random() * 1e7));
     const that = this;
 
@@ -27,13 +24,11 @@ export class NGLPanel {
     this.flareModel = flareModel;
 
     this.stage = new NGL.Stage(containerID, { backgroundColor: 'white'});
+    this.stage.viewerControls.center(NGL.Vector3(0,0,0));
+    this.stage.viewerControls.zoom(-0.2);
+    this.stage.mouseControls.remove('clickPick-left', NGL.MouseActions.movePick)
+    this.stage.mouseControls.remove('clickPick-right', NGL.MouseActions.measurePick)
     window.addEventListener('resize', function () { that.stage.handleResize(); }, false);
-
-    if (layoutOptions && layoutOptions.resiLabelFile) {
-      this.setStructure(fname, layoutOptions.resiLabelFile, undefined, true);
-    } else {
-      this.setStructure(fname, undefined, undefined, true);
-    }
   }
 
   /**
@@ -41,18 +36,16 @@ export class NGLPanel {
    * @param pdbFile path to a pdb-file or a PDB-id
    * @param labelFile path to label-file
    * @param atomicContacts list of atomic-level interactions
-   * @param firstTime indicates if this is the first time the function is called. Used to determine if autoView
-   * should be called
    */
-  setStructure(pdbFile, labelFile, atomicContacts, firstTime) {
+  setStructure(pdbFile, labelFile, atomicContacts) {
     this.atomicContacts = atomicContacts;
+    console.log(atomicContacts)
 
     // Clear stage
     this.stage.removeAllComponents();
 
     // Create residue label file promise
     let resiLabelPromise = Promise.resolve(undefined);
-
     if (labelFile !== undefined) {
       resiLabelPromise = d3.text(labelFile);
     }
@@ -72,6 +65,7 @@ export class NGLPanel {
         that.modelToStrucResiMap = new Map();
         that.strucToModelResiMap = new Map();
         if (values[0] === undefined) {
+          // No residue labels defined. Assume model indicates residue id and use chain A
           that.flareModel.getVertices().forEach(v => {
             const modelResi = v.name.match(/[0-9]+$/)[0];
             const strucResi = modelResi + ':A';
@@ -80,6 +74,7 @@ export class NGLPanel {
             that.strucToModelResiMap.set(strucResi, v.name);
           });
         } else {
+          // Parse residue label file
           values[0].split('\n').forEach(line => {
             line = line.trim();
             if (line.length === 0) {
@@ -106,12 +101,6 @@ export class NGLPanel {
           side: 'front',
           quality: 'high'
         });
-        if (firstTime) {
-          // that.component.autoView();
-          that.stage.viewerControls.center(NGL.Vector3(0,0,0));
-          that.stage.viewerControls.zoom(-0.2);
-          that.stage.mouseControls.remove('clickPick-left', NGL.MouseActions.movePick)
-        }
         that._updateColorScheme();
         that._updateInteractions();
         that._updateToggle();
@@ -132,7 +121,6 @@ export class NGLPanel {
           backgroundColor: 'none',
           color: 'grey',
           padding: '0.5em',
-          fontSize: '0.5rem',
           bottom: '0px',
           right: '0px',
           fontFamily: 'sans-serif'
@@ -156,7 +144,9 @@ export class NGLPanel {
 
         that.stage.signals.clicked.add(function (pickingProxy) {
           if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
-            if (that.dragStartTime && (Date.now() - that.dragStartTime < 500)) {
+
+            // Left click and not dragging
+            if (pickingProxy.mouse.which == 1 && that.dragStartTime && (Date.now() - that.dragStartTime < 500)) {
               const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
 
               that.resiMouseClicked(atom.resno, atom.chainname);
@@ -200,7 +190,6 @@ export class NGLPanel {
       this.component.removeRepresentation(this.interactionRepresentation);
     }
 
-    console.log(this.atomicContacts);
     const edges = this.flareModel.getEdges()
       .filter(e => this.flareModel.vertexToggled(e.v1.name) || this.flareModel.vertexToggled(e.v2.name))
       .map(e => {
@@ -212,12 +201,23 @@ export class NGLPanel {
       })
       .filter(d => d.count > 0);
 
+    let pairs = [];
     if(this.atomicContacts){
-      const edgeresipairs = new Set(edges.map(e => Math.min(e.resi1, e.resi2)+"-"+Math.max(e.resi1, e.resi2)));
-      let pairs = [];
-      edges.forEach()
+      function edgeHash(r1, r2){
+        return r1 < r2 ? r1 + "-" + r2 : r2 + "-" + r1;
+      }
+      const edgeresipairs = new Set(edges.map(e => edgeHash(e.resi1, e.resi2)));
+      this.atomicContacts.forEach((e) => {
+        let atom1 = e[2].split(":");
+        let atom2 = e[3].split(":");
+        let r1 = atom1[2]+":"+atom1[0];
+        let r2 = atom2[2]+":"+atom2[0];
+        if(edgeresipairs.has(edgeHash(r1, r2))){
+          pairs.push([r1 + "." + atom1[3], r2 + "." + atom2[3]])
+        }
+      })
     } else {
-      let pairs = edges.map(d => [d.resi1 + '.CA', d.resi2 + '.CA']);
+      pairs = edges.map(d => [d.resi1 + '.CA', d.resi2 + '.CA']);
     }
     // .map(d => [NGLPanel._resiFromName(d.edge.v1.name) + '.CA', NGLPanel._resiFromName(d.edge.v2.name) + '.CA']);
 
@@ -225,7 +225,8 @@ export class NGLPanel {
       atomPair: pairs,
       color: 'black',
       useCylinder: true,
-      labelVisible: false
+      labelVisible: false,
+      radiusSize: 0.1
     });
     // color: '#414141',
   }
@@ -235,7 +236,6 @@ export class NGLPanel {
     const colDefs = Array.from(track.properties)
       .filter(entry => this.modelToStrucResiMap.get(entry[0]) !== undefined)
       .map(entry => [entry[1].color, this.modelToStrucResiMap.get(entry[0])]);
-    // .map(entry => [entry[1].color, '' + NGLPanel._resiFromName(entry[0])]);
 
     colDefs.push(['white', '*']);
     const schemeId = NGL.ColormakerRegistry.addSelectionScheme(colDefs, track.label + '_scheme');
@@ -298,6 +298,7 @@ export class NGLPanel {
 
   _updateToggle() {
     const toggledNames = this.flareModel.getToggledVertices();
+    const neighborNames = [];
 
     if (this.atomicContacts) {
       const that = this;
@@ -305,20 +306,37 @@ export class NGLPanel {
         let vertex = that.flareModel.getVertex(vname);
         vertex.edges.forEach(function (edge) {
           let adjName = edge.opposite(vertex).name;
-          toggledNames.push(adjName);
+          if(toggledNames.indexOf(adjName) == -1) {
+            neighborNames.push(adjName);
+          }
         });
       });
     }
 
-    const resis = toggledNames.map(n => this.modelToStrucResiMap.get(n))
-      .filter(n => n !== undefined);
-
     if (this.toggleRepresentation) {
       this.component.removeRepresentation(this.toggleRepresentation);
     }
+
+    if (this.neighborRepresentation) {
+      this.component.removeRepresentation(this.neighborRepresentation);
+    }
+
+    const resis = toggledNames.map(n => this.modelToStrucResiMap.get(n)).filter(n => n !== undefined);
     if (resis.length > 0) {
       const nglselection = resis.join(' or ');
       this.toggleRepresentation = this.component.addRepresentation('hyperball', {sele: nglselection});
+    }
+
+    const neighborresis = neighborNames.map(n => this.modelToStrucResiMap.get(n)).filter(n => n !== undefined);
+    if (neighborresis.length > 0) {
+      const nglselection = neighborresis.join(' or ');
+      this.neighborRepresentation = this.component.addRepresentation('hyperball', {
+        sele: nglselection,
+        opacity: 0.4, // Minimum opacity at which you can still pick
+        depthWrite: false,
+        side: 'front',
+        quality: 'high'
+      });
     }
   }
 
@@ -334,7 +352,10 @@ export class NGLPanel {
       const nglselection = resis.join(' or ');
 
       // this.highlightRepresentation = this.component.addRepresentation('ball+stick', {
-      this.highlightRepresentation = this.component.addRepresentation('hyperball', {sele: nglselection});
+      this.highlightRepresentation = this.component.addRepresentation('hyperball', {
+        sele: nglselection,
+        opacity: 0.6
+      });
       this.tooltip.innerText = nglselection;
       this.tooltip.style.display = 'block';
     } else {
