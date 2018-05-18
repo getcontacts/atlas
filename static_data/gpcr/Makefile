@@ -40,22 +40,10 @@ contacts/dummy: structures_protonated/dummy
 	  out_file=$(dir $@)$$out_file.tsv; \
 	  if [ ! -e $$out_file ]; then \
 	    ligs=`python ../get_ligands.py $$f`; \
-	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --output $$out_file; \
-	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --output $$out_file; \
+	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --vdw_res_diff 5 --output $$out_file; \
+	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --vdw_res_diff 5 --output $$out_file; \
 	  fi; \
 	done
 	touch $@
 
-#
-flares/dummy: contacts/dummy residuelabels/dummy
-	mkdir -p $(dir $@)
-	for f in contacts/*.tsv; do \
-	  out_file=$$(basename -- $$f); \
-	  out_file=$${out_file%%.*}; \
-	  out_file=$(dir $@)$$out_file.json; \
-	  if [ ! -e $$out_file ]; then \
-	    echo get_static_contacts.py --topology $$f --itype all --output $$out_file; \
-	  fi \
-	done
-	touch $@
 
