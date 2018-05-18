@@ -14,7 +14,8 @@ export function buildMultiFlare(contacts, labels, conditions){
     edges : [],
     trees: [{treeLabel: "default", treeProperties: []}],
     tracks: [{trackLabel: "default", trackProperties: []}],
-    frameDict: {}
+    frameDict: {},
+    defaults: {edgeWidth: 4}
   };
 
   // Build tree

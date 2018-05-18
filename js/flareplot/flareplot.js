@@ -14,10 +14,11 @@ export class Flareplot {
    * the container will be used.
    * @param {string} containerSelector - CSS selector for the container
    * @param {Object=} layoutOptions - Optional argument for defining the layout features. Following are the defaults
-   *  - gap: 5                  // Pixel gap between inner disc, data-track, and vertices
-   *  - verticesOutside: true   // Indicates that vertices are outside and data-track inside
-   *  - trackWidth: 15          // Pixel width of data-track
-   *  - trackBackground: 'none' // Color of track background
+   *  - gap: 5                   // Pixel gap between inner disc, data-track, and vertices
+   *  - verticesOutside: true    // Indicates that vertices are outside and data-track inside
+   *  - trackWidth: 15           // Pixel width of data-track
+   *  - trackBackground: 'none'  // Color of track background
+   *  - inactiveEdgeOpacity: 0.2 // Opacity of edges that are not highlighted
    */
   constructor(flare, width, containerSelector, layoutOptions) {
     this.width = width;
@@ -64,6 +65,7 @@ export class Flareplot {
     this.arcBg
       .style('fill', layoutOptions.trackBackground)
       .attr('d', arc);
+    this.inactiveEdgeOpacity = layoutOptions.inactiveEdgeOpacity;
 
     // Create hierarchy based on the flareModel (innerRadius must be set)
     // this.hierarchy = this._createHierarchy();
@@ -199,7 +201,7 @@ export class Flareplot {
         const sourceToggled = this.flareModel.vertexToggled(d.modelEdge.v1.name);
         const targetToggled = this.flareModel.vertexToggled(d.modelEdge.v2.name);
 
-        return (sourceToggled || targetToggled) ? 1.0 : 0.1;
+        return (sourceToggled || targetToggled) ? 1.0 : this.inactiveEdgeOpacity;
       })
       .attr('d', function (d) { return lineGenerator(d.source.path(d.target)); });
 
@@ -309,7 +311,7 @@ export class Flareplot {
         const sourceToggled = this.flareModel.vertexToggled(d.modelEdge.v1.name);
         const targetToggled = this.flareModel.vertexToggled(d.modelEdge.v2.name);
 
-        return (sourceToggled || targetToggled) ? 1.0 : 0.1;
+        return (sourceToggled || targetToggled) ? 1.0 : this.inactiveEdgeOpacity;
       });
   }
 
@@ -355,6 +357,9 @@ export class Flareplot {
     }
     if (layoutOptions.trackBackground === undefined) {
       layoutOptions.trackBackground = 'none';
+    }
+    if (layoutOptions.inactiveEdgeOpacity === undefined) {
+      layoutOptions.inactiveEdgeOpacity = 0.2;
     }
 
     return layoutOptions;
