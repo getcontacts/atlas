@@ -75,7 +75,9 @@ export function buildMultiFlare(contacts, labels, conditions){
         n1 = n1[0].substring(n1[0].lastIndexOf(".")+1);
         n2 = n2[0].substring(n2[0].lastIndexOf(".")+1);
         const edge = findEdge(n1, n2);
-        edge.frames.push(i);
+        if(edge.frames.indexOf(i) < 0) {
+          edge.frames.push(i);
+        }
       }
     });
   }
