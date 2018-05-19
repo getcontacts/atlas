@@ -18,7 +18,16 @@ export class FingerprintPanel {
     this.numCols = flareModel.getNumFrames();
 
     this._updateHeaders();
-    this._updateBody();
+    this._createBody();
+
+    this.flareModel.addVertexChangeListener(this);
+  }
+
+  fire(event) {
+    console.log(event);
+    if(event.type === 'vertexChange') {
+      this._updateBody();
+    }
   }
 
   _updateHeaders() {
@@ -71,7 +80,21 @@ export class FingerprintPanel {
     headerDiv.style('height', headerHeight + 'px');
   }
 
+  _createBody() {
+    const cellWidth = this.cellWidth;
+
+    // Scrollable body
+    this.bodyDiv = this.div.append('div')
+      .classed('fp-body', true)
+      .style('position', 'relative')
+      .style('height', (cellWidth * 5.5) + 'px')
+      .style('overflow-y', 'auto');
+
+    this._updateBody();
+  }
+
   _updateBody() {
+    console.log("_updateBody")
     // ------------- Initialize panel body -------------
     const fingerprints = FingerprintPanel.computeFingerprints(this.flareModel);
     const cellWidth = this.cellWidth;
@@ -79,18 +102,13 @@ export class FingerprintPanel {
     const activeRowBorderWidth = 2;
     const that = this;
 
-    // Scrollable body
-    const bodyDiv = this.div.append('div')
-      .classed('fp-body', true)
-      .style('position', 'relative')
-      .style('height', (cellWidth * 5.5) + 'px')
-      .style('overflow-y', 'auto');
 
     // The rows are duplicated in 2 layers because of how css positions things with/without border.
     // The bottom layer (z-index -1) are used to display dividers (border-bottom)
     // The top layer rows contain the actual cells
-    bodyDiv.selectAll('.fp-row-bottom')
-      .data(fingerprints).enter()
+    this.bodyDiv.selectAll('.fp-row-bottom').remove();
+    this.bodyDiv.selectAll('.fp-row-bottom')
+      .data(fingerprints)
       .append('div')
       .attr('class', 'fp-row-bottom')
       .style('position', 'absolute')
@@ -102,8 +120,10 @@ export class FingerprintPanel {
       .style('border-bottom', '1px solid #DDD')
       .style('margin-left', -(numCols * cellWidth / 2) + 'px');
 
-    const rows = bodyDiv.selectAll('.fp-row')
-      .data(fingerprints).enter()
+    this.bodyDiv.selectAll('.fp-row').remove();
+    const rows = this.bodyDiv.selectAll('.fp-row')
+      .data(fingerprints)
+      .enter()
       .append('div')
       .attr('class', 'fp-row')
       .style('position', 'absolute')
@@ -152,8 +172,10 @@ export class FingerprintPanel {
         that.flareModel.setFrames({type: 'intersect-subtract', intersect: included, subtract: excluded});
       });
 
+
     // Place cells
-    rows.each(function (rd, ri) {
+    this.bodyDiv.selectAll('.fp-row')
+      .each(function (rd, ri) {
       // For each row generate numCols data entries and set their content based on the fingerpring
       const rowData = new Array(numCols)
         .fill({})
