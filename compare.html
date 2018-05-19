@@ -78,7 +78,7 @@
     .infobutton{
       color: #a6b8e0;
       position:absolute;
-      left: 30px;
+      right: 50px;
       top: 10px;
       text-shadow: 1px 1px 4px #DDD;
       z-index: 1000;
@@ -91,7 +91,7 @@
       font-size: 0.9em;
     }
     #flareMenu, #nglMenu{
-      left:0px;
+      right:15px;
       width: 20px;
     }
 
@@ -265,7 +265,7 @@
     "<div class='btn-group-vertical' role='group'>" +
     "<button type='button' onclick='downloadNGLscreenshot()' class='btn btn-secondary'>Download as PNG</button>" +
     "</div>";
-  new HoverInfo("#nglMenu", nglMenuHTML, undefined, 'fas fa-bars');
+  new HoverInfo("#nglMenu", nglMenuHTML, 200, 'fas fa-bars');
   window.downloadNGLscreenshot = function() {
     manager.nglpanel.stage.makeImage({
       factor: 2,
