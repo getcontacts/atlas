@@ -3,8 +3,8 @@
  */
 export class HoverInfo {
   constructor(containerSelector, html, width, symbol) {
-    console.log(containerSelector)
-    console.log(symbol)
+    // console.log(containerSelector)
+    // console.log(symbol)
 
     if(symbol===undefined){
       symbol = "far fa-lightbulb";

@@ -24,7 +24,7 @@ export class FingerprintPanel {
   }
 
   fire(event) {
-    console.log(event);
+    // console.log(event);
     if(event.type === 'vertexChange') {
       this._updateBody();
     }
@@ -94,7 +94,7 @@ export class FingerprintPanel {
   }
 
   _updateBody() {
-    console.log("_updateBody")
+    // console.log("_updateBody")
     // ------------- Initialize panel body -------------
     const fingerprints = FingerprintPanel.computeFingerprints(this.flareModel);
     const cellWidth = this.cellWidth;
