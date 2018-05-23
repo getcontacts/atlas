@@ -1,0 +1,17 @@
+[
+  {
+    "pdbid": "5T1A",
+    "chain": "A",
+    "protein": "CCR2",
+    "protid": "ccr2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-12-14",
+    "method": "XC",
+    "resolution": 2.81,
+    "doi": "10.1038/NATURE20605",
+    "ligands": [
+      "2H-Pyrrol-2-one, 4-acetyl-1-(4-chloro-2-fluorophenyl)-5-cyclohexyl-1,5-dihydro-3-hydroxy-, (5R)-",
+      "CHEMBL3577945"
+    ]
+  }
+]
