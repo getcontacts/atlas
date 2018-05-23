@@ -47,22 +47,67 @@ pdb_to_chain = {prot['pdbid']: prot['chain'] for prot in annotations}
 # Dictionary association pdb-ids with a list of CGN number / residue number pairs
 with open('galpha_structure_table.txt') as f:
     lines = f.readlines()
-    pdbs = [pdb.strip() for pdb in lines[0].split('\t')[2:]]
-    pdb_to_res = defaultdict(list)
 
-    for line in lines[1:]:
-        tokens = line.split("\t")
-        cgn_number = tokens[0]
+pdbs = [pdb.strip() for pdb in lines[0].split('\t')[2:]]
+pdb_to_res = defaultdict(list)
 
-        for i, res in enumerate(tokens[2:]):
-            res = res.strip()
-            if res == "-":
-                continue
-            pdb = pdbs[i]
-            resi = int(res[1:])
-            resn = aminoresnmap[res[0]]
-            pdb_to_res[pdb].append((cgn_number, resi, resn))
+for line in lines[1:]:
+    tokens = line.split("\t")
+    cgn_number = tokens[0]
 
-print(pdb_to_chain)
+    for i, res in enumerate(tokens[2:]):
+        res = res.strip()
+        if res == "-":
+            continue
+        pdb = pdbs[i]
+        resi = int(res[1:])
+        resn = aminoresnmap[res[0]]
+        pdb_to_res[pdb].append((cgn_number, resi, resn))
+
+for pdb in pdbs:
+    chain = pdb_to_chain[pdb]
+    hetatm_resis = extract_ligands("structures_protonated/"+pdb+"_"+chain+".pdb")
+
+    resi_mapping = []
+
+    # Add ligands
+    for (resn, resi) in hetatm_resis:
+        pdb_res = chain+":"+resn+":"+resi
+        cgn_id = "Ligand"
+        color = "white"
+        resi_mapping.append(pdb_res + "\t" + cgn_id + "\t" + color + "\n")
+
+    indx_toplevel = 0
+    prev_toplevel = ""
+    for cgn_id, resi, resn in pdb_to_res[pdb]:
+        # Insert a number in the top-level part of the CGN path (H.HE.2 => H2.HE.2)
+        if cgn_id[0] != prev_toplevel:
+            prev_toplevel = cgn_id[0]
+            indx_toplevel += 1
+
+        cgn_path = cgn_id.split(".")
+        cgn_id = cgn_path[0] + str(indx_toplevel) + "." + cgn_path[1] + "." + ":".join(cgn_path)
+        #cgn_id = cgn_id[0]+str(indx_toplevel)+cgn_id[1:]
+
+        # Determine color
+        color = 'white'
+        if cgn_id.split(".")[1][0] == "H":
+            color = "#F57879"
+        if cgn_id.split(".")[1][0] == "S":
+            color = "#FFE900"
+
+        # Determine pdb residue id
+        pdb_res = chain + ":" + resn + ":" + str(resi)
+
+        resi_mapping.append(pdb_res + "\t" + cgn_id + "\t" + color + "\n")
+
+    label_file = output_dir+'/'+pdb+'_'+chain+'.tsv'
+    print('Writing label file '+label_file+' .. ')
+    with open(label_file, 'w') as f:
+        f.writelines(resi_mapping)
+
+    
+  
+    
 
 

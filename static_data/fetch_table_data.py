@@ -17,7 +17,7 @@ ligand_lists = {}
 json_out = []
 
 def addXMLRecordsToJson(xml, prot_data):
-  for record, prot in zip(xml, prot_data):
+  for record in xml:
     pdb = record.find('dimEntity.structureId').text
     
     if pdb in ligand_lists:
@@ -27,6 +27,10 @@ def addXMLRecordsToJson(xml, prot_data):
     else:
       chain = record.find('dimEntity.chainId').text
       sys.stderr.write("Processing "+pdb+"\n")
+      for d in prot_data:
+          if d[0] == pdb:
+              prot = d
+              break
 
       protid = prot[5]
       response = requests.get('https://www.ebi.ac.uk/proteins/api/proteins/'+protid+'/')
@@ -86,7 +90,7 @@ def addXMLRecordsToJson(xml, prot_data):
 
 sz = 100
 for prot_slice in [protein_list[i:i+sz] for i in range(0, len(protein_list), sz)]:
-  #sys.stderr.write("Processing slice of "+str(sz)+"\n")
+  sys.stderr.write("Processing slice of "+str(sz)+"\n")
   pdbids = ",".join(list(map(lambda prot: prot[0]+'.'+prot[1], prot_slice)))
   response = requests.get('https://www.rcsb.org/pdb/rest/customReport.xml?pdbids=%s&customReportColumns=releaseDate,experimentalTechnique,resolution,doi,geneName,taxonomy,pfamId,pfamAccession,ligandId&service=wsfile&format=xml' % pdbids)
   xml = ET.fromstring(response.text)
