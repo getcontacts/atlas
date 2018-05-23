@@ -288,9 +288,9 @@
   {
     "pdbid": "1GDD",
     "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
+    "protein": "subunit alpha-13",
+    "protid": "GNA13_MOUSE",
+    "species": "Mus musculus (Mouse)",
     "pfamid": "PF00503",
     "date": "1995-11-27",
     "doi": "",
@@ -304,9 +304,9 @@
   {
     "pdbid": "1GFI",
     "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
     "pfamid": "PF00503",
     "date": "1995-03-31",
     "doi": "",
@@ -321,9 +321,9 @@
   {
     "pdbid": "1GG2",
     "chain": "A",
-    "protein": "G(s) subunit alpha isoforms short",
-    "protid": "GNAS2_BOVIN",
-    "species": "Bos taurus (Bovine)",
+    "protein": "G(o) subunit alpha",
+    "protid": "GNAO_MOUSE",
+    "species": "Mus musculus (Mouse)",
     "pfamid": "PF00503",
     "date": "1997-02-12",
     "doi": "",
@@ -336,8 +336,8 @@
   {
     "pdbid": "1GIA",
     "chain": "A",
-    "protein": "G(o) subunit alpha",
-    "protid": "GNAO_MOUSE",
+    "protein": "subunit alpha-13",
+    "protid": "GNA13_MOUSE",
     "species": "Mus musculus (Mouse)",
     "pfamid": "PF00503",
     "date": "1994-09-30",
@@ -384,9 +384,9 @@
   {
     "pdbid": "1GOT",
     "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
+    "protein": "G(s) subunit alpha isoforms short",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
     "pfamid": "PF00503",
     "date": "1997-03-12",
     "doi": "10.1038/379311a0",
@@ -399,9 +399,9 @@
   {
     "pdbid": "1GP2",
     "chain": "A",
-    "protein": "G(s) subunit alpha isoforms short",
-    "protid": "GNAS2_BOVIN",
-    "species": "Bos taurus (Bovine)",
+    "protein": "G(q) subunit alpha",
+    "protid": "GNAQ_MOUSE",
+    "species": "Mus musculus (Mouse)",
     "pfamid": "PF00503",
     "date": "1997-02-12",
     "doi": "",
@@ -414,9 +414,9 @@
   {
     "pdbid": "1KJY",
     "chain": "A",
-    "protein": "G(q) subunit alpha",
-    "protid": "GNAQ_MOUSE",
-    "species": "Mus musculus (Mouse)",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
     "pfamid": "PF00503",
     "date": "2002-05-08",
     "doi": "10.1038/416878a",
@@ -447,9 +447,9 @@
   {
     "pdbid": "1SVK",
     "chain": "A",
-    "protein": "G(s) subunit alpha isoforms short",
-    "protid": "GNAS2_BOVIN",
-    "species": "Bos taurus (Bovine)",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
     "pfamid": "PF00503",
     "date": "2004-06-01",
     "doi": "10.1073/pnas.0304091101",
@@ -464,9 +464,9 @@
   {
     "pdbid": "1SVS",
     "chain": "A",
-    "protein": "G(t) subunit alpha-1",
-    "protid": "GNAT1_BOVIN",
-    "species": "Bos taurus (Bovine)",
+    "protein": "G(q) subunit alpha",
+    "protid": "GNAQ_MOUSE",
+    "species": "Mus musculus (Mouse)",
     "pfamid": "PF00503",
     "date": "2004-06-01",
     "doi": "10.1073/pnas.0304091101",
@@ -480,9 +480,9 @@
   {
     "pdbid": "1TAD",
     "chain": "A",
-    "protein": "G(q) subunit alpha",
-    "protid": "GNAQ_MOUSE",
-    "species": "Mus musculus (Mouse)",
+    "protein": "G(i) subunit alpha-1",
+    "protid": "GNAI1_HUMAN",
+    "species": "Homo sapiens (Human)",
     "pfamid": "PF00503",
     "date": "1995-05-08",
     "doi": "10.1038/372276a0",
@@ -490,106 +490,7 @@
     "resolution": "1.7",
     "ligands": [
       "ALF",
-      "CA",
-      "CAC",
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "1TAG",
-    "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
-    "pfamid": "PF00503",
-    "date": "1995-02-07",
-    "doi": "10.1038/369621a0",
-    "method": "XC",
-    "resolution": "1.8",
-    "ligands": [
-      "GDP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "1TL7",
-    "chain": "C",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
-    "pfamid": "PF00503",
-    "date": "2004-12-14",
-    "doi": "10.1074/jbc.M409076200",
-    "method": "XC",
-    "resolution": "2.8",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "1TND",
-    "chain": "A",
-    "protein": "G(q) subunit alpha",
-    "protid": "GNAQ_MOUSE",
-    "species": "Mus musculus (Mouse)",
-    "pfamid": "PF00503",
-    "date": "1994-07-31",
-    "doi": "10.1038/366654a0",
-    "method": "XC",
-    "resolution": "2.2",
-    "ligands": [
-      "CAC",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "1U0H",
-    "chain": "C",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_HUMAN",
-    "species": "Homo sapiens (Human)",
-    "pfamid": "PF00503",
-    "date": "2004-12-14",
-    "doi": "10.1074/jbc.M409076200",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "CL",
-      "GSP",
-      "MG"
-    ]
-  },
-  {
-    "pdbid": "1Y3A",
-    "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_RAT",
-    "species": "Rattus norvegicus (Rat)",
-    "pfamid": "PF00503",
-    "date": "2005-07-12",
-    "doi": "10.1016/j.str.2005.04.007",
-    "method": "XC",
-    "resolution": "2.5",
-    "ligands": [
-      "GDP"
-    ]
-  },
-  {
-    "pdbid": "1ZCA",
-    "chain": "A",
-    "protein": "G(i) subunit alpha-1",
-    "protid": "GNAI1_HUMAN",
-    "species": "Homo sapiens (Human)",
-    "pfamid": "PF00503",
-    "date": "2005-11-15",
-    "doi": "10.1021/bi051729t",
-    "method": "XC",
-    "resolution": "2.9",
-    "ligands": [
-      "ALF"
+      "CA"
     ]
   }
 ]
