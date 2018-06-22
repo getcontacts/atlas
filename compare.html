@@ -102,7 +102,7 @@
 
 <div class="container-fluid">
   <!--<h1 style="text-align:center">Comparison of non-covalent contacts</h1>-->
-  <h1>GPCR Contact Atlas <small>Contacts in Structures</small></h1>
+  <h1 id="pagetitle">Contact Comparison Atlas</h1>
   <div class="row-fluid">
     <div class="col-sm-2" id="panelDiv">
       <p>Select interaction type:</p>
@@ -166,6 +166,12 @@
   }
   const family = parseArgFromURL("family");
   const manager = new CompareManager(family, pdbids);
+
+  let famStr = ""
+  if(family=="kinase") { famStr = "Kinase"; }
+  if(family=="gpcr") { famStr = "GPCR"; }
+  if(family=="galpha") { famStr = "G-alpha"; }
+  d3.select("#pagetitle").text(famStr + " Contact Comparison Atlas");
 
 
   // ---------------------------------------
