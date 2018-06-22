@@ -341,7 +341,7 @@ export class Flareplot {
   _computeVertexTextHeight() {
     const leaves = this.flareModel.getVertices();
 
-    return Math.min(0.8 * Math.PI * this.width / leaves.length, 20);
+    return Math.min(0.8 * Math.PI * this.width / leaves.length, 13);
   }
 
   static _fillLayoutOptions(layoutOptions) {
