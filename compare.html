@@ -147,7 +147,7 @@
    * Parse a url and extract a variable declared using either "?<varname>=..." or "&<varname>=" or undefined if the
    * variable couldn't be found. For example, `parse_URL_arg("b","http://hmm.com?a=1&b=2")` will return "2".
    * @param s variable name
-   * @returns {string|undefined}
+   * @returns string
    */
   function parseArgFromURL(argName) {
     "use strict";
@@ -169,9 +169,9 @@
   const manager = new CompareManager(family, pdbids);
 
   let famStr = ""
-  if(family=="kinase") { famStr = "Kinase"; }
-  if(family=="gpcr") { famStr = "GPCR"; }
-  if(family=="galpha") { famStr = "G-alpha"; }
+  if (family=="kinase") { famStr = "Kinase"; }
+  if (family=="gpcr") { famStr = "GPCR"; }
+  if (family=="galpha") { famStr = "G-alpha"; }
   d3.select("#pagetitle").text(famStr + " Contact Comparison Atlas");
 
 
