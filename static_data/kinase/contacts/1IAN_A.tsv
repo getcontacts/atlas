@@ -1,0 +1,2 @@
+# total_frames:1 beg:0 end:0 stride:1 interaction_types:sb,pc,ps,ts,vdw,hb,lhb
+# Columns: frame, interaction_type, atom_1, atom_2[, atom_3[, atom_4]]

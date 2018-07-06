@@ -1,4 +1,4 @@
-
+all: annotations.json contacts/dummy
 
 annotations.json: KLIFS_updated.csv
 	python fetch_table_data.py $< > $@
@@ -49,18 +49,25 @@ residuelabels/dummy: annotations.json
 	python fetch_residuelabels.py $< residuelabels
 	touch $@
 
-contacts/dummy: structures_protonated/dummy
-	mkdir -p $(dir $@)
-	for f in $(dir $<)*.pdb; do \
-	  out_file=$$(basename -- $$f); \
-	  out_file=$${out_file%%.*}; \
-	  out_file=$(dir $@)$$out_file.tsv; \
-	  if [ ! -e $$out_file ]; then \
-	    ligs=`python ../get_ligands.py $$f`; \
-	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --vdw_res_diff 5 --output $$out_file; \
-	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --vdw_res_diff 5 --output $$out_file; \
-	  fi; \
-	done
+
+contacts/%.tsv: structures_protonated/%.pdb
+	ligs=`python ../get_ligands.py $<`; get_static_contacts.py --structure $< --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $@
+
+contacts/dummy: $(subst .pdb,.tsv,$(subst structures_protonated,contacts,$(wildcard structures_protonated/*.pdb)))
 	touch $@
 
+#contacts/dummy: structures_protonated/dummy
+#	mkdir -p $(dir $@)
+#	for f in $(dir $<)*.pdb; do \
+#	  out_file=$$(basename -- $$f); \
+#	  out_file=$${out_file%%.*}; \
+#	  out_file=$(dir $@)$$out_file.tsv; \
+#	  if [ ! -e $$out_file ]; then \
+#	    ligs=`python ../get_ligands.py $$f`; \
+#	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $$out_file; \
+#	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $$out_file; \
+#	  fi; \
+#	done
+#	touch $@
+#
 
