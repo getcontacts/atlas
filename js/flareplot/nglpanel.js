@@ -29,6 +29,84 @@ export class NGLPanel {
     this.stage.mouseControls.remove('clickPick-left', NGL.MouseActions.movePick)
     this.stage.mouseControls.remove('clickPick-right', NGL.MouseActions.measurePick)
     window.addEventListener('resize', function () { that.stage.handleResize(); }, false);
+
+    that.flareModel.addHighlightListener(that);
+    that.flareModel.addToggleListener(that);
+    that.flareModel.addFrameListener(that);
+
+    // Modify tooltip
+    that.stage.mouseControls.remove('hoverPick');
+    that.tooltip = document.createElement('div');
+    that.tooltip.class = 'ngl-tooltip';
+    Object.assign(that.tooltip.style, {
+      display: 'none',
+      position: 'absolute',
+      zIndex: 10,
+      pointerEvents: 'none',
+      backgroundColor: 'none',
+      color: 'grey',
+      padding: '0.5em',
+      bottom: '0px',
+      right: '0px',
+      fontFamily: 'sans-serif'
+    });
+    that.stage.viewer.container.appendChild(that.tooltip);
+    that.stage.signals.hovered.add(function (pickingProxy) {
+      if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
+        const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
+        that.tooltip.innerText = atom.chainname + ':' + atom.resname + ':' + atom.resno;
+        that.tooltip.style.display = 'block';
+      } else {
+        that.tooltip.style.display = 'none';
+      }
+    });
+
+    if (document) {
+      document.addEventListener('mousedown', function () {
+        that.dragStartTime = Date.now();
+      }, false);
+    }
+
+    that.stage.signals.clicked.add(function (pickingProxy) {
+      if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
+
+        // Left click and not dragging
+        if (pickingProxy.mouse.which == 1 && that.dragStartTime && (Date.now() - that.dragStartTime < 500)) {
+          const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
+
+          that.resiMouseClicked(atom.resno, atom.chainname);
+        }
+        delete that.dragStartTime;
+      }
+    });
+
+    // Add highlight listener
+    let hoverResi, hoverChain;
+
+    that.stage.signals.hovered.add(function (pickingProxy) {
+      // If dragging, don't hover
+      if (that.dragStartTime) {
+        return;
+      }
+      if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
+        const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
+        const resi = atom.resno;
+        const chain = atom.chainname;
+
+        if (hoverResi !== resi || hoverChain !== chain) {
+          if (hoverResi !== undefined) {
+            that.resiMouseLeave(hoverResi, hoverChain);
+          }
+          that.resiMouseEnter(resi, chain);
+          hoverResi = resi;
+          hoverChain = chain;
+        }
+      } else if (hoverResi) {
+        that.resiMouseLeave(hoverResi, hoverChain);
+        hoverResi = undefined;
+        hoverChain = undefined;
+      }
+    });
   }
 
   /**
@@ -104,83 +182,6 @@ export class NGLPanel {
         that._updateInteractions();
         that._updateToggle();
 
-        that.flareModel.addHighlightListener(that);
-        that.flareModel.addToggleListener(that);
-        that.flareModel.addFrameListener(that);
-
-        // Modify tooltip
-        that.stage.mouseControls.remove('hoverPick');
-        that.tooltip = document.createElement('div');
-        that.tooltip.class = 'ngl-tooltip';
-        Object.assign(that.tooltip.style, {
-          display: 'none',
-          position: 'absolute',
-          zIndex: 10,
-          pointerEvents: 'none',
-          backgroundColor: 'none',
-          color: 'grey',
-          padding: '0.5em',
-          bottom: '0px',
-          right: '0px',
-          fontFamily: 'sans-serif'
-        });
-        that.stage.viewer.container.appendChild(that.tooltip);
-        that.stage.signals.hovered.add(function (pickingProxy) {
-          if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
-            const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
-            that.tooltip.innerText = atom.chainname + ':' + atom.resname + ':' + atom.resno;
-            that.tooltip.style.display = 'block';
-          } else {
-            that.tooltip.style.display = 'none';
-          }
-        });
-
-        if (document) {
-          document.addEventListener('mousedown', function () {
-            that.dragStartTime = Date.now();
-          }, false);
-        }
-
-        that.stage.signals.clicked.add(function (pickingProxy) {
-          if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
-
-            // Left click and not dragging
-            if (pickingProxy.mouse.which == 1 && that.dragStartTime && (Date.now() - that.dragStartTime < 500)) {
-              const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
-
-              that.resiMouseClicked(atom.resno, atom.chainname);
-            }
-            delete that.dragStartTime;
-          }
-        });
-
-        // Add highlight listener
-        let hoverResi, hoverChain;
-
-        that.stage.signals.hovered.add(function (pickingProxy) {
-          // If dragging, don't hover
-          if (that.dragStartTime) {
-            return;
-          }
-          if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)) {
-            const atom = pickingProxy.atom || pickingProxy.closestBondAtom;
-            const resi = atom.resno;
-            const chain = atom.chainname;
-
-            if (hoverResi !== resi || hoverChain !== chain) {
-              if (hoverResi !== undefined) {
-                that.resiMouseLeave(hoverResi, hoverChain);
-              }
-              that.resiMouseEnter(resi, chain);
-              hoverResi = resi;
-              hoverChain = chain;
-            }
-          } else if (hoverResi) {
-            that.resiMouseLeave(hoverResi, hoverChain);
-            hoverResi = undefined;
-            hoverChain = undefined;
-          }
-        });
       });
   }
 
