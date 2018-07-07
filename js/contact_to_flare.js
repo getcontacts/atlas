@@ -6,8 +6,6 @@
  * @returns {{edges: Array, trees: Array, tracks: Array, frameDict: {}}}
  */
 export function buildMultiFlare(contacts, labels, conditions){
-  console.log(contacts);
-  console.log(labels);
   // Number of contacts
   const n = contacts.length;
 
@@ -73,10 +71,6 @@ export function buildMultiFlare(contacts, labels, conditions){
       const resi2 = contact[3].substr(0,contact[3].lastIndexOf(":"));
       let n1 = labels[i][resi1];
       let n2 = labels[i][resi2];
-      console.log(resi1);
-      console.log(resi2);
-      console.log(n1);
-      console.log(n2);
       if (n1 !== undefined && n2 !== undefined) {
         n1 = n1[0].substring(n1[0].lastIndexOf(".")+1);
         n2 = n2[0].substring(n2[0].lastIndexOf(".")+1);
@@ -88,6 +82,5 @@ export function buildMultiFlare(contacts, labels, conditions){
     });
   }
 
-  console.log(ret);
   return ret;
 }
