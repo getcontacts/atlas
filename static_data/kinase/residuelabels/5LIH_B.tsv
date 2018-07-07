@@ -82,3 +82,7 @@ B:TYR:397	xDFG_17.xDFG:82	#2b5bc1
 B:GLY:398	xDFG_17.xDFG:83	#2b5bc1
 B:MET:399	al_18.a:l:84	#2b5bc1
 B:CYS:400	al_18.a:l:85	#2b5bc1
+B:AF3:602	Ligand
+B:AF3:605	Ligand
+B:ADP:601	Ligand
+B:SCN:606	Ligand

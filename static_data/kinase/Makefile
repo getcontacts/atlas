@@ -43,10 +43,16 @@ structures_protonated/dummy: $(subst structures,structures_protonated,$(wildcard
 #	done
 #	touch $@
 
-
-residuelabels/dummy: annotations.json
+residuelabels/dummy: KLIFS_updated.csv
 	mkdir -p $(dir $@)
-	python fetch_residuelabels.py $< residuelabels
+	python klifs_to_residuelabels.py $< 
+	for label_file in residuelabels/*.tsv; do \
+	  pdb_file=$$(basename -- $$label_file); \
+	  pdb_file=$${pdb_file%%.*}; \
+	  pdb_file=structures_protonated/$$pdb_file.pdb; \
+	  python pdb_to_ligandlabels.py $$pdb_file >> $$label_file; \
+	  echo "Appended ligand to $$label_file"; \
+	done
 	touch $@
 
 

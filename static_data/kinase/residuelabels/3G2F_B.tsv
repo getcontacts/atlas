@@ -82,3 +82,7 @@ B:PHE:352	xDFG_17.xDFG:82	#2b5bc1
 B:GLY:353	xDFG_17.xDFG:83	#2b5bc1
 B:LEU:354	al_18.a:l:84	#2b5bc1
 B:SER:355	al_18.a:l:85	#2b5bc1
+B:CAS:496	Ligand
+B:CAS:288	Ligand
+B:CAS:397	Ligand
+B:ADP:900	Ligand

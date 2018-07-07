@@ -81,3 +81,6 @@ A:PHE:168	xDFG_17.xDFG:82	#2b5bc1
 A:GLY:169	xDFG_17.xDFG:83	#2b5bc1
 A:LEU:170	al_18.a:l:84	#2b5bc1
 A:ALA:171	al_18.a:l:85	#2b5bc1
+A:CAQ:401	Ligand
+A:NH4:405	Ligand
+A:NH4:406	Ligand
