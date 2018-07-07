@@ -26,7 +26,19 @@ export class CompareManager {
     const structureFile = "static_data/" + this.family + "/structures_protonated/" + pdbid + ".pdb";
     const labelFile = "static_data/" + this.family + "/residuelabels/" + pdbid + ".tsv";
     this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
+
+    const that = this;
+    this.flareplot.vertexGroup.selectAll("g.vertex text")
+      .text(function (d) {
+        const label = that.labelToResiData[structureIdx][d.data.name];
+        if (label) {
+          return label.substring(label.indexOf(":") + 1);
+        } else {
+          return d.data.name;
+        }
+      });
   }
+
 
   update(){
     const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
@@ -47,18 +59,28 @@ export class CompareManager {
               .filter((row) => that.curItypes.includes(row[1]));
           });
 
-        let labelsData = data.slice(contactFiles.length);
-        labelsData = labelsData.map(function (ld) {
-          return ld.split("\n")
-            .map((line) => line.split("\t"))
-            .filter((row) => row.length >= 2)
-            .reduce((acc, row) => {
-              acc[row[0]] = row.slice(1);
-              return acc;
-            }, {});
-        });
+        that.labelsData = data.slice(contactFiles.length)
+          .map(function (ld) {
+            return ld.split("\n")
+              .map((line) => line.split("\t"))
+              .filter((row) => row.length >= 2)
+              .reduce((acc, row) => {
+                acc[row[0]] = row.slice(1);
+                return acc;
+              }, {});
+          });
+        that.labelToResiData = data.slice(contactFiles.length)
+          .map(function (ld) {
+            return ld.split("\n")
+              .map((line) => line.split("\t"))
+              .filter((row) => row.length >= 2)
+              .reduce((acc, row) => {
+                acc[row[1].substring(row[1].lastIndexOf(".") + 1)] = row[0];
+                return acc;
+              }, {});
+          });
 
-        const graph = buildMultiFlare(that.contactsData, labelsData, that.pdbIds);
+        const graph = buildMultiFlare(that.contactsData, that.labelsData, that.pdbIds);
 
         if (that.flareplot) {
           that.model.setGraph(graph);
