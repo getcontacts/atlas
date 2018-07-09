@@ -67,6 +67,11 @@ def addXMLRecordsToJson(xml, prot_data):
 
         date = record.find('dimStructure.releaseDate').text
         doi = record.find('dimStructure.doi').text
+        gene = record.find('dimEntity.geneName').text
+        if gene is None:
+            gene = ''
+        else:
+            gene = gene.split("#")[0]
         if doi == 'null':
             doi = ''
         method = record.find('dimStructure.experimentalTechnique').text
@@ -90,6 +95,7 @@ def addXMLRecordsToJson(xml, prot_data):
             "pdbid": pdb,
             "chain": chn,
             "protein": protein,
+            "protid": gene + "_",
             "species": species,
             "date": date,
             "doi": doi,
@@ -100,8 +106,10 @@ def addXMLRecordsToJson(xml, prot_data):
 
 
 sz = 100
+slice_idx = 0
 for prot_slice in [protein_list[i:i+sz] for i in range(0, len(protein_list), sz)]:
-    # sys.stderr.write("Processing slice of "+str(sz)+"\n")
+    sys.stderr.write("Processing slice %d (structure %d)\n" % (slice_idx, slice_idx*sz) )
+    slice_idx+=1
     pdbids = ",".join(list(map(lambda prot: prot[4].upper()+'.'+prot[6].upper(), prot_slice)))
     response = requests.get("https://www.rcsb.org/pdb/rest/customReport.xml?pdbids=%s&customReportColumns=releaseDate,"
                             "experimentalTechnique,resolution,doi,geneName,taxonomy,pfamId,pfamAccession,"

@@ -9,6 +9,7 @@ function createTable(family, containerSelector) {
     const headData = [
       {id: "select", text: ""},
       {id: "protein", text: "Protein"},
+      {id: "protId", text: "Gene"},
       {id: "species", text: "Species"},
       {id: "pdbid", text: "PDB"},
       {id: "chain", text: "Chain"},
@@ -16,6 +17,7 @@ function createTable(family, containerSelector) {
       {id: "resolution", text: "Resolution"},
       {id: "date", text: "Pub. date"},
       {id: "ligands", text: "Ligands"},
+      {id: "gotoContactDL", text: ""},
       {id: "gotoSingle", text: ""}
     ];
 
@@ -74,6 +76,7 @@ function createTable(family, containerSelector) {
         const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
         d3.select("#compare-button").classed("btn-inactive", numChecked == 0);
       });
+
     rows.append("td").append("input").attr("type", "checkbox")
       .on("click", function () {
         d3.event.stopPropagation();
@@ -85,6 +88,9 @@ function createTable(family, containerSelector) {
       });
     rows.append("td").html(function (d) {
       return d.protein;
+    });
+    rows.append("td").html(function (d) {
+      return d.protid.split("_")[0].toUpperCase();
     });
     rows.append("td").html(function (d) {
       return d.species;
@@ -120,8 +126,12 @@ function createTable(family, containerSelector) {
     rows.append("td").html(function (d) {
       return ligandHtml(d.ligands);
     });
-//        rows.append("td").html(function(d){ return preferred_chain; });
-//        rows.append("td").html(function(d){ return d.family; });
+    rows.append("td").append("a")
+      .attr("target", "_blank")
+      .attr("href", function (d) { return "static_data/"+family+"/contacts/"+d.pdbid+"_"+d.chain+".tsv"; })
+      .append("span")
+      .attr("class", "glyphicon glyphicon-download-alt")
+      .style("color", "#AAA");
     rows.append("td").append("span")
       .attr("class", "glyphicon glyphicon-chevron-right")
       .style("color", "#AAA")
