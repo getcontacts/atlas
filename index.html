@@ -28,6 +28,10 @@
       max-width: 100%;
     }
 
+    .container .row{
+      margin-bottom: 20px;
+    }
+
   </style>
 </head>
 
@@ -45,6 +49,20 @@
 
 <div class="container">
 
+  <!--==================== Top text ==================-->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <p>
+        The molecular functions of proteins (e.g. ligand-binding) are governed by networks of molecular interactions
+        such as hydrogen bonds and van der Waals interactions. We have precomputed interaction networks for a range of
+        molecular families and made visualization and comparison of these networks available in this atlas.
+      </p>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <!--==================== Atlas type picker ==================-->
   <div class="row">
 
     <div class="col-sm-2 text-center" style="vertical-align:middle;line-height: 150px;height:150px">
@@ -88,6 +106,22 @@
 
   </div>
 
+  <!--==================== Bottom text ==================-->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <p>
+        Interactions have been computed using the <a href="https://getcontacts.github.io/">GetContacts</a> framework and
+        are visualized using <a href="https://gpcrviz.github.io/flareplot/">Flareplots</a> and the
+        <a href="http://nglviewer.org/">NGL Viewer</a>. To compile interaction comparisons for a family of your own
+        choice, feel free to follow
+        <a href="https://getcontacts.github.io/family_flare.html">this recipe</a>, and submit it for this atlas using
+        either a pull-request or by creating an issue: <a href="https://github.com/getcontacts/atlas">Github
+        repository</a>.
+      </p>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
 
 </div>
 
