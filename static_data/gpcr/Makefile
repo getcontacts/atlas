@@ -1,6 +1,9 @@
 
 all: annotations.json structures/dummy residuelabels/dummy contacts/dummy
 
+clean:
+	rm annotations.json structures/dummy residuelabels/dummy contacts/dummy pdbids.txt gpcrdb_dump.json
+
 gpcrdb_dump.json:
 	curl -X GET --header 'Accept: application/json' 'http://gpcrdb.org/services/structure/' > $@
 
