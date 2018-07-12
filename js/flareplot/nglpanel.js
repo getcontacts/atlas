@@ -15,6 +15,16 @@ export class NGLPanel {
     const containerID = 'NGLviewport' + (Math.floor(Math.random() * 1e7));
     const that = this;
 
+    if (width === 'auto' && window) {
+      const containerStyle = window.getComputedStyle(d3.select(containerSelector).node());
+      const containerPadding = parseFloat(containerStyle.paddingLeft) + parseFloat(containerStyle.paddingRight);
+
+      width = (d3.select(containerSelector).node().clientWidth - containerPadding) + "px";
+    }
+    if (height === 'auto') {
+      height = width;
+    }
+
     d3.select(containerSelector)
       .append('div')
       .style('width', width)

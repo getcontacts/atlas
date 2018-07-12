@@ -85,13 +85,13 @@ export class CompareManager {
         if (that.flareplot) {
           that.model.setGraph(graph);
         } else {
-          that.flareplot = new fp.Flareplot(graph, 600, "#flareDiv", {
+          that.flareplot = new fp.Flareplot(graph, "auto", "#flareDiv", {
 
           });
           that.model = that.flareplot.getModel();
           // that.nglpanel = new NGLPanel(structureFiles[that.curStructure], that.model, "600px", "600px", "#nglDiv",
           //   {resiLabelFile: labelFiles[0]});
-          that.nglpanel = new NGLPanel(that.model, "600px", "600px", "#nglDiv");
+          that.nglpanel = new NGLPanel(that.model, "auto", "auto", "#nglDiv");
           that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
           that.updateStructure(that.pdbIds[0]);
           that.fingerprintpanel.addHeaderClickListener(function(pdbId){
