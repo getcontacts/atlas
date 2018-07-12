@@ -184,9 +184,9 @@ export class NGLPanel {
         });
         that.cartoonRepresentation = that.component.addRepresentation('cartoon', {
           opacity: 0.7, // Minimum opacity at which you can still pick
-          depthWrite: false,
           side: 'front',
-          quality: 'high'
+          quality: 'high',
+          aspectRatio: 3
         });
         that._updateColorScheme();
         that._updateInteractions();
