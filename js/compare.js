@@ -29,6 +29,14 @@ export class CompareManager {
 
     const that = this;
     this.flareplot.vertexGroup.selectAll("g.vertex text")
+      .style("opacity", function (d) {
+        const label = that.labelToResiData[structureIdx][d.data.name];
+        if (label) {
+          return null;
+        } else {
+          return 0.2;
+        }
+      })
       .text(function (d) {
         const label = that.labelToResiData[structureIdx][d.data.name];
         if (label) {
@@ -43,12 +51,14 @@ export class CompareManager {
   update(){
     const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
     const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
-    // const structureFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/structures_protonated/" + pdb + ".pdb");
+    const annotationFile = "static_data/" + this.family + "/annotations.json";
+
     const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
     const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
+    const annotationPromise = [d3.json(annotationFile)];
     const that = this;
 
-    Promise.all(contactFilePromises.concat(labelFilePromises))
+    Promise.all(contactFilePromises.concat(labelFilePromises).concat(annotationPromise))
       .then(function (data) {
         // Split data into lines, lines into fields, and filter on interaction types
         that.contactsData = data
@@ -59,7 +69,7 @@ export class CompareManager {
               .filter((row) => that.curItypes.includes(row[1]));
           });
 
-        that.labelsData = data.slice(contactFiles.length)
+        that.labelsData = data.slice(contactFiles.length, data.length - 1)
           .map(function (ld) {
             return ld.split("\n")
               .map((line) => line.split("\t"))
@@ -69,7 +79,7 @@ export class CompareManager {
                 return acc;
               }, {});
           });
-        that.labelToResiData = data.slice(contactFiles.length)
+        that.labelToResiData = data.slice(contactFiles.length, data.length - 1)
           .map(function (ld) {
             return ld.split("\n")
               .map((line) => line.split("\t"))
@@ -80,10 +90,26 @@ export class CompareManager {
               }, {});
           });
 
-        const graph = buildMultiFlare(that.contactsData, that.labelsData, that.pdbIds);
+        // Use annotation data to compose headers
+        const annotationData = data[data.length - 1];
+        const headerData = new Map();
+        that.pdbIds.forEach((pdbid) => {headerData.set(pdbid, "");});
+        annotationData.forEach((ann) => {
+          const key = ann.pdbid + "_" + ann.chain;
+          if (headerData.has(key)) {
+            console.log(ann);
+            const header = ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain;
+            headerData.set(key, header);
+          }
+        });
+        const headers = that.pdbIds.map((pdbid) => headerData.get(pdbid));
+
+
+        const graph = buildMultiFlare(that.contactsData, that.labelsData, headers);
 
         if (that.flareplot) {
           that.model.setGraph(graph);
+          that.updateStructure(that.pdbIds[0]);
         } else {
           that.flareplot = new fp.Flareplot(graph, "auto", "#flareDiv", {
 
@@ -94,10 +120,9 @@ export class CompareManager {
           that.nglpanel = new NGLPanel(that.model, "auto", "auto", "#nglDiv");
           that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
           that.updateStructure(that.pdbIds[0]);
-          that.fingerprintpanel.addHeaderClickListener(function(pdbId){
-            that.updateStructure(pdbId);
+          that.fingerprintpanel.addHeaderClickListener(function(headerData){
+            that.updateStructure(headerData[0]);
           })
-
         }
       });
   }
