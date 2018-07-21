@@ -121,7 +121,8 @@ export class CompareManager {
           that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
           that.updateStructure(that.pdbIds[0]);
           that.fingerprintpanel.addHeaderClickListener(function(headerData){
-            that.updateStructure(headerData[0]);
+            const pdb = headerData[0].split(":").slice(1).join("_");
+            that.updateStructure(pdb);
           })
         }
       });
