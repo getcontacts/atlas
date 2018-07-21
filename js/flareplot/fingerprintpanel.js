@@ -17,14 +17,17 @@ export class FingerprintPanel {
 
     this.numCols = flareModel.getNumFrames();
 
+
+    this.div.append('div')
+      .classed('fp-header', true);
     this._updateHeaders();
+
     this._createBody();
 
     this.flareModel.addVertexChangeListener(this);
   }
 
   fire(event) {
-    // console.log(event);
     if(event.type === 'vertexChange') {
       this._updateBody();
     }
@@ -41,8 +44,8 @@ export class FingerprintPanel {
       this.colHeaders[f] = this.flareModel.getFrameName(f);
     }
 
-    const headerDiv = this.div.append('div')
-      .classed('fp-header', true)
+    // const headerDiv = this.div.append('div')
+    const headerDiv = this.div.select(".fp-header")
       .style('position', 'relative');
 
     const headerCells = headerDiv
@@ -63,12 +66,22 @@ export class FingerprintPanel {
       .style('margin-left', function (d, i) {
         return ((i - numCols / 2) * cellWidth) + 'px';
       })
+      .on("click", (d, i) => {
+        this.fireHeaderClickListeners([d, i]);
+      });
+
+    headerDiv.selectAll(".fp-headerCell")
       .text(function (d) {
         return d;
       })
-      .on("click", (d) => {
-        this.fireHeaderClickListeners(d);
+      .style('cursor', () => {
+        if (this.headerClickListeners.length > 0){
+          return "pointer";
+        } else {
+          return null;
+        }
       });
+
 
     // Cell width hasn't been set yet, so will represent the width of the text. Compute the max width
     // const maxHeaderCellWidth = d3.max(d3.merge(headerCells), c => c.clientWidth);  // d3 v3
@@ -261,6 +274,7 @@ export class FingerprintPanel {
     if(cl && {}.toString.call(cl) === '[object Function]') {
       this.headerClickListeners.push(cl);
     }
+    this._updateHeaders();
   }
 
   fireHeaderClickListeners(data) {
