@@ -27,8 +27,8 @@
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     }
 
-    #pvDiv{
-      overflow: visible;
+    #flareDiv, #nglDiv{
+      padding-top: 20px;
     }
 
     /*.structure-dropdown{*/
@@ -167,6 +167,7 @@
   const family = parseArgFromURL("family");
 
   const manager = new CompareManager(family, pdbids);
+  window.manager = manager;
 
   let famStr = ""
   if (family=="kinase") { famStr = "Kinase"; }
