@@ -197,6 +197,7 @@ export class Flareplot {
         return count === 0 ? 0 : count * d.modelEdge.weight;
       })
       .style('stroke', function (d) { return d.modelEdge.color; })
+      .style('stroke-linecap', 'round')
       .style('fill', 'none')
       .style('stroke-opacity', d => {
         const sourceToggled = this.flareModel.vertexToggled(d.modelEdge.v1.name);
@@ -293,6 +294,14 @@ export class Flareplot {
           return '#4f57a5';
         }
         return null;
+      });
+
+    this.edgeGroup
+      .selectAll('.edge')
+      .style('stroke-opacity', d => {
+        const sourceToggled = toggledAndHighlighted.has(d.modelEdge.v1.name);
+        const targetToggled = toggledAndHighlighted.has(d.modelEdge.v2.name);
+        return (sourceToggled || targetToggled) ? 1.0 : this.inactiveEdgeOpacity;
       });
   }
 
