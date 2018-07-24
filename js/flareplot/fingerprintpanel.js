@@ -13,6 +13,7 @@ export class FingerprintPanel {
     this.cellWidth = cellWidth;
     // this.clickListeners = [];
     this.headerClickListeners = [];
+    this.rowClickListeners = [];
     this.div = d3.select(containerSelector).append('div');
 
     this.numCols = flareModel.getNumFrames();
@@ -183,6 +184,7 @@ export class FingerprintPanel {
         const excluded = [...Array(numCols).keys()].filter(v => included.indexOf(v) < 0);
 
         that.flareModel.setFrames({type: 'intersect-subtract', intersect: included, subtract: excluded});
+        that.fireRowClickListeners(d)
       });
 
 
@@ -279,6 +281,19 @@ export class FingerprintPanel {
 
   fireHeaderClickListeners(data) {
     this.headerClickListeners.forEach(function (cl) {
+      cl(data);
+    });
+  }
+
+  addRowClickListener(cl) {
+    // Check if cl is a function
+    if(cl && {}.toString.call(cl) === '[object Function]') {
+      this.rowClickListeners.push(cl);
+    }
+  }
+
+  fireRowClickListeners(data) {
+    this.rowClickListeners.forEach(function (cl) {
       cl(data);
     });
   }
