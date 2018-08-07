@@ -1,0 +1,9 @@
+Identified the following residue names as waters: TIP3
+Identified the following residue names as lipids: POPC
+Identified the following residue names as ligands: H3B
+Processing /scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_3//stitched.dcd (frame 0 to 328 with stride of 1) as 4 fragments
+
+Finished computing contacts for fragment 0: 100 frames from 0 to 99 in strides of 1 taking 126.832287 s
+Finished computing contacts for fragment 3: 29 frames from 300 to 328 in strides of 1 taking 37.415415 s
+Finished computing contacts for fragment 1: 100 frames from 100 to 199 in strides of 1 taking 125.678126 s
+Finished computing contacts for fragment 2: 100 frames from 200 to 299 in strides of 1 taking 126.352189 s

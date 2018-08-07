@@ -9,7 +9,7 @@ export class CompareManager {
   constructor(family, pdbIds){
     this.family = family;
     this.pdbIds = pdbIds;
-    this.curStructure = 0;
+    this.structureIdx = 0;
     this.curItypes = ['hbss'];
   }
 
@@ -21,16 +21,23 @@ export class CompareManager {
   updateStructure(pdbid) {
     //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
     //this.update();
-    const structureIdx = this.pdbIds.indexOf(pdbid);
-    const atomicContacts = this.contactsData[structureIdx];
+    this.structureIdx = this.pdbIds.indexOf(pdbid);
+    const atomicContacts = this.contactsData[this.structureIdx];
     const structureFile = "static_data/" + this.family + "/structures_protonated/" + pdbid + ".pdb";
     const labelFile = "static_data/" + this.family + "/residuelabels/" + pdbid + ".tsv";
-    this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
-
     const that = this;
+
+    // Style fingerprint header
+    const headerDiv = this.fingerprintpanel.div.select(".fp-header")
+      .selectAll('.fp-headerCell')
+      .style("font-weight", function(d, i) {
+        return i == that.structureIdx ? "bold" : "normal";
+      });
+
+    // Update flareplot labels
     this.flareplot.vertexGroup.selectAll("g.vertex text")
       .style("opacity", function (d) {
-        const label = that.labelToResiData[structureIdx][d.data.name];
+        const label = that.labelToResiData[that.structureIdx][d.data.name];
         if (label) {
           return null;
         } else {
@@ -38,13 +45,16 @@ export class CompareManager {
         }
       })
       .text(function (d) {
-        const label = that.labelToResiData[structureIdx][d.data.name];
+        const label = that.labelToResiData[that.structureIdx][d.data.name];
         if (label) {
           return label.substring(label.indexOf(":") + 1);
         } else {
           return d.data.name;
         }
       });
+
+    // Change structure in ngl panel
+    this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
   }
 
 
@@ -97,7 +107,6 @@ export class CompareManager {
         annotationData.forEach((ann) => {
           const key = ann.pdbid + "_" + ann.chain;
           if (headerData.has(key)) {
-            console.log(ann);
             const header = ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain;
             headerData.set(key, header);
           }
@@ -121,8 +130,16 @@ export class CompareManager {
           that.fingerprintpanel = new FingerprintPanel(that.model, 23, "#fingerprintDiv");
           that.updateStructure(that.pdbIds[0]);
           that.fingerprintpanel.addHeaderClickListener(function(headerData){
-            that.updateStructure(headerData[0]);
-          })
+            const pdb = headerData[0].split(":").slice(1).join("_");
+            that.updateStructure(pdb);
+          });
+          that.fingerprintpanel.addRowClickListener(function(rowData){
+            if (rowData.fingerprint.indexOf(that.structureIdx) == -1){
+              const pdb = that.pdbIds[rowData.fingerprint[0]];
+              that.updateStructure(pdb);
+            }
+
+          });
         }
       });
   }

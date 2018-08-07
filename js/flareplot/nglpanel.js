@@ -129,7 +129,8 @@ export class NGLPanel {
     this.atomicContacts = atomicContacts;
 
     // Clear stage
-    this.stage.removeAllComponents();
+    // this.stage.removeAllComponents();
+    // This is now done after setting up the new component to avoid blink
 
     // Create residue label file promise
     let resiLabelPromise = Promise.resolve(undefined);
@@ -188,6 +189,8 @@ export class NGLPanel {
           quality: 'high',
           aspectRatio: 3
         });
+        // Remove component except the one that was just added
+        that.stage.eachComponent((c) => { if (c != values[1]) { that.stage.removeComponent(c); }});
         that._updateColorScheme();
         that._updateInteractions();
         that._updateToggle();

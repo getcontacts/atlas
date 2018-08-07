@@ -1,0 +1,6 @@
+Identified the following residue names as waters: TIP3
+Identified the following residue names as lipids: POPC
+Identified the following residue names as ligands: IXO
+Processing /scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_1//stitched.dcd (frame 0 to 98 with stride of 1) as 1 fragments
+
+Finished computing contacts for fragment 0: 99 frames from 0 to 98 in strides of 1 taking 167.93356 s
