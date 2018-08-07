@@ -1,0 +1,3517 @@
+[
+  {
+    "pdbid": "4UHR (?)",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> active",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "-",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "unpublished",
+    "ligands": [
+      "NEC"
+    ]
+  },
+  {
+    "pdbid": "4UHR (?)",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> inactive",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "-",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "ZMA"
+    ]
+  },
+  {
+    "pdbid": "3SN6 (?)",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>AR active Gs BI",
+    "protein": "A<sub>2A</sub> inactive",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "ZMA"
+    ]
+  },
+    
+
+
+
+  {
+    "pdbid": "5NX2",
+    "chain": "A",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-06-14",
+    "method": "XC",
+    "resolution": 3.7,
+    "doi": "10.1038/NATURE22800",
+    "ligands": [
+      "truncated protein agonist"
+    ]
+  },
+  {
+    "pdbid": "5WS3",
+    "chain": "A",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-12-13",
+    "method": "XC",
+    "resolution": 2.3,
+    "doi": "",
+    "ligands": [
+      "EMPA"
+    ]
+  },
+  {
+    "pdbid": "5X93",
+    "chain": "A",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-08-16",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1038/NSMB.3450",
+    "ligands": [
+      "K-8794"
+    ]
+  },
+  {
+    "pdbid": "5X33",
+    "chain": "A",
+    "protein": "BLT<sub>1</sub> receptor",
+    "protid": "q9wtk1_cavpo",
+    "species": "Cavia porcellus (Guinea pig)",
+    "date": "2018-01-03",
+    "method": "XC",
+    "resolution": 3.7,
+    "doi": "10.1038/NCHEMBIO.2547",
+    "ligands": [
+      "BIIL-260"
+    ]
+  },
+  {
+    "pdbid": "3SN6",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-07-20",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE10361",
+    "ligands": [
+      "BI-167107"
+    ]
+  },
+  {
+    "pdbid": "5G53",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-08-03",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE18966",
+    "ligands": [
+      "NECA"
+    ]
+  },
+  {
+    "pdbid": "5CXV",
+    "chain": "A",
+    "protein": "M<sub>1</sub> receptor",
+    "protid": "acm1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-03-09",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE17188",
+    "ligands": [
+      "CHEMBL258622"
+    ]
+  },
+  {
+    "pdbid": "4XNW",
+    "chain": "A",
+    "protein": "P2Y<sub>1</sub> receptor",
+    "protid": "p2ry1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-04-01",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE14287",
+    "ligands": [
+      "MRS2500"
+    ]
+  },
+  {
+    "pdbid": "5L7D",
+    "chain": "B",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-07-20",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE18934",
+    "ligands": []
+  },
+  {
+    "pdbid": "3VW7",
+    "chain": "A",
+    "protein": "PAR1",
+    "protid": "par1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-12-12",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1038/NATURE11701",
+    "ligands": [
+      "Vorapaxar"
+    ]
+  },
+  {
+    "pdbid": "5T04",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2016-12-21",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1038/SREP38564",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "5JQH",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-07-13",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE18636",
+    "ligands": [
+      "Carazolol"
+    ]
+  },
+  {
+    "pdbid": "5TGZ",
+    "chain": "A",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-11-02",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1016/J.CELL.2016.10.004",
+    "ligands": [
+      "SCHEMBL662960"
+    ]
+  },
+  {
+    "pdbid": "3ODU",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-10-27",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1126/SCIENCE.1194396",
+    "ligands": [
+      "IT1t"
+    ]
+  },
+  {
+    "pdbid": "4N6H",
+    "chain": "A",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-12-25",
+    "method": "XC",
+    "resolution": 1.8,
+    "doi": "10.1038/NATURE12944",
+    "ligands": [
+      "Naltrindole"
+    ]
+  },
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu; receptor",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "2015-08-05",
+    "method": "XC",
+    "resolution": 2.1,
+    "doi": "10.1038/NATURE14886",
+    "ligands": [
+      "BU72"
+    ]
+  },
+  {
+    "pdbid": "5XSZ",
+    "chain": "A",
+    "protein": "LPA<sub>6</sub> receptor",
+    "protid": "q08bg4_danre",
+    "species": "Danio rerio (Zebrafish)",
+    "date": "2017-08-16",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE23448",
+    "ligands": []
+  },
+  {
+    "pdbid": "4MQT",
+    "chain": "A",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-11-27",
+    "method": "XC",
+    "resolution": 3.7,
+    "doi": "10.1038/NATURE12735",
+    "ligands": [
+      "LY2119620",
+      "iperoxo"
+    ]
+  },
+  {
+    "pdbid": "6BQH",
+    "chain": "A",
+    "protein": "5-HT<sub>2C</sub> receptor",
+    "protid": "5ht2c_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-14",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1016/J.CELL.2018.01.001",
+    "ligands": [
+      "Ritanserin"
+    ]
+  },
+  {
+    "pdbid": "5TZY",
+    "chain": "A",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-06-07",
+    "method": "XC",
+    "resolution": 3.22,
+    "doi": "10.1038/NSMB.3417",
+    "ligands": [
+      "(2s,3r)-3-Cyclopropyl-3-[(2r)-2-(1-{(1s)-1-[5-Fluoro-2-(Trifluoromethoxy)phenyl]ethyl}piperidin-4-Yl)-3,4-Dihydro-2h-1-Benzopyran-7-Yl]-2-Methylpropanoic Acid",
+      "UNII-11612L5SPI"
+    ]
+  },
+  {
+    "pdbid": "3UON",
+    "chain": "A",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-02-01",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE10753",
+    "ligands": [
+      "62869-69-6"
+    ]
+  },
+  {
+    "pdbid": "6CM4",
+    "chain": "A",
+    "protein": "D<sub>2</sub> receptor",
+    "protid": "drd2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-03-14",
+    "method": "XC",
+    "resolution": 2.87,
+    "doi": "10.1038/NATURE25758",
+    "ligands": [
+      "Risperidone"
+    ]
+  },
+  {
+    "pdbid": "5UNG",
+    "chain": "B",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-04-05",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE22035",
+    "ligands": [
+      "CHEMBL289472"
+    ]
+  },
+  {
+    "pdbid": "4DJH",
+    "chain": "A",
+    "protein": "&kappa; receptor",
+    "protid": "oprk_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-03-21",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/NATURE10939",
+    "ligands": [
+      "JDTic"
+    ]
+  },
+  {
+    "pdbid": "5DSG",
+    "chain": "B",
+    "protein": "M<sub>4</sub> receptor",
+    "protid": "acm4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-03-16",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE17188",
+    "ligands": [
+      "Tiotropium"
+    ]
+  },
+  {
+    "pdbid": "3RZE",
+    "chain": "A",
+    "protein": "H<sub>1</sub> receptor",
+    "protid": "hrh1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-06-15",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1038/NATURE10236",
+    "ligands": [
+      "doxepin"
+    ]
+  },
+  {
+    "pdbid": "5DHG",
+    "chain": "A",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-10-21",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1016/J.STR.2015.07.024",
+    "ligands": []
+  },
+  {
+    "pdbid": "5TUD",
+    "chain": "D",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-26",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1073/PNAS.1700891114",
+    "ligands": [
+      "Ergotamine"
+    ]
+  },
+  {
+    "pdbid": "5O9H",
+    "chain": "A",
+    "protein": "C5a<sub>1</sub> receptor",
+    "protid": "c5ar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-10",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE25025",
+    "ligands": [
+      "NDT 9513727"
+    ]
+  },
+  {
+    "pdbid": "5NDD",
+    "chain": "A",
+    "protein": "PAR2",
+    "protid": "par2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-03",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE22309",
+    "ligands": [
+      "GTPL9585"
+    ]
+  },
+  {
+    "pdbid": "4UHR",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-04-08",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1124/MOL.114.097360",
+    "ligands": [
+      "Cgs 21680"
+    ]
+  },
+  {
+    "pdbid": "5T1A",
+    "chain": "A",
+    "protein": "CCR2",
+    "protid": "ccr2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-12-14",
+    "method": "XC",
+    "resolution": 2.81,
+    "doi": "10.1038/NATURE20605",
+    "ligands": [
+      "2H-Pyrrol-2-one, 4-acetyl-1-(4-chloro-2-fluorophenyl)-5-cyclohexyl-1,5-dihydro-3-hydroxy-, (5R)-",
+      "CHEMBL3577945"
+    ]
+  },
+  {
+    "pdbid": "4U15",
+    "chain": "B",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-11-26",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1016/J.STR.2014.08.022",
+    "ligands": [
+      "Tiotropium"
+    ]
+  },
+  {
+    "pdbid": "6B73",
+    "chain": "A",
+    "protein": "&kappa; receptor",
+    "protid": "oprk_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1016/J.CELL.2017.12.011",
+    "ligands": [
+      "MP1104"
+    ]
+  },
+  {
+    "pdbid": "2Z73",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
+    "species": "Todarodes pacificus (Japanese flying squid)",
+    "date": "2008-05-13",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE06925",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "5DYS",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2016-08-10",
+    "method": "XC",
+    "resolution": 2.3,
+    "doi": "10.15252/EMBR.201642671",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "5VEW",
+    "chain": "A",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE22378",
+    "ligands": [
+      "97Y"
+    ]
+  },
+  {
+    "pdbid": "5UEN",
+    "chain": "B",
+    "protein": "A<sub>1</sub> receptor",
+    "protid": "aa1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-03-01",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1016/J.CELL.2017.01.042",
+    "ligands": [
+      "CHEMBL144360"
+    ]
+  },
+  {
+    "pdbid": "4Z35",
+    "chain": "A",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-06-03",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1016/J.CELL.2015.06.002",
+    "ligands": [
+      "ONO-9910539"
+    ]
+  },
+  {
+    "pdbid": "5LWE",
+    "chain": "B",
+    "protein": "CCR9",
+    "protid": "ccr9_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-12-07",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE20606",
+    "ligands": [
+      "Vercirnon"
+    ]
+  },
+  {
+    "pdbid": "3PBL",
+    "chain": "A",
+    "protein": "D<sub>3</sub> receptor",
+    "protid": "drd3_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-11-03",
+    "method": "XC",
+    "resolution": 2.89,
+    "doi": "10.1126/SCIENCE.1197410",
+    "ligands": [
+      "Eticlopride"
+    ]
+  },
+  {
+    "pdbid": "5XEZ",
+    "chain": "B",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE22363",
+    "ligands": [
+      "4-{[(4-Cyclohexylphenyl){[3-(Methylsulfonyl)phenyl]carbamoyl}amino]methyl}-N-(1h-Tetrazol-5-Yl)benzamide"
+    ]
+  },
+  {
+    "pdbid": "5VBL",
+    "chain": "B",
+    "protein": "apelin receptor",
+    "protid": "apj_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-31",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1016/J.STR.2017.04.008",
+    "ligands": [
+      "AMG3054"
+    ]
+  },
+  {
+    "pdbid": "5WIV",
+    "chain": "A",
+    "protein": "D<sub>4</sub> receptor",
+    "protid": "drd4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-10-18",
+    "method": "XC",
+    "resolution": 2.14,
+    "doi": "10.1126/SCIENCE.AAN5468",
+    "ligands": [
+      "Nemonapride"
+    ]
+  },
+  {
+    "pdbid": "5VAI",
+    "chain": "R",
+    "protein": "GLP-1 receptor",
+    "protid": "g1sgd4_rabit",
+    "species": "Oryctolagus cuniculus (Rabbit)",
+    "date": "2017-05-24",
+    "method": "EM",
+    "resolution": 4.1,
+    "doi": "10.1038/NATURE22394",
+    "ligands": [
+      "GLP-1"
+    ]
+  },
+  {
+    "pdbid": "6B3J",
+    "chain": "R",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-21",
+    "method": "EM",
+    "resolution": 3.3,
+    "doi": "10.1038/NATURE25773",
+    "ligands": [
+      "Exendin-P5"
+    ]
+  },
+  {
+    "pdbid": "4Z9G",
+    "chain": "A",
+    "protein": "CRF<sub>1</sub> receptor",
+    "protid": "crfr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 3.18,
+    "doi": "10.2174/1874467210666170110114727",
+    "ligands": [
+      "CP-376395"
+    ]
+  },
+  {
+    "pdbid": "4NTJ",
+    "chain": "A",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-03-26",
+    "method": "XC",
+    "resolution": 2.62,
+    "doi": "10.1038/NATURE13083",
+    "ligands": [
+      "AZD1283"
+    ]
+  },
+  {
+    "pdbid": "1GZM",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2003-11-20",
+    "method": "XC",
+    "resolution": 2.65,
+    "doi": "10.1016/J.JMB.2004.08.090",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4ZUD",
+    "chain": "A",
+    "protein": "AT<sub>1</sub> receptor",
+    "protid": "agtr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-10-07",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1074/JBC.M115.689000",
+    "ligands": [
+      "OLM"
+    ]
+  },
+  {
+    "pdbid": "4XES",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2015-07-29",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NCOMMS8895",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "4ZJ8",
+    "chain": "A",
+    "protein": "OX<sub>1</sub> receptor",
+    "protid": "ox1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-03-09",
+    "method": "XC",
+    "resolution": 2.75,
+    "doi": "10.1038/NSMB.3183",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4BUO",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-01-29",
+    "method": "XC",
+    "resolution": 2.75,
+    "doi": "10.1073/PNAS.1317903111",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "4EJ4",
+    "chain": "A",
+    "protein": "&delta; receptor",
+    "protid": "oprd_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "2012-05-16",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE11111",
+    "ligands": [
+      "Naltrindole"
+    ]
+  },
+  {
+    "pdbid": "5UIW",
+    "chain": "A",
+    "protein": "CCR5",
+    "protid": "ccr5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-06-28",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1016/J.IMMUNI.2017.05.002",
+    "ligands": [
+      "5P7-CCL5"
+    ]
+  },
+  {
+    "pdbid": "4XT1",
+    "chain": "A",
+    "protein": "US28",
+    "protid": "us28_hcmva",
+    "species": "Human cytomegalovirus (strain AD169) (HHV-5)",
+    "date": "2015-03-04",
+    "method": "XC",
+    "resolution": 2.89,
+    "doi": "10.1126/SCIENCE.AAA5026",
+    "ligands": [
+      "CX3CL1"
+    ]
+  },
+  {
+    "pdbid": "5UZ7",
+    "chain": "R",
+    "protein": "CT receptor",
+    "protid": "calcr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-03",
+    "method": "EM",
+    "resolution": 4.1,
+    "doi": "10.1038/NATURE22327",
+    "ligands": []
+  },
+  {
+    "pdbid": "3V2Y",
+    "chain": "A",
+    "protein": "S1P<sub>1</sub> receptor",
+    "protid": "s1pr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-02-15",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIENCE.1215904",
+    "ligands": [
+      "909725-61-7"
+    ]
+  },
+  {
+    "pdbid": "4IB4",
+    "chain": "A",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-03-13",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1126/SCIENCE.1232808",
+    "ligands": [
+      "ERGOTAMINE"
+    ]
+  },
+  {
+    "pdbid": "4OR2",
+    "chain": "A",
+    "protein": "mGlu<sub>1</sub> receptor",
+    "protid": "grm1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-03-19",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIENCE.1249489",
+    "ligands": [
+      "FITM"
+    ]
+  },
+  {
+    "pdbid": "4IAQ",
+    "chain": "A",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-03-13",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIENCE.1232807",
+    "ligands": [
+      "dihydroergotamine"
+    ]
+  },
+  {
+    "pdbid": "3VG9",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-02-01",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE10750",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4ZWJ",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-07-29",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1038/NATURE14656",
+    "ligands": []
+  },
+  {
+    "pdbid": "4DKL",
+    "chain": "A",
+    "protein": "&mu; receptor",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "2012-03-21",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE10954",
+    "ligands": [
+      "BF0"
+    ]
+  },
+  {
+    "pdbid": "4AMJ",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2012-05-23",
+    "method": "XC",
+    "resolution": 2.3,
+    "doi": "10.1016/J.STR.2012.03.014",
+    "ligands": [
+      "(S)-Carvedilol"
+    ]
+  },
+  {
+    "pdbid": "2RH1",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2007-10-30",
+    "method": "XC",
+    "resolution": 2.4,
+    "doi": "10.1126/SCIENCE.1150577",
+    "ligands": [
+      "Carazolol"
+    ]
+  },
+  {
+    "pdbid": "1L9H",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2002-05-15",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1073/PNAS.082666399",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "1HZX",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2001-07-04",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1021/BI0155091",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "5IUB",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 2.1,
+    "doi": "10.1021/ACS.JMEDCHEM.6B00653",
+    "ligands": [
+      "CHEMBL184061"
+    ]
+  },
+  {
+    "pdbid": "2PED",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2007-10-30",
+    "method": "XC",
+    "resolution": 2.95,
+    "doi": "10.1529/BIOPHYSJ.107.108225",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3UZC",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-03-21",
+    "method": "XC",
+    "resolution": 3.34,
+    "doi": "10.1021/JM201376W",
+    "ligands": [
+      "T4E"
+    ]
+  },
+  {
+    "pdbid": "5WQC",
+    "chain": "A",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-11-29",
+    "method": "XC",
+    "resolution": 1.96,
+    "doi": "10.1016/J.STR.2017.11.005",
+    "ligands": [
+      "EMPA"
+    ]
+  },
+  {
+    "pdbid": "2Y00",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-01-12",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE09746",
+    "ligands": [
+      "Dobutamine"
+    ]
+  },
+  {
+    "pdbid": "2Y04",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-01-12",
+    "method": "XC",
+    "resolution": 3.05,
+    "doi": "",
+    "ligands": [
+      "Levalbuterol"
+    ]
+  },
+  {
+    "pdbid": "5IU8",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 2.0,
+    "doi": "",
+    "ligands": [
+      "2-(Furan-2-Yl)-N~5~-[2-(4-Methylpiperazin-1-Yl)ethyl][1,2,4]triazolo[1,5-A][1,3,5]triazine-5,7-Diamine"
+    ]
+  },
+  {
+    "pdbid": "3PDS",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-01-12",
+    "method": "XC",
+    "resolution": 3.5,
+    "doi": "10.1038/NATURE09665",
+    "ligands": [
+      "FAUC50"
+    ]
+  },
+  {
+    "pdbid": "5VRA",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-12-13",
+    "method": "XC",
+    "resolution": 2.35,
+    "doi": "10.1038/NPROT.2017.135",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "5OLO",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "Tozadenant"
+    ]
+  },
+  {
+    "pdbid": "3NY8",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-08-11",
+    "method": "XC",
+    "resolution": 2.84,
+    "doi": "10.1021/JA105108Q",
+    "ligands": [
+      "AC1NSK5N"
+    ]
+  },
+  {
+    "pdbid": "4J4Q",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2013-10-30",
+    "method": "XC",
+    "resolution": 2.65,
+    "doi": "10.1002/ANIE.201302374",
+    "ligands": []
+  },
+  {
+    "pdbid": "5K2C",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-21",
+    "method": "XC",
+    "resolution": 1.9,
+    "doi": "10.1126/SCIADV.1600292",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4RWD",
+    "chain": "A",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-01-14",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NSMB.2965",
+    "ligands": [
+      "DIPP-NH2"
+    ]
+  },
+  {
+    "pdbid": "5L7I",
+    "chain": "B",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-07-20",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1038/NATURE18934",
+    "ligands": [
+      "Vismodegib"
+    ]
+  },
+  {
+    "pdbid": "5TE3",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2017-03-15",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1073/PNAS.1617446114",
+    "ligands": []
+  },
+  {
+    "pdbid": "5N2R",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-26",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1016/J.STR.2017.06.012",
+    "ligands": [
+      "PSB36"
+    ]
+  },
+  {
+    "pdbid": "2Y03",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-01-12",
+    "method": "XC",
+    "resolution": 2.85,
+    "doi": "10.1038/NATURE09746",
+    "ligands": [
+      "LEVISOPRENALINE"
+    ]
+  },
+  {
+    "pdbid": "5V56",
+    "chain": "B",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/NCOMMS15383",
+    "ligands": [
+      "N-methyl-N-[1-[4-(2-methylpyrazol-3-yl)phthalazin-1-yl]piperidin-4-yl]-4-nitro-2-(trifluoromethyl)benzamide"
+    ]
+  },
+  {
+    "pdbid": "4EIY",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-07-25",
+    "method": "XC",
+    "resolution": 1.8,
+    "doi": "10.1126/SCIENCE.1219218",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "3AYM",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
+    "species": "Todarodes pacificus (Japanese flying squid)",
+    "date": "2011-08-17",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1016/J.JMB.2011.08.044",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4K5Y",
+    "chain": "C",
+    "protein": "CRF<sub>1</sub> receptor",
+    "protid": "crfr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-07-17",
+    "method": "XC",
+    "resolution": 2.98,
+    "doi": "10.1038/NATURE12357",
+    "ligands": [
+      "CP-376395"
+    ]
+  },
+  {
+    "pdbid": "2YCX",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-06-01",
+    "method": "XC",
+    "resolution": 3.25,
+    "doi": "10.1073/PNAS.1100185108",
+    "ligands": [
+      "(S)-Cyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "5D5A",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-01-13",
+    "method": "XC",
+    "resolution": 2.48,
+    "doi": "10.1107/S2059798315021683",
+    "ligands": [
+      "Carazolol"
+    ]
+  },
+  {
+    "pdbid": "6AQF",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-10",
+    "method": "XC",
+    "resolution": 2.51,
+    "doi": "10.1016/J.CELL.2017.12.004",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "3ZEV",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-01-29",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1073/PNAS.1317903111",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "5WF5",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-21",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1016/J.STR.2017.12.013",
+    "ligands": [
+      "UK-432,097"
+    ]
+  },
+  {
+    "pdbid": "5OLH",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "Vipadenant"
+    ]
+  },
+  {
+    "pdbid": "5F8U",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2015-12-23",
+    "method": "XC",
+    "resolution": 3.35,
+    "doi": "10.1038/NSMB.3130",
+    "ligands": [
+      "(S)-Cyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "5XR8",
+    "chain": "A",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-12",
+    "method": "XC",
+    "resolution": 2.95,
+    "doi": "10.1038/NATURE23272",
+    "ligands": [
+      "8D0"
+    ]
+  },
+  {
+    "pdbid": "6FK6",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.36,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "(2~{S})-2-(4-chlorophenyl)-3-methyl-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-butan-1-one"
+    ]
+  },
+  {
+    "pdbid": "2YDV",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-05-18",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE10136",
+    "ligands": [
+      "NECA"
+    ]
+  },
+  {
+    "pdbid": "2VT4",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2008-06-24",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE07101",
+    "ligands": [
+      "(S)-Cyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "4AMI",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2012-05-23",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1016/J.STR.2012.03.014",
+    "ligands": [
+      "bucindolol"
+    ]
+  },
+  {
+    "pdbid": "3REY",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-09-07",
+    "method": "XC",
+    "resolution": 3.31,
+    "doi": "10.1016/J.STR.2011.06.014",
+    "ligands": [
+      "Xanthine amine congener"
+    ]
+  },
+  {
+    "pdbid": "4PY0",
+    "chain": "A",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-04-30",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1038/NATURE13288",
+    "ligands": [
+      "2-Mesatp"
+    ]
+  },
+  {
+    "pdbid": "3OE9",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-10-27",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1126/SCIENCE.1194396",
+    "ligands": [
+      "IT1t"
+    ]
+  },
+  {
+    "pdbid": "2R4R",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2007-11-06",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE06325",
+    "ligands": []
+  },
+  {
+    "pdbid": "4LDE",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-09-25",
+    "method": "XC",
+    "resolution": 2.79,
+    "doi": "10.1038/NATURE12572",
+    "ligands": [
+      "BI167107"
+    ]
+  },
+  {
+    "pdbid": "5K2B",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-21",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1126/SCIADV.1600292",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "5MZJ",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-26",
+    "method": "XC",
+    "resolution": 2.0,
+    "doi": "10.1016/J.STR.2017.06.012",
+    "ligands": [
+      "Theophylline"
+    ]
+  },
+  {
+    "pdbid": "4PXF",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2014-09-17",
+    "method": "XC",
+    "resolution": 2.75,
+    "doi": "10.1038/NCOMMS5801",
+    "ligands": []
+  },
+  {
+    "pdbid": "4L6R",
+    "chain": "A",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-07-24",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1038/NATURE12393",
+    "ligands": []
+  },
+  {
+    "pdbid": "3OAX",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2011-01-19",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1016/J.BPJ.2010.08.003",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4WW3",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
+    "species": "Todarodes pacificus (Japanese flying squid)",
+    "date": "2015-06-17",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1371/JOURNAL.PONE.0126970",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "5MZP",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-26",
+    "method": "XC",
+    "resolution": 2.1,
+    "doi": "10.1016/J.STR.2017.06.012",
+    "ligands": [
+      "Caffeine"
+    ]
+  },
+  {
+    "pdbid": "5JTB",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-31",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIADV.1602952",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "2YDO",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-05-18",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE10136",
+    "ligands": [
+      "adenosine"
+    ]
+  },
+  {
+    "pdbid": "3PQR",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2011-03-09",
+    "method": "XC",
+    "resolution": 2.85,
+    "doi": "10.1038/NATURE09789",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3UZA",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-03-21",
+    "method": "XC",
+    "resolution": 3.27,
+    "doi": "10.1021/JM201376W",
+    "ligands": [
+      "CHEMBL2024115"
+    ]
+  },
+  {
+    "pdbid": "5IUA",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1021/ACS.JMEDCHEM.6B00653",
+    "ligands": [
+      "2-(Furan-2-Yl)-N~5~-[3-(4-Phenylpiperazin-1-Yl)propyl][1,2,4]triazolo[1,5-A][1,3,5]triazine-5,7-Diamine"
+    ]
+  },
+  {
+    "pdbid": "3NYA",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-08-11",
+    "method": "XC",
+    "resolution": 3.16,
+    "doi": "10.1021/JA105108Q",
+    "ligands": [
+      "(-)-Alprenolol"
+    ]
+  },
+  {
+    "pdbid": "4BEZ",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2013-04-24",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1038/EMBOR.2013.44",
+    "ligands": []
+  },
+  {
+    "pdbid": "2I35",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2006-10-17",
+    "method": "XC",
+    "resolution": 3.8,
+    "doi": "10.1073/PNAS.0608022103",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub> receptor",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-11-27",
+    "method": "XC",
+    "resolution": 3.5,
+    "doi": "10.1038/NATURE12735",
+    "ligands": [
+      "iperoxo"
+    ]
+  },
+  {
+    "pdbid": "4U14",
+    "chain": "A",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-11-26",
+    "method": "XC",
+    "resolution": 3.57,
+    "doi": "10.1016/J.STR.2014.08.022",
+    "ligands": [
+      "Tiotropium"
+    ]
+  },
+  {
+    "pdbid": "3VGA",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-02-01",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1038/NATURE10750",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4QKX",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-07-23",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1073/PNAS.1410415111",
+    "ligands": [
+      "35V"
+    ]
+  },
+  {
+    "pdbid": "5WIU",
+    "chain": "A",
+    "protein": "D<sub>4</sub> receptor",
+    "protid": "drd4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-10-18",
+    "method": "XC",
+    "resolution": 1.96,
+    "doi": "10.1126/SCIENCE.AAN5468",
+    "ligands": [
+      "Nemonapride"
+    ]
+  },
+  {
+    "pdbid": "2G87",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2006-09-02",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1002/ANIE.200600595",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3EML",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2008-10-14",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1126/SCIENCE.1164772",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4GRV",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2012-10-17",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE11558",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "4XT3",
+    "chain": "A",
+    "protein": "US28",
+    "protid": "us28_hcmva",
+    "species": "Human cytomegalovirus (strain AD169) (HHV-5)",
+    "date": "2015-03-04",
+    "method": "XC",
+    "resolution": 3.8,
+    "doi": "10.1126/SCIENCE.AAA5026",
+    "ligands": [
+      "CX3CL1"
+    ]
+  },
+  {
+    "pdbid": "6BQG",
+    "chain": "A",
+    "protein": "5-HT<sub>2C</sub> receptor",
+    "protid": "5ht2c_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-14",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1016/J.CELL.2018.01.001",
+    "ligands": [
+      "Ergotamine"
+    ]
+  },
+  {
+    "pdbid": "3D4S",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2008-06-17",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1016/J.STR.2008.05.001",
+    "ligands": [
+      "timolol"
+    ]
+  },
+  {
+    "pdbid": "5YQZ",
+    "chain": "R",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE25153",
+    "ligands": [
+      "NNC1702"
+    ]
+  },
+  {
+    "pdbid": "5W0P",
+    "chain": "D",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-08-09",
+    "method": "XC",
+    "resolution": 3.01,
+    "doi": "10.1016/J.CELL.2017.07.002",
+    "ligands": []
+  },
+  {
+    "pdbid": "4RWA",
+    "chain": "A",
+    "protein": "&delta; receptor",
+    "protid": "oprd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-01-14",
+    "method": "XC",
+    "resolution": 3.28,
+    "doi": "10.1038/NSMB.2965",
+    "ligands": [
+      "DIPP-NH2"
+    ]
+  },
+  {
+    "pdbid": "4XNV",
+    "chain": "A",
+    "protein": "P2Y<sub>1</sub> receptor",
+    "protid": "p2ry1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-04-01",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1038/NATURE14287",
+    "ligands": [
+      "BPTU"
+    ]
+  },
+  {
+    "pdbid": "4Z34",
+    "chain": "A",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-06-03",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1016/J.CELL.2015.06.002",
+    "ligands": [
+      "ONO-9780307"
+    ]
+  },
+  {
+    "pdbid": "4BEY",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2013-05-08",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/EMBOR.2013.44",
+    "ligands": []
+  },
+  {
+    "pdbid": "5GLH",
+    "chain": "A",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-07",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE19319",
+    "ligands": [
+      "Et 1"
+    ]
+  },
+  {
+    "pdbid": "2ZIY",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
+    "species": "Todarodes pacificus (Japanese flying squid)",
+    "date": "2008-05-06",
+    "method": "XC",
+    "resolution": 3.7,
+    "doi": "10.1074/JBC.C800040200",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "2HPY",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2006-08-22",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1073/PNAS.0601765103",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3V2W",
+    "chain": "A",
+    "protein": "S1P<sub>1</sub> receptor",
+    "protid": "s1pr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-02-15",
+    "method": "XC",
+    "resolution": 3.35,
+    "doi": "10.1126/SCIENCE.1215904",
+    "ligands": [
+      "909725-61-7"
+    ]
+  },
+  {
+    "pdbid": "2J4Y",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2007-09-25",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1016/J.JMB.2007.03.007",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4PHU",
+    "chain": "A",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-07-16",
+    "method": "XC",
+    "resolution": 2.33,
+    "doi": "10.1038/NATURE13494",
+    "ligands": [
+      "TAK-875"
+    ]
+  },
+  {
+    "pdbid": "4MBS",
+    "chain": "A",
+    "protein": "CCR5",
+    "protid": "ccr5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-09-11",
+    "method": "XC",
+    "resolution": 2.71,
+    "doi": "10.1126/SCIENCE.1241475",
+    "ligands": [
+      "Maraviroc"
+    ]
+  },
+  {
+    "pdbid": "5NJ6",
+    "chain": "A",
+    "protein": "PAR2",
+    "protid": "par2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-03",
+    "method": "XC",
+    "resolution": 4.0,
+    "doi": "10.1038/NATURE22309",
+    "ligands": []
+  },
+  {
+    "pdbid": "5CGC",
+    "chain": "A",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-08-12",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1021/ACS.JMEDCHEM.5B00892",
+    "ligands": [
+      "CHEMBL3603915"
+    ]
+  },
+  {
+    "pdbid": "4Z36",
+    "chain": "A",
+    "protein": "LPA<sub>1</sub> receptor",
+    "protid": "lpar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-06-03",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1016/J.CELL.2015.06.002",
+    "ligands": [
+      "ONO-3080573"
+    ]
+  },
+  {
+    "pdbid": "5IU4",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 1.72,
+    "doi": "10.1021/ACS.JMEDCHEM.6B00653",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "1F88",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2000-08-04",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIENCE.289.5480.739",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "2YCY",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-06-08",
+    "method": "XC",
+    "resolution": 3.15,
+    "doi": "10.1073/PNAS.1100185108",
+    "ligands": [
+      "(S)-Cyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "5TZR",
+    "chain": "A",
+    "protein": "FFA1 receptor",
+    "protid": "ffar1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-06-07",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1038/NSMB.3417",
+    "ligands": [
+      "UNII-11612L5SPI"
+    ]
+  },
+  {
+    "pdbid": "3QAK",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-03-09",
+    "method": "XC",
+    "resolution": 2.71,
+    "doi": "10.1126/SCIENCE.1202793",
+    "ligands": [
+      "UK-432097"
+    ]
+  },
+  {
+    "pdbid": "5D6L",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-08-17",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NPROT.2017.057",
+    "ligands": [
+      "Carazolol"
+    ]
+  },
+  {
+    "pdbid": "3P0G",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-01-19",
+    "method": "XC",
+    "resolution": 3.5,
+    "doi": "10.1038/NATURE09648",
+    "ligands": [
+      "BI-167107"
+    ]
+  },
+  {
+    "pdbid": "5OLV",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 2.0,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "CHEMBL1671936"
+    ]
+  },
+  {
+    "pdbid": "3PWH",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-09-07",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1016/J.STR.2011.06.014",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "5NLX",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-09-27",
+    "method": "XC",
+    "resolution": 2.14,
+    "doi": "10.1038/S41467-017-00630-4",
+    "ligands": []
+  },
+  {
+    "pdbid": "5WKT",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2017-12-13",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NPROT.2017.135",
+    "ligands": []
+  },
+  {
+    "pdbid": "5UNF",
+    "chain": "A",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-04-05",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NATURE22035",
+    "ligands": [
+      "CHEMBL289472"
+    ]
+  },
+  {
+    "pdbid": "5OM1",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 2.1,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "4-(3-amino-5-phenyl-1,2,4-triazin-6-yl)-2-chlorophenol"
+    ]
+  },
+  {
+    "pdbid": "4JKV",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-04-24",
+    "method": "XC",
+    "resolution": 2.45,
+    "doi": "10.1038/NATURE12167",
+    "ligands": [
+      "LY2940680"
+    ]
+  },
+  {
+    "pdbid": "5XF1",
+    "chain": "B",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 3.19,
+    "doi": "10.1038/NATURE22363",
+    "ligands": [
+      "4-{[(4-Cyclohexylphenyl){[3-(Methylsulfonyl)phenyl]carbamoyl}amino]methyl}-N-(1h-Tetrazol-5-Yl)benzamide"
+    ]
+  },
+  {
+    "pdbid": "2Y02",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-01-12",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE09746",
+    "ligands": [
+      "Carmoterol"
+    ]
+  },
+  {
+    "pdbid": "5D5B",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-01-13",
+    "method": "XC",
+    "resolution": 3.8,
+    "doi": "10.1107/S2059798315021683",
+    "ligands": [
+      "Carazolol"
+    ]
+  },
+  {
+    "pdbid": "6FFH",
+    "chain": "A",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-03-07",
+    "method": "XC",
+    "resolution": 2.65,
+    "doi": "10.1021/ACS.JMEDCHEM.7B01722",
+    "ligands": [
+      "Fenobam"
+    ]
+  },
+  {
+    "pdbid": "5CGD",
+    "chain": "A",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-08-12",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1021/ACS.JMEDCHEM.5B00892",
+    "ligands": [
+      "CHEMBL3603923"
+    ]
+  },
+  {
+    "pdbid": "5DGY",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-03-23",
+    "method": "XC",
+    "resolution": 7.7,
+    "doi": "10.1038/SDATA.2016.21",
+    "ligands": []
+  },
+  {
+    "pdbid": "4NC3",
+    "chain": "A",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-12-18",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1126/SCIENCE.1244142",
+    "ligands": [
+      "ERGOTAMINE"
+    ]
+  },
+  {
+    "pdbid": "3OE0",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-10-27",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1126/SCIENCE.1194396",
+    "ligands": [
+      "CVX15"
+    ]
+  },
+  {
+    "pdbid": "6FK8",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.87,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "(2~{R},3~{S})-3-azanyl-2-(4-chlorophenyl)-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-butan-1-one"
+    ]
+  },
+  {
+    "pdbid": "2I37",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2006-10-17",
+    "method": "XC",
+    "resolution": 4.15,
+    "doi": "10.1073/PNAS.0608022103",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "5OLG",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 1.87,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "5NDZ",
+    "chain": "A",
+    "protein": "PAR2",
+    "protid": "par2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-03",
+    "method": "XC",
+    "resolution": 3.6,
+    "doi": "10.1038/NATURE22309",
+    "ligands": [
+      "2-(6-Bromanyl-1,3-Benzodioxol-5-Yl)-~{n}-(4-Cyanophenyl)-1-[(1~{s})-1-Cyclohexylethyl]benzimidazole-5-Carboxamide"
+    ]
+  },
+  {
+    "pdbid": "3OE8",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-10-27",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1126/SCIENCE.1194396",
+    "ligands": [
+      "IT1t"
+    ]
+  },
+  {
+    "pdbid": "4X1H",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2015-11-04",
+    "method": "XC",
+    "resolution": 2.29,
+    "doi": "10.1016/J.STR.2015.09.015",
+    "ligands": [
+      "69984-73-2"
+    ]
+  },
+  {
+    "pdbid": "4BWB",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-01-29",
+    "method": "XC",
+    "resolution": 3.57,
+    "doi": "10.1073/PNAS.1317903111",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "6FKB",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 3.03,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "2-(4-chlorophenyl)-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-ethanone"
+    ]
+  },
+  {
+    "pdbid": "5TE5",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2017-03-15",
+    "method": "XC",
+    "resolution": 4.01,
+    "doi": "10.1073/PNAS.1617446114",
+    "ligands": [
+      "10,20-Methanoretinal"
+    ]
+  },
+  {
+    "pdbid": "5WF6",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-21",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1016/J.STR.2017.12.013",
+    "ligands": [
+      "UK-432,097"
+    ]
+  },
+  {
+    "pdbid": "6FKA",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "(2~{S})-2-(3,4-dichlorophenyl)-3-methyl-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-butan-1-one"
+    ]
+  },
+  {
+    "pdbid": "2X72",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2011-03-16",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE09795",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "2YCW",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-06-01",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1073/PNAS.1100185108",
+    "ligands": [
+      "timolol"
+    ]
+  },
+  {
+    "pdbid": "5K2A",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-21",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1126/SCIADV.1600292",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4BVN",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2014-04-02",
+    "method": "XC",
+    "resolution": 2.1,
+    "doi": "10.1371/JOURNAL.PONE.0092727",
+    "ligands": [
+      "(S)-Cyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "5UVI",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1107/S205225251700570X",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "3ZPR",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2013-04-03",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1021/JM400140Q",
+    "ligands": [
+      "4-Methyl-2-piperazin-1-yl-quinoline"
+    ]
+  },
+  {
+    "pdbid": "5TVN",
+    "chain": "A",
+    "protein": "5-HT<sub>2B</sub> receptor",
+    "protid": "5ht2b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-02-01",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1016/J.CELL.2016.12.033",
+    "ligands": [
+      "Lysergide"
+    ]
+  },
+  {
+    "pdbid": "5UIG",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-02-08",
+    "method": "XC",
+    "resolution": 3.5,
+    "doi": "10.1073/PNAS.1621423114",
+    "ligands": [
+      "5-Amino-N-[(2-Methoxyphenyl)methyl]-2-(3-Methylphenyl)-2h-1,2,3-Triazole-4-Carboximidamide"
+    ]
+  },
+  {
+    "pdbid": "5N2S",
+    "chain": "A",
+    "protein": "A<sub>1</sub> receptor",
+    "protid": "aa1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-07-26",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1016/J.STR.2017.06.012",
+    "ligands": [
+      "PSB36"
+    ]
+  },
+  {
+    "pdbid": "4EA3",
+    "chain": "A",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-04-25",
+    "method": "XC",
+    "resolution": 3.01,
+    "doi": "10.1038/NATURE11085",
+    "ligands": [
+      "C-24"
+    ]
+  },
+  {
+    "pdbid": "5VEX",
+    "chain": "B",
+    "protein": "GLP-1 receptor",
+    "protid": "glp1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-17",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE22378",
+    "ligands": [
+      "4-{[(4-Cyclohexylphenyl){[3-(Methylsulfonyl)phenyl]carbamoyl}amino]methyl}-N-(1h-Tetrazol-5-Yl)benzamide"
+    ]
+  },
+  {
+    "pdbid": "5EE7",
+    "chain": "A",
+    "protein": "glucagon receptor",
+    "protid": "glr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-04-20",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE17414",
+    "ligands": [
+      "3,6,9,12,15,18,21,24-OCTAOXAHEXACOSAN-1-OL"
+    ]
+  },
+  {
+    "pdbid": "6FKD",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.49,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "5-chloranyl-2-(2-oxidanylidene-2-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-ethyl)-3~{H}-pyridin-6-one"
+    ]
+  },
+  {
+    "pdbid": "3RFM",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2011-09-07",
+    "method": "XC",
+    "resolution": 3.6,
+    "doi": "10.1016/J.STR.2011.06.014",
+    "ligands": [
+      "caffeine"
+    ]
+  },
+  {
+    "pdbid": "5X7D",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-08-16",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1038/NATURE23652",
+    "ligands": [
+      "Carazolol",
+      "4-carbamoyl-N-[(2R)-2-cyclohexyl-2-phenylacetyl]-L-phenylalanyl-3-bromo-N-methyl-L-phenylalaninamide"
+    ]
+  },
+  {
+    "pdbid": "5V57",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-24",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NCOMMS15383",
+    "ligands": [
+      "N-methyl-N-[1-[4-(2-methylpyrazol-3-yl)phthalazin-1-yl]piperidin-4-yl]-4-nitro-2-(trifluoromethyl)benzamide"
+    ]
+  },
+  {
+    "pdbid": "3KJ6",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-02-16",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE08650",
+    "ligands": []
+  },
+  {
+    "pdbid": "4LDL",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-09-25",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1038/NATURE12572",
+    "ligands": [
+      "hydroxybenzylisoproterenol"
+    ]
+  },
+  {
+    "pdbid": "5DHH",
+    "chain": "A",
+    "protein": "NOP receptor",
+    "protid": "oprx_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-10-21",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1016/J.STR.2015.07.024",
+    "ligands": []
+  },
+  {
+    "pdbid": "5V54",
+    "chain": "A",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-07",
+    "method": "XC",
+    "resolution": 3.9,
+    "doi": "",
+    "ligands": [
+      "CHEMBL428892"
+    ]
+  },
+  {
+    "pdbid": "5UNH",
+    "chain": "B",
+    "protein": "AT<sub>2</sub> receptor",
+    "protid": "agtr2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-04-05",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/NATURE22035",
+    "ligands": [
+      "8EM"
+    ]
+  },
+  {
+    "pdbid": "3AYN",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_todpa",
+    "species": "Todarodes pacificus (Japanese flying squid)",
+    "date": "2011-08-17",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1016/J.JMB.2011.08.044",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4DAJ",
+    "chain": "A",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2012-02-22",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE10867",
+    "ligands": [
+      "Tiotropium"
+    ]
+  },
+  {
+    "pdbid": "2YCZ",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-06-01",
+    "method": "XC",
+    "resolution": 3.65,
+    "doi": "10.1073/PNAS.1100185108",
+    "ligands": [
+      "timolol"
+    ]
+  },
+  {
+    "pdbid": "2Y01",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2011-03-30",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE09746",
+    "ligands": [
+      "dobutamine"
+    ]
+  },
+  {
+    "pdbid": "4A4M",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2012-01-25",
+    "method": "XC",
+    "resolution": 3.3,
+    "doi": "10.1073/PNAS.1114089108",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3C9M",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2008-08-05",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1107/S0907444908017162",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3OE6",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-10-27",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1126/SCIENCE.1194396",
+    "ligands": [
+      "IT1t"
+    ]
+  },
+  {
+    "pdbid": "4GPO",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2013-02-27",
+    "method": "XC",
+    "resolution": 3.5,
+    "doi": "10.1038/NSMB.2504",
+    "ligands": []
+  },
+  {
+    "pdbid": "2R4S",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2007-11-06",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE06325",
+    "ligands": []
+  },
+  {
+    "pdbid": "3NY9",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2010-08-11",
+    "method": "XC",
+    "resolution": 2.84,
+    "doi": "10.1021/JA105108Q",
+    "ligands": [
+      "CHEMBL1233771"
+    ]
+  },
+  {
+    "pdbid": "4GBR",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2012-10-24",
+    "method": "XC",
+    "resolution": 3.99,
+    "doi": "10.1371/JOURNAL.PONE.0046039",
+    "ligands": [
+      "timolol"
+    ]
+  },
+  {
+    "pdbid": "4XEE",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2015-07-29",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/NCOMMS8895",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "4U16",
+    "chain": "B",
+    "protein": "M<sub>3</sub> receptor",
+    "protid": "acm3_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-11-26",
+    "method": "XC",
+    "resolution": 3.7,
+    "doi": "10.1016/J.STR.2014.08.022",
+    "ligands": [
+      "methscopolamine"
+    ]
+  },
+  {
+    "pdbid": "5NM2",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-09-27",
+    "method": "XC",
+    "resolution": 1.95,
+    "doi": "10.1038/S41467-017-00630-4",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4QIM",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-07-23",
+    "method": "XC",
+    "resolution": 2.61,
+    "doi": "10.1038/NCOMMS5355",
+    "ligands": [
+      "AntaXV"
+    ]
+  },
+  {
+    "pdbid": "5GLI",
+    "chain": "A",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-07",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE19319",
+    "ligands": []
+  },
+  {
+    "pdbid": "4QIN",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-07-23",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NCOMMS5355",
+    "ligands": [
+      "SAG1.5"
+    ]
+  },
+  {
+    "pdbid": "5U09",
+    "chain": "A",
+    "protein": "CB<sub>1</sub> receptor",
+    "protid": "cnr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-12-07",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE20613",
+    "ligands": [
+      "Taranabant"
+    ]
+  },
+  {
+    "pdbid": "3PXO",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2011-03-09",
+    "method": "XC",
+    "resolution": 3.0,
+    "doi": "10.1038/NATURE09789",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3C9L",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2008-08-05",
+    "method": "XC",
+    "resolution": 2.65,
+    "doi": "10.1107/S0907444908017162",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "3ZPQ",
+    "chain": "B",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2013-04-03",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1021/JM400140Q",
+    "ligands": [
+      "4-(1-Piperazinyl)-1H-indole"
+    ]
+  },
+  {
+    "pdbid": "5XPR",
+    "chain": "A",
+    "protein": "ET<sub>B</sub> receptor",
+    "protid": "ednrb_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-08-16",
+    "method": "XC",
+    "resolution": 3.6,
+    "doi": "10.1038/NSMB.3450",
+    "ligands": []
+  },
+  {
+    "pdbid": "4ZJC",
+    "chain": "A",
+    "protein": "OX<sub>1</sub> receptor",
+    "protid": "ox1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-03-09",
+    "method": "XC",
+    "resolution": 2.83,
+    "doi": "10.1038/NSMB.3183",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4N4W",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-01-22",
+    "method": "XC",
+    "resolution": 2.8,
+    "doi": "10.1038/NCOMMS5355",
+    "ligands": [
+      "SANT-1"
+    ]
+  },
+  {
+    "pdbid": "6FK9",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.63,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "(2~{S})-3-methyl-2-phenyl-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-butan-1-one"
+    ]
+  },
+  {
+    "pdbid": "4S0V",
+    "chain": "A",
+    "protein": "OX<sub>2</sub> receptor",
+    "protid": "ox2r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-01-14",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE14035",
+    "ligands": [
+      "Suvorexant"
+    ]
+  },
+  {
+    "pdbid": "4BV0",
+    "chain": "A",
+    "protein": "NTS<sub>1</sub> receptor",
+    "protid": "ntr1_rat",
+    "species": "Rattus norvegicus (Rat)",
+    "date": "2014-01-29",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1073/PNAS.1317903111",
+    "ligands": [
+      "CHEMBL342252"
+    ]
+  },
+  {
+    "pdbid": "4IAR",
+    "chain": "A",
+    "protein": "5-HT<sub>1B</sub> receptor",
+    "protid": "5ht1b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-03-13",
+    "method": "XC",
+    "resolution": 2.7,
+    "doi": "10.1126/SCIENCE.1232807",
+    "ligands": [
+      "ERGOTAMINE"
+    ]
+  },
+  {
+    "pdbid": "2I36",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2006-10-17",
+    "method": "XC",
+    "resolution": 4.1,
+    "doi": "10.1073/PNAS.0608022103",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "6FKC",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2018-04-04",
+    "method": "XC",
+    "resolution": 2.46,
+    "doi": "10.1073/PNAS.1718084115",
+    "ligands": [
+      "3-[1'-[(2~{S})-2-(4-chlorophenyl)-3-methyl-butanoyl]spiro[1,3-benzodioxole-2,4'-piperidine]-5-yl]propanoic acid"
+    ]
+  },
+  {
+    "pdbid": "5EN0",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2016-08-10",
+    "method": "XC",
+    "resolution": 2.81,
+    "doi": "10.15252/EMBR.201642671",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4UG2",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-04-08",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1124/MOL.114.097360",
+    "ligands": [
+      "Cgs 21680"
+    ]
+  },
+  {
+    "pdbid": "4O9R",
+    "chain": "A",
+    "protein": "SMO",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-03-05",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NCOMMS4309",
+    "ligands": [
+      "Cyclopamine"
+    ]
+  },
+  {
+    "pdbid": "3DQB",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2008-09-23",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE07330",
+    "ligands": []
+  },
+  {
+    "pdbid": "4YAY",
+    "chain": "A",
+    "protein": "AT<sub>1</sub> receptor",
+    "protid": "agtr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-04-22",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1016/J.CELL.2015.04.011",
+    "ligands": [
+      "ZD7155"
+    ]
+  },
+  {
+    "pdbid": "5IU7",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-06-29",
+    "method": "XC",
+    "resolution": 1.9,
+    "doi": "10.1021/ACS.JMEDCHEM.6B00653",
+    "ligands": [
+      "2-(Furan-2-Yl)-N~5~-[2-(4-Phenylpiperidin-1-Yl)ethyl][1,2,4]triazolo[1,5-A][1,3,5]triazine-5,7-Diamine"
+    ]
+  },
+  {
+    "pdbid": "5NM4",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-09-27",
+    "method": "XC",
+    "resolution": 1.7,
+    "doi": "10.1038/S41467-017-00630-4",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "5OLZ",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 1.9,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "4-(3-amino-5-phenyl-1,2,4-triazin-6-yl)-2-chlorophenol"
+    ]
+  },
+  {
+    "pdbid": "4PXZ",
+    "chain": "A",
+    "protein": "P2Y<sub>12</sub> receptor",
+    "protid": "p2y12_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-04-30",
+    "method": "XC",
+    "resolution": 2.5,
+    "doi": "10.1038/NATURE13288",
+    "ligands": [
+      "2-MeSADP"
+    ]
+  },
+  {
+    "pdbid": "1U19",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2004-10-12",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1016/J.JMB.2004.07.044",
+    "ligands": [
+      "retinal"
+    ]
+  },
+  {
+    "pdbid": "4LDO",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2013-09-25",
+    "method": "XC",
+    "resolution": 3.2,
+    "doi": "10.1038/NATURE12572",
+    "ligands": [
+      "epinephrine"
+    ]
+  },
+  {
+    "pdbid": "5A8E",
+    "chain": "A",
+    "protein": "&beta;<sub>1</sub>-adrenoceptor",
+    "protid": "adrb1_melga",
+    "species": "Meleagris gallopavo (Wild turkey)",
+    "date": "2015-09-30",
+    "method": "XC",
+    "resolution": 2.4,
+    "doi": "10.1124/MOL.115.101030",
+    "ligands": [
+      "7-methylcyanopindolol"
+    ]
+  },
+  {
+    "pdbid": "5OM4",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-01-17",
+    "method": "XC",
+    "resolution": 2.0,
+    "doi": "10.1038/S41598-017-18570-W",
+    "ligands": [
+      "4-(3-amino-5-phenyl-1,2,4-triazin-6-yl)-2-chlorophenol"
+    ]
+  },
+  {
+    "pdbid": "5K2D",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> receptor",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-09-21",
+    "method": "XC",
+    "resolution": 1.9,
+    "doi": "10.1126/SCIADV.1600292",
+    "ligands": [
+      "ZM 241385"
+    ]
+  },
+  {
+    "pdbid": "4RWS",
+    "chain": "A",
+    "protein": "CXCR4",
+    "protid": "cxcr4_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2015-02-11",
+    "method": "XC",
+    "resolution": 3.1,
+    "doi": "10.1126/SCIENCE.1261064",
+    "ligands": [
+      "vMIP-II"
+    ]
+  },
+  {
+    "pdbid": "3CAP",
+    "chain": "A",
+    "protein": "Rhodopsin",
+    "protid": "opsd_bovin",
+    "species": "Bos taurus (Bovine)",
+    "date": "2008-06-24",
+    "method": "XC",
+    "resolution": 2.9,
+    "doi": "10.1038/NATURE07063",
+    "ligands": []
+  },
+  {
+    "pdbid": "6FFI",
+    "chain": "A",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-03-07",
+    "method": "XC",
+    "resolution": 2.2,
+    "doi": "10.1021/ACS.JMEDCHEM.7B01722",
+    "ligands": [
+      "2-[2-(3-methoxyphenyl)ethynyl]-6-methyl-pyridine"
+    ]
+  },
+  {
+    "pdbid": "4OO9",
+    "chain": "A",
+    "protein": "mGlu<sub>5</sub> receptor",
+    "protid": "grm5_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2014-07-02",
+    "method": "XC",
+    "resolution": 2.6,
+    "doi": "10.1038/NATURE13396",
+    "ligands": [
+      "Mavoglurant"
+    ]
+  }
+]
