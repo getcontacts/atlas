@@ -2,13 +2,14 @@
   {
     "pdbid": "4UHR (?)",
     "chain": "A",
-    "protein": "A<sub>2A</sub> active",
+    "protein": "A<sub>2A</sub> active (repl. 1)",
     "protid": "aa2ar_human",
     "species": "Homo sapiens (Human)",
     "date": "-",
     "method": "MD",
     "resolution": "-",
     "doi": "unpublished",
+    "structure": "A2A-active-NEC-unpublished/active-NEC/rep_1/step5_assembly.pdb",
     "ligands": [
       "NEC"
     ]
@@ -16,13 +17,29 @@
   {
     "pdbid": "4UHR (?)",
     "chain": "A",
-    "protein": "A<sub>2A</sub> inactive",
+    "protein": "A<sub>2A</sub> active (repl. 2)",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "-",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "unpublished",
+    "structure": "A2A-active-NEC-unpublished/active-NEC/rep_2/step5_assembly.pdb",
+    "ligands": [
+      "NEC"
+    ]
+  },
+  {
+    "pdbid": "4UHR (?)",
+    "chain": "A",
+    "protein": "A<sub>2A</sub> inactive (repl. 1)",
     "protid": "aa2ar_human",
     "species": "Homo sapiens (Human)",
     "date": "Unpublished",
     "method": "MD",
     "resolution": "-",
     "doi": "-",
+    "structure": "A2A-inactive-ZMA-unpublished/inactive-ZMA/rep_1/step5_assembly.pdb",
     "ligands": [
       "ZMA"
     ]
@@ -30,13 +47,14 @@
   {
     "pdbid": "4N6H (?)",
     "chain": "A",
-    "protein": "&delta;-opiod inactive naltrindole",
+    "protein": "&delta;-opiod inactive naltrindole (repl. 1)",
     "protid": "oprd_human",
     "species": "Homo sapiens (Human)",
     "date": "Unpublished",
     "method": "MD",
     "resolution": "-",
     "doi": "-",
+    "structure": "DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_1/step5_assembly.pdb",
     "ligands": [
       "Naltrindole"
     ]

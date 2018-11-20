@@ -1,69 +1,98 @@
+
+body{
+  margin-bottom: 100px;
+}
 h1{
-    text-align: center;
+  text-align: center;
 }
 
+#tableContents {
+  margin-top: 4rem;
+}
 table{
-    padding: 1rem;
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 100px;
+  padding: 1rem;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 0.3rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.3rem;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 th.col-ascending:after {
-    content: " \25be";
+  content: " \25be";
 }
 
 th.col-descending:after {
-    content: " \25b4";
+  content: " \25b4";
 }
 
 table .col-date {
-    min-width: 100px;
+  min-width: 100px;
 }
 
 .btn{
-    padding: 1rem;
-    color: white;
-    background-color: #8795b4;
-    border-radius: 0.4rem;
-    font-weight: bold;
-    position: fixed;
-    bottom: 0.1rem;
-    width: 400px;
-    left: 50%;
-    margin-left:-200px;
-    cursor: pointer;
-    text-align: center;
-    transition: bottom 200ms;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
-.btn:hover {
-    background-color: #325eb4;
+
+.btn-upload{
+  position: relative;
+  width: 400px;
+  left: 50%;
+  margin-left:-200px;
+  background-color: #d5dbef;
 }
-.btn-inactive {
-    bottom: -100px;
-    transition: bottom 200ms;
+.btn-upload:hover{
+  background-color: #c2cbe5;
 }
-.btn-inactive:hover {
-    background-color: #969596;
+.btn-upload-inactive {
+  background-color: #e9ecef;
+}
+.btn-upload-inactive:hover{
+  color: gray;
+  /*background-color: #d5dbef;*/
+  cursor: not-allowed;
+}
+
+.btn-compare{
+  position: fixed;
+  bottom: 0.1rem;
+  width: 400px;
+  left: 50%;
+  margin-left:-200px;
+  background-color: #8795b4;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: bottom 200ms;
+}
+.btn-compare:hover {
+  background-color: #325eb4;
+}
+.btn-compare-inactive {
+  bottom: -100px;
+  transition: bottom 200ms;
+}
+.btn-compare-inactive:hover {
+  background-color: #969596;
 }
 
 .hoverlink{
-    text-decoration: underline dashed gray;
+  text-decoration: underline dashed gray;
 }
 
 .fa-external-link-alt{
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 .fa-external-link-alt:hover{
-    color: black;
+  color: black;
 }
 

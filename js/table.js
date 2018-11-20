@@ -1,8 +1,23 @@
 
 function createTable(family, containerSelector) {
-  const structureJson = "static_data/"+family+"/annotations.json";
+  // const structureJson = "static_data/"+family+"/annotations.json";
+  const staticJson = "static_data/"+family+"/annotations.json";
+  const dynamicJson = "simulation_data/"+family+"/annotations.json";
 
-  d3.json(structureJson).then(function (structures) {
+  // const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
+  // const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
+  // const annotationPromise = [d3.json(annotationFile)];
+  // const that = this;
+  //
+  // Promise.all(contactFilePromises.concat(labelFilePromises).concat(annotationPromise))
+  //   .then(function (data) {
+
+  // d3.json(staticJson).then(function (structures) {
+  // const staticPromise = d3.json(staticJson);
+  // const dynamicPromise = d3.json(dynamicJson);
+  Promise.all([d3.json(staticJson), d3.json(dynamicJson)]).then(function (strucArrs) {
+    const structures = strucArrs[0].concat(strucArrs[1]);
+
     const table = d3.select(containerSelector)
       .append("table");
 
@@ -74,7 +89,7 @@ function createTable(family, containerSelector) {
         d.selected = !currentlyChecked;
         checkInput.property("checked", !currentlyChecked);
         const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
-        d3.select("#compare-button").classed("btn-inactive", numChecked == 0);
+        d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
 
     rows.append("td").append("input").attr("type", "checkbox")
@@ -84,7 +99,7 @@ function createTable(family, containerSelector) {
       .on("change", function (d) {
         d.selected = this.checked;
         const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
-        d3.select("#compare-button").classed("btn-inactive", numChecked == 0);
+        d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
     rows.append("td").html(function (d) {
       return d.protein;
@@ -149,7 +164,8 @@ function createTable(family, containerSelector) {
       .append("div")
       .attr("id", "compare-button")
       .classed("btn", true)
-      .classed("btn-inactive", true)
+      .classed("btn-compare", true)
+      .classed("btn-compare-inactive", true)
       .text("Compare selected structures")
       .on("click", function () {
         navigateToComparison(family, structures);
@@ -217,7 +233,12 @@ function navigateToComparison(family, structures){
   console.log(family)
   console.log(structures)
   var sel_pdbs = structures.filter((s) => s.selected)
-    .map((s) => (s.pdbid + "_" + s.chain).toUpperCase())
+    .map(function(s) {
+      if(s.hasOwnProperty("structure"))
+        return s.structure;
+      else
+        return (s.pdbid + "_" + s.chain).toUpperCase();
+    })
     .join(",");
   window.location.href="compare.html?family="+family+"&pdbids="+sel_pdbs;
 }
