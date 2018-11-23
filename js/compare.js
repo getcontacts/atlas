@@ -27,7 +27,6 @@ export class CompareManager {
     this.pdbIds = pdbIds;
     this.usrIds = usrIds;
     this.structureIdx = 0;
-    this.userStructures = new Map(usrIds.map((key) => [key, JSON.parse(localStorage.getItem(key))]));
     this.curItypes = ['hbss'];
   }
 
@@ -60,7 +59,7 @@ export class CompareManager {
     this.usrIds.forEach((usrid) => {
       const rawStorage = JSON.parse(localStorage.getItem(usrid));
       this.fileData.push({
-        id: usrid,
+        id: usrid.substr(9),
         contacts: parseTsvString(rawStorage.contactFile),
         labels: parseLabelString(rawStorage.labelFile),
         labelToResiMap: labelToResi(rawStorage.labelFile),
@@ -71,6 +70,7 @@ export class CompareManager {
     const that = this;
 
     // Read, parse and add builtin structures
+    const n = this.pdbIds.length;
     const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
     const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
     const pdbFiles = this.pdbIds.map((pdb) => "static_data/" + this.family + "/structures_protonated/" + pdb + ".pdb");
@@ -85,11 +85,13 @@ export class CompareManager {
       function(resolve) {
         Promise.all(contactFilePromises.concat(labelFilePromises).concat(pdbFilePromises).concat(annotationPromise))
           .then(function (data) {
-            const n = that.pdbIds.length;
+            // that.annotationData = data[3 * n];
+            const annotationData = data[3 * n];
+            const annMap = CompareManager._parseAnnotation(annotationData);
 
             for (let i = 0; i < contactFiles.length; i++) {
               that.fileData.push({
-                id: that.pdbIds[i],
+                id: annMap.get(that.pdbIds[i]),
                 contacts: parseTsvString(data[0 * n + i]),
                 labels: parseLabelString(data[1 * n + i]),
                 labelToResiMap: labelToResi(data[1 * n + i]),
@@ -97,11 +99,24 @@ export class CompareManager {
               });
             }
 
-            that.annotationData = data[3 * n];
             resolve();
           });
       }
     );
+  }
+
+  /**
+   *
+   * @param {Object} annotationJson
+   * @returns {Map<string, string>}
+   * @private
+   */
+  static _parseAnnotation(annotationJson) {
+    const kvArray = annotationJson.map((ann) => [
+      ann.pdbid + "_" + ann.chain,
+      ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain
+      ]);
+    return new Map(kvArray);
   }
 
   updateItypes(itypes) {
@@ -120,45 +135,42 @@ export class CompareManager {
       const labelsData = this.fileData.map((fd) => fd.labels); // TODO: Move to readAndParseFiles
 
       // Use annotation data to compose headers
-      const annotationData = this.annotationData;
-      const headerData = new Map();
-      this.pdbIds.forEach((pdbid) => {headerData.set(pdbid, "");});
-      annotationData.forEach((ann) => {
-        const key = ann.pdbid + "_" + ann.chain;
-        if (headerData.has(key)) {
-          const header = ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain;
-          headerData.set(key, header);
-        }
-      });
-      const headers = this.pdbIds
-        .map((pdbid) => headerData.get(pdbid))
-        .concat(this.usrIds
-          .map((key) => key.substr(9)));
+      // const annotationData = this.annotationData;
+      // const headerData = new Map();
+      // this.pdbIds.forEach((pdbid) => {headerData.set(pdbid, "");});
+      // annotationData.forEach((ann) => {
+      //   const key = ann.pdbid + "_" + ann.chain;
+      //   if (headerData.has(key)) {
+      //     const header = ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain;
+      //     headerData.set(key, header);
+      //   }
+      // });
+      // const headers = this.pdbIds
+      //   .map((pdbid) => headerData.get(pdbid))
+      //   .concat(this.usrIds
+      //     .map((key) => key.substr(9)));
+      const headers = this.fileData.map((fd) => fd.id);
+
+      console.log(headers);
 
       const graph = buildMultiFlare(contactsData, labelsData, headers);
 
       if (this.flareplot) {
         this.model.setGraph(graph);
-        this.updateStructure(this.pdbIds[0]);
+        // this.updateStructure(this.pdbIds[0]);
+        this.updateStructure(this.fileData[0].id);
       } else {
-        this.flareplot = new fp.Flareplot(graph, "auto", "#flareDiv", {
-
-        });
+        this.flareplot = new fp.Flareplot(graph, "auto", "#flareDiv", {});
         this.model = this.flareplot.getModel();
-        // this.nglpanel = new NGLPanel(structureFiles[this.curStructure], this.model, "600px", "600px", "#nglDiv",
-        //   {resiLabelFile: labelFiles[0]});
         this.nglpanel = new NGLPanel(this.model, "auto", "auto", "#nglDiv");
         this.fingerprintpanel = new FingerprintPanel(this.model, 23, "#fingerprintDiv");
-        this.updateStructure(this.pdbIds[0]);
+        this.updateStructure(this.fileData[0].id);
         this.fingerprintpanel.addHeaderClickListener((headerData) => {
-          console.log(headerData);
           this.updateStructure(this.fileData[headerData[1]].id);
-          // const pdb = headerData[0].split(":").slice(1).join("_");
-          // this.updateStructure(pdb);
         });
         this.fingerprintpanel.addRowClickListener((rowData) => {
           if (rowData.fingerprint.indexOf(this.structureIdx) == -1){
-            const pdb = this.pdbIds[rowData.fingerprint[0]];
+            const pdb = this.fileData[rowData.fingerprint[0]].id;
             this.updateStructure(pdb);
           }
 
@@ -168,6 +180,7 @@ export class CompareManager {
   }
 
   updateStructure(structureid) {
+    console.log("updateStructure", structureid);
     //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
     //this.update();
     const fileData = this.fileData.find((fd) => fd.id == structureid);
@@ -176,6 +189,33 @@ export class CompareManager {
     const contactData = fileData.contacts.filter((c) => this.curItypes.has(c[1]));
     this.nglpanel.setStructure(pdbBlob, fileData.labelToResiMap, contactData);
 
+    // // Style fingerprint header
+    // const headerDiv = this.fingerprintpanel.div.select(".fp-header")
+    //   .selectAll('.fp-headerCell')
+    //   .style("font-weight", function(d, i) {
+    //     return i == that.structureIdx ? "bold" : "normal";
+    //   });
+    //
+    // // Update flareplot labels
+    // this.flareplot.vertexGroup.selectAll("g.vertex text")
+    //   .style("opacity", function (d) {
+    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
+    //     const label = that.labelToResiData.get(d.data.name);
+    //     if (label) {
+    //       return null;
+    //     } else {
+    //       return 0.2;
+    //     }
+    //   })
+    //   .text(function (d) {
+    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
+    //     const label = that.labelToResiData.get(d.data.name);
+    //     if (label) {
+    //       return label.substring(label.indexOf(":") + 1);
+    //     } else {
+    //       return d.data.name;
+    //     }
+    //   });
 
     // this.structureIdx = this.pdbIds.indexOf(structureid);
     // const atomicContacts = this.contactsData[this.structureIdx];
