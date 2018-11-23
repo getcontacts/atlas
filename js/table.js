@@ -92,12 +92,13 @@ function createTable(family, containerSelector) {
       })
       .style("cursor", "pointer")
       .on("click", function (d) {
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
         const checkInput = d3.select(this).select("input");
         const currentlyChecked = checkInput.property("checked");
         d.selected = !currentlyChecked;
         checkInput.property("checked", !currentlyChecked);
         const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
-        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = us.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
         const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
@@ -108,8 +109,9 @@ function createTable(family, containerSelector) {
       })
       .on("change", function (d) {
         d.selected = this.checked;
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
         const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
-        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = us.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
         const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
@@ -166,7 +168,8 @@ function createTable(family, containerSelector) {
         structures.forEach(function (s) {
           s.selected = false;
         });
-        uploadedStructures.forEach(function (s) {
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
+        us.forEach(function (s) {
           s.selected = false;
         });
         d.selected = true;
@@ -252,7 +255,8 @@ function navigateToComparison(family){
         return (s.pdbid + "_" + s.chain).toUpperCase();
     })
     .join(",");
-  let selUploaded = uploadedStructures.filter((s) => s.selected)
+  const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
+  let selUploaded = us.filter((s) => s.selected)
     .map((s) => encodeURIComponent("USRTABLE_" + s.name))
     .join(",");
 
