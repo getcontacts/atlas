@@ -36,6 +36,10 @@ table .col-date {
   min-width: 100px;
 }
 
+#pdbDummyInput, #contactDummyInput, #labelDummyInput{
+  width: 100%;
+}
+
 .btn{
   border-radius: 0.4rem;
   font-weight: bold;
@@ -45,9 +49,7 @@ table .col-date {
 
 .btn-upload{
   position: relative;
-  width: 400px;
-  left: 50%;
-  margin-left:-200px;
+  width: 100%;
   background-color: #d5dbef;
 }
 .btn-upload:hover{
@@ -55,10 +57,12 @@ table .col-date {
 }
 .btn-upload-inactive {
   background-color: #e9ecef;
+  color: gray;
 }
 .btn-upload-inactive:hover{
-  color: gray;
   /*background-color: #d5dbef;*/
+  color: gray;
+  background-color: #e9ecef;
   cursor: not-allowed;
 }
 

@@ -1,19 +1,17 @@
+
+var uploadManager;
+var uploadedStructures;
+
 /**
- * Creates a structure uploader and validator Promise which creates a div in the current
- * page and either "resolves" or "rejects" based on the succes of uploading and parsing.
+ * ...
  *
  * Three files should be uploaded; an interaction file from the GetContacts package,
  * a residue label file, and a PDB-file. On succesful upload of all three, the files
  * will be validated for syntax (not content integrety) and returned as a list in the
  * argument of the `resolve` function.
- *
- * The dialog for creating
- * @param container_id
  */
-
-
 function createUserUpload(containerSelector) {
-  new UploadManager(containerSelector);
+  uploadManager = new UploadManager(containerSelector);
 }
 
 
@@ -35,22 +33,29 @@ class UploadManager {
     d3.select(containerSelector).append("div")
       .style("text-align", "center")
       .append("h3")
-      .text("Upload your own");
+      .text("Add your own (files are not stored on server!)");
 
     const table = d3.select(containerSelector).append("table");
 
-    const tbody = table.append("tbody");
-    const trow = tbody.append("tr");
-    let td = trow.append("td").style("border-bottom", "none");
-    td.append("label")
-      .attr("for", "nameInput")
-      .text("Name: ");
-    td.append("input")
+    const headRow = table.append("thead").append("tr");
+    headRow.append("th");
+    headRow.append("th").text("Name");
+    headRow.append("th").text("Contact-file");
+    headRow.append("th").text("Label-file");
+    headRow.append("th").text("PDB-file");
+    headRow.append("th");
+    headRow.append("th");
+
+    this.tbody = table.append("tbody");
+    const trow = this.tbody.append("tr");
+    trow.append("td");
+    trow.append("td")
+      .append("input")
       .attr("id", "nameInput")
       .attr("value", "")
       .attr("type", "text");
 
-    td = trow.append("td").style("position", "relative").style("border-bottom", "none");
+    let td = trow.append("td").style("position", "relative")
     td.append("input")
       .attr("id", "contactInput")
       .attr("type", "file")
@@ -61,20 +66,23 @@ class UploadManager {
       .on("change", function() {
         that._fileUploadInitiated("contact", this.files[0]);
       });
-    td.append("label")
-      .attr("for", "contactDummyInput")
-      .text("Contact-file: ");
+    // td.append("label")
+    //   .attr("for", "contactDummyInput")
+    //   .text("Contact-file: ");
     td.append("i")
       .attr("id", "contactDummyIcon")
-      .style("position", "relative")
-      .style("left", "2rem")
+      .style("position", "absolute")
+      .style("right", "1rem")
+      .style("top", "50%")
+      .style("margin-top", "-0.5em")
       .style("opacity", 0.2)
       .attr("class", "fas fa-upload");
     td.append("input")
       .attr("id", "contactDummyInput")
+      .on("focus", function(){this.blur();})
       .attr("type", "text");
 
-    td = trow.append("td").style("position", "relative").style("border-bottom", "none");
+    td = trow.append("td").style("position", "relative");
     td.append("input")
       .attr("id", "labelInput")
       .attr("type", "file")
@@ -85,20 +93,23 @@ class UploadManager {
       .on("change", function() {
         that._fileUploadInitiated("label", this.files[0]);
       });
-    td.append("label")
-      .attr("for", "labelDummyInput")
-      .text("Label-file: ");
+    // td.append("label")
+    //   .attr("for", "labelDummyInput")
+    //   .text("Label-file: ");
     td.append("i")
       .attr("id", "labelDummyIcon")
-      .style("position", "relative")
-      .style("left", "2rem")
+      .style("position", "absolute")
+      .style("right", "1rem")
+      .style("top", "50%")
+      .style("margin-top", "-0.5em")
       .style("opacity", 0.2)
       .attr("class", "fas fa-upload");
     td.append("input")
       .attr("id", "labelDummyInput")
+      .on("focus", function(){this.blur();})
       .attr("type", "text");
 
-    td = trow.append("td").style("position", "relative").style("border-bottom", "none");
+    td = trow.append("td").style("position", "relative");
     td.append("input")
       .attr("id", "pdbInput")
       .attr("type", "file")
@@ -109,42 +120,60 @@ class UploadManager {
       .on("change", function () {
         that._fileUploadInitiated("pdb", this.files[0]);
       });
-    td.append("label")
-      .attr("for", "pdbDummyInput")
-      .text("PDB-file: ");
+    // td.append("label")
+    //   .attr("for", "pdbDummyInput")
+    //   .text("PDB-file: ");
     td.append("i")
       .attr("id", "pdbDummyIcon")
-      .style("position", "relative")
-      .style("left", "2rem")
+      .style("position", "absolute")
+      .style("right", "1rem")
+      .style("top", "50%")
+      .style("margin-top", "-0.5em")
       .style("opacity", 0.2)
       .attr("class", "fas fa-upload");
     td.append("input")
       .attr("id", "pdbDummyInput")
+      .on("focus", function(){this.blur();})
       .attr("type", "text");
 
-    d3.select(containerSelector)
-      .append("div")
-      .style("position", "relative")
+    trow.append("td")
+      .attr("colspan", 2)
       .append("div")
       .attr("id", "upload-button")
       .classed("btn", true)
       .classed("btn-upload", true)
       .classed("btn-upload-inactive", true)
-      .text("Add to table")
+      .text("Add")
       .on("click", function () {
         that._addToTable();
       });
+
+    // d3.select(containerSelector)
+    //   .append("div")
+    //   .style("position", "relative")
+    //   .append("div")
+    //   .attr("id", "upload-button")
+    //   .classed("btn", true)
+    //   .classed("btn-upload", true)
+    //   .classed("btn-upload-inactive", true)
+    //   .text("Add to table")
+    //   .on("click", function () {
+    //     that._addToTable();
+    //   });
   }
 
   _createUserTable(containerSelector) {
-    const table = d3.select(containerSelector).append("table");
-    this.tbody = table.append("tbody");
+    // const table = d3.select(containerSelector).append("table");
+
+    // this.tbody = table.append("tbody");
+    // console.log(this.tbody.node());
     this._reloadTableFromSessionStorage();
   }
 
   _reloadTableFromSessionStorage() {
     const structures = this._getTableDataFromSessionStorage();
-    const rows = this.tbody.selectAll("tr").data(structures, d => d.name);
+    uploadedStructures = structures;
+    const rows = this.tbody.selectAll("tr.contentRow").data(structures, d => d.name);
 
     rows.select("td:nth-of-type(2)")
       .html(function (d) {
@@ -162,13 +191,16 @@ class UploadManager {
     const newRows = rows
       .enter()
       .append("tr")
+      .classed("contentRow", true)
       .style("cursor", "pointer")
       .on("click", function (d) {
         const checkInput = d3.select(this).select("input");
         const currentlyChecked = checkInput.property("checked");
         d.selected = !currentlyChecked;
         checkInput.property("checked", !currentlyChecked);
-        const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
 
@@ -178,7 +210,9 @@ class UploadManager {
       })
       .on("change", function (d) {
         d.selected = this.checked;
-        const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
     newRows.append("td").html(function (d) {
@@ -193,21 +227,29 @@ class UploadManager {
     newRows.append("td").html(function (d) {
       return d.pdbFileName;
     });
-    newRows.append("td").append("span")
+    newRows.append("td")
+      .style("text-align", "right")
+      .append("span")
       .attr("class", "glyphicon glyphicon-remove-circle")
       .style("color", "#AAA")
       .on("click", d => {
         this._removeFromTable(d.name);
       });
-    newRows.append("td").append("span")
+    newRows.append("td")
+      .style("text-align", "right")
+      .style("width", "1.5em")
+      .append("span")
       .attr("class", "glyphicon glyphicon-chevron-right")
       .style("color", "#AAA")
       .on("click", function (d) {
         structures.forEach(function (s) {
           s.selected = false;
         });
+        existingStructures.forEach(function (s) {
+          s.selected = false;
+        });
         d.selected = true;
-        navigateToComparison(family, structures);
+        navigateToComparison(family, []);
       });
 
     rows.exit().remove();
@@ -215,10 +257,10 @@ class UploadManager {
 
   _getTableDataFromSessionStorage() {
     const data = [];
-    for (let i = 0 ; i < sessionStorage.length; i++) {
-      const key = sessionStorage.key(i);
+    for (let i = 0 ; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
       if (key.match(/^USRTABLE_/)) {
-        data.push(JSON.parse(sessionStorage.getItem(key)));
+        data.push(JSON.parse(localStorage.getItem(key)));
       }
     }
     return data;
@@ -276,7 +318,7 @@ class UploadManager {
 
   _removeFromTable(name) {
     console.log("removeFromTable("+name+")");
-    sessionStorage.removeItem("USRTABLE_" + name);
+    localStorage.removeItem("USRTABLE_" + name);
     this._reloadTableFromSessionStorage();
   }
 
@@ -298,7 +340,7 @@ class UploadManager {
     const pdbName = d3.select("#pdbDummyInput").node().value;
     const ligands = [];
 
-    sessionStorage.setItem(sessionName, JSON.stringify({
+    localStorage.setItem(sessionName, JSON.stringify({
       'name': protName,
       'ligands': ligands,
       'pdbFileName': pdbName,
@@ -390,31 +432,5 @@ function validatePdbFile(fileContents) {
   // }
 
   return true;
-}
-
-function populateSessionStorageWithDummyData() {
-  // sessionStorage.clear();
-  sessionStorage.setItem("USRTABLE_3sn6", JSON.stringify({
-    'name': 'B2AR complex',
-    'ligands': ['P0G'],
-    'pdbFileName': '3sn6_R.pdb',
-    'contactFileName': '3sn6_R_contacts.tsv',
-    'labelFileName': '3sn6_labels.tsv',
-    'contactFile': '0       sb      R:ASP:300:OD1   R:HIS:296:NE2\n0       sb      R:ARG:1148:NH2  R:ASP:1010:OD1',
-    'pdbFile': 'PDBFILE 3SN6',
-    'labelFile': 'R:P0G:1601      Ligand  white\nR:GLU:30        h1.1x29 #78C5D5'
-  }));
-
-  sessionStorage.setItem("USRTABLE_4OR2", JSON.stringify({
-    'name': 'Glutamate receptor',
-    'ligands': ['FM9'],
-    'pdbFileName': '4or2_A.pdb',
-    'contactFileName': '4or2_A_contacts.tsv',
-    'labelFileName': '4or2_labels.tsv',
-    'contactFile': '0       sb      A:ASP:1012:OD1  A:LYS:1015:NZ\n0       sb      A:ASP:1028:OD2  A:LYS:1032:NZ',
-    'pdbFile': 'PDBFILE 4OR2',
-    'labelFile': 'A:FM9:1901      Ligand  white\nA:ILE:591       h1.1x38 #78C5D5'
-  }));
-  // sessionStorage.clear();
 }
 

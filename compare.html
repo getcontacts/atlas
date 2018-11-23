@@ -160,13 +160,16 @@
     }
   }
 
+  const usrkeys = parseArgFromURL("usrkeys").split(",")
+    .filter((key) => key.substr(0, 9) === "USRTABLE_")
+    .map((key) => decodeURIComponent(key));
   const pdbids = parseArgFromURL("pdbids").split(",").filter((pdb) => pdb.length === 6);
-  if (pdbids.length === 0){
+  if (pdbids.length === 0 && usrkeys === 0){
     pdbids.push("3SN6_R");
   }
   const family = parseArgFromURL("family");
 
-  const manager = new CompareManager(family, pdbids);
+  const manager = new CompareManager(family, pdbids, usrkeys);
   window.manager = manager;
 
   let famStr = ""

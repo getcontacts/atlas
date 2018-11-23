@@ -1,8 +1,15 @@
 
+var existingStructures;
+
 function createTable(family, containerSelector) {
   // const structureJson = "static_data/"+family+"/annotations.json";
   const staticJson = "static_data/"+family+"/annotations.json";
   const dynamicJson = "simulation_data/"+family+"/annotations.json";
+
+  d3.select(containerSelector).append("div")
+    .style("text-align", "center")
+    .append("h3")
+    .text("Pre-generated contacts");
 
   // const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
   // const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
@@ -17,6 +24,7 @@ function createTable(family, containerSelector) {
   // const dynamicPromise = d3.json(dynamicJson);
   Promise.all([d3.json(staticJson), d3.json(dynamicJson)]).then(function (strucArrs) {
     const structures = strucArrs[0].concat(strucArrs[1]);
+    existingStructures = structures;
 
     const table = d3.select(containerSelector)
       .append("table");
@@ -88,7 +96,9 @@ function createTable(family, containerSelector) {
         const currentlyChecked = checkInput.property("checked");
         d.selected = !currentlyChecked;
         checkInput.property("checked", !currentlyChecked);
-        const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
 
@@ -98,7 +108,9 @@ function createTable(family, containerSelector) {
       })
       .on("change", function (d) {
         d.selected = this.checked;
-        const numChecked = structures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = uploadedStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
         d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
       });
     rows.append("td").html(function (d) {
@@ -152,6 +164,9 @@ function createTable(family, containerSelector) {
       .style("color", "#AAA")
       .on("click", function (d) {
         structures.forEach(function (s) {
+          s.selected = false;
+        });
+        uploadedStructures.forEach(function (s) {
           s.selected = false;
         });
         d.selected = true;
@@ -228,11 +243,8 @@ function hideLigandTooltip(){
 }
 
 /** Extract selected structures and go to comparison page */
-function navigateToComparison(family, structures){
-  console.log("navigatetocomparison")
-  console.log(family)
-  console.log(structures)
-  var sel_pdbs = structures.filter((s) => s.selected)
+function navigateToComparison(family){
+  let selPdbs = existingStructures.filter((s) => s.selected)
     .map(function(s) {
       if(s.hasOwnProperty("structure"))
         return s.structure;
@@ -240,7 +252,19 @@ function navigateToComparison(family, structures){
         return (s.pdbid + "_" + s.chain).toUpperCase();
     })
     .join(",");
-  window.location.href="compare.html?family="+family+"&pdbids="+sel_pdbs;
+  let selUploaded = uploadedStructures.filter((s) => s.selected)
+    .map((s) => encodeURIComponent("USRTABLE_" + s.name))
+    .join(",");
+
+  let urlArgs = "family=" + family;
+  if (selPdbs.length > 0){
+    urlArgs += "&pdbids=" + selPdbs;
+  }
+  if (selUploaded.length > 0){
+    urlArgs += "&usrkeys=" + selUploaded;
+  }
+
+  window.location.href="compare.html?" + urlArgs;
 }
 
 

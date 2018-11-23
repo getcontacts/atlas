@@ -119,6 +119,10 @@ export class NGLPanel {
     });
   }
 
+  _setStructureToBlob(pdbBlob, labelBlob, atomicContacts) {
+
+  }
+
   /**
    * Updates the currently shown structure.
    * @param pdbFile path to a pdb-file or a PDB-id
@@ -126,6 +130,9 @@ export class NGLPanel {
    * @param atomicContacts list of atomic-level interactions
    */
   setStructure(pdbFile, labelFile, atomicContacts) {
+    console.log(pdbFile)
+    console.log(labelFile)
+    console.log(atomicContacts)
     this.atomicContacts = atomicContacts;
 
     // Clear stage
