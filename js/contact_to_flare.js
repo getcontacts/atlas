@@ -69,7 +69,6 @@ export function buildMultiFlare(contacts, labels, conditions){
     return edge;
   }
 
-  console.log(labels);
   for (let i=0; i < n; i += 1){
     contacts[i].forEach(function(contact){
       const resi1 = contact[2].substr(0,contact[2].lastIndexOf(":"));

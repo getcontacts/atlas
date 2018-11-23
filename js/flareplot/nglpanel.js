@@ -119,89 +119,84 @@ export class NGLPanel {
     });
   }
 
-  _setStructureToBlob(pdbBlob, labelBlob, atomicContacts) {
+  /**
+   * Associate labels with NGL residue selections and put two-way mappings in the `modelToStrucResiMap` and
+   * `strucToModelResiMap` fields.
+   *
+   * Example input:
+   *   {
+   *     "R:P0G:1601" => "Ligand",
+   *     "R:GLU:30" => "h1.1x29",
+   *     ...
+   *   }
+   * which would result the maps:
+   *   this.modelToStrucResiMap = { "Ligand" => "1601:R", "1x29" => "30:R", ...}
+   *   this.strucToModelResiMap = { "1601:R" => "Ligand", "30:R" => "1x29", ...}
+   * If the input-parameter is undefined the maps are generated based on residue id parsed from the last digits of
+   * model vertex names.
+   *
+   * @param {Map<string, string} labelMap - Associates residue identifiers with labels
+   */
+  _parseLabels(labelMap) {
+    this.modelToStrucResiMap = new Map();
+    this.strucToModelResiMap = new Map();
 
+    if (labelMap === undefined) {
+      this.flareModel.getVertices().forEach((v) => {
+        const modelResi = v.name.match(/[0-9]+$/)[0];
+        const strucResi = modelResi + ':A';
+
+        this.modelToStrucResiMap.set(v.name, strucResi);
+        this.strucToModelResiMap.set(strucResi, v.name);
+      });
+
+    } else {
+
+      labelMap.forEach((v, k) => {
+        const keyTokens = v.split(":");
+        const strucChain = keyTokens[0];
+        const strucResi = keyTokens[2] + ':' + strucChain;
+        const modelResi = k.substr(k.lastIndexOf('.') + 1);
+
+        this.modelToStrucResiMap.set(modelResi, strucResi);
+        this.strucToModelResiMap.set(strucResi, modelResi);
+      });
+    }
   }
+
 
   /**
    * Updates the currently shown structure.
-   * @param pdbFile path to a pdb-file or a PDB-id
-   * @param labelFile path to label-file
-   * @param atomicContacts list of atomic-level interactions
+   * @param {Blob} pdbFile - PDB file blob
+   * @param {Map<string, string} labelFile - Associates residue identifiers with labels
+   * @param {Array<Array<string>>} atomicContacts - List of atomic-level interactions
    */
   setStructure(pdbFile, labelFile, atomicContacts) {
-    console.log(pdbFile)
-    console.log(labelFile)
-    console.log(atomicContacts)
     this.atomicContacts = atomicContacts;
-
-    // Clear stage
-    // this.stage.removeAllComponents();
-    // This is now done after setting up the new component to avoid blink
-
-    // Create residue label file promise
-    let resiLabelPromise = Promise.resolve(undefined);
-    if (labelFile !== undefined) {
-      resiLabelPromise = d3.text(labelFile);
-    }
+    this._parseLabels(labelFile);
 
     // Set up the promise to load pdb-file into stage
-    if (pdbFile.match(/^[0-9][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z]$/)) {
-      pdbFile = 'rcsb://' + pdbFile;
-    }
-    let stagePromise = this.stage.loadFile(pdbFile);
-    const that = this;
-
-    // Wait for promises to resolve
-    Promise.all([resiLabelPromise, stagePromise])
-      .then(function (values) {
-
-        // Set up residue labels
-        that.modelToStrucResiMap = new Map();
-        that.strucToModelResiMap = new Map();
-        if (values[0] === undefined) {
-          // No residue labels defined. Assume model indicates residue id and use chain A
-          that.flareModel.getVertices().forEach(v => {
-            const modelResi = v.name.match(/[0-9]+$/)[0];
-            const strucResi = modelResi + ':A';
-
-            that.modelToStrucResiMap.set(v.name, strucResi);
-            that.strucToModelResiMap.set(strucResi, v.name);
-          });
-        } else {
-          // Parse residue label file
-          values[0].split('\n').forEach(line => {
-            line = line.trim();
-            if (line.length === 0) {
-              return;
-            }
-            const tokens = line.split('\t');
-            const strucChain = tokens[0].split(':')[0];
-            const strucResi = tokens[0].split(':')[2] + ':' + strucChain;
-            const modelResi = tokens[1].substr(tokens[1].lastIndexOf('.') + 1);
-
-            that.modelToStrucResiMap.set(modelResi, strucResi);
-            that.strucToModelResiMap.set(strucResi, modelResi);
-          });
-        }
-
+    this.stage.loadFile(pdbFile, {ext: "pdb"})
+      .then((pdbComponent) => {
         // Set up component
-        that.component = values[1];
-        that.ligandRepresentation = that.component.addRepresentation('ball+stick', {
+        this.component = pdbComponent;
+        // this.ligandRepresentation = this.component.addRepresentation('ball+stick', {
+        //   sele: 'ligand'
+        // });
+        this.component.addRepresentation('ball+stick', {
           sele: 'ligand'
         });
-        that.cartoonRepresentation = that.component.addRepresentation('cartoon', {
+        this.cartoonRepresentation = this.component.addRepresentation('cartoon', {
           opacity: 0.7, // Minimum opacity at which you can still pick
           side: 'front',
           quality: 'high',
           aspectRatio: 3
         });
         // Remove component except the one that was just added
-        that.stage.eachComponent((c) => { if (c != values[1]) { that.stage.removeComponent(c); }});
-        that._updateColorScheme();
-        that._updateInteractions();
-        that._updateToggle();
-
+        this.stage.eachComponent((c) => { if (c != pdbComponent) { this.stage.removeComponent(c); }});
+        this._updateColorScheme();
+        this._updateInteractions();
+        this._updateToggle();
       });
   }
 

@@ -40,7 +40,7 @@ export class CompareManager {
 
     const parseTsvString =
       (s) => s.split("\n")
-        .filter((line) => line[0] != "#")
+        .filter((line) => line[0] != "#" && line.trim().length > 0)  // Strip comments and empty lines
         .map((line) => line.split("\t"));
 
     const parseLabelString =
@@ -105,20 +105,21 @@ export class CompareManager {
   }
 
   updateItypes(itypes) {
-    this.curItypes = itypes;
+    if (Array.isArray(itypes)){
+      this.curItypes = new Set(itypes);
+    } else {
+      this.curItypes = Array.from(itypes);
+    }
+
     this.update();
   }
 
   update(){
     this._readAndParseFiles().then(() => {
-      const fdata = this.fileData[this.fileSelected];
-
-      this.contactsData = this.fileData.map((fd) => fd.contacts.filter((row) => this.curItypes.includes(row[1])));
-      this.labelsData = this.fileData.map((fd) => fd.labels); // TODO: Move to readAndParseFiles
-      this.labelToResiData = fdata.labelToResiMap;
+      const contactsData = this.fileData.map((fd) => fd.contacts.filter((row) => this.curItypes.has(row[1])));
+      const labelsData = this.fileData.map((fd) => fd.labels); // TODO: Move to readAndParseFiles
 
       // Use annotation data to compose headers
-
       const annotationData = this.annotationData;
       const headerData = new Map();
       this.pdbIds.forEach((pdbid) => {headerData.set(pdbid, "");});
@@ -134,7 +135,7 @@ export class CompareManager {
         .concat(this.usrIds
           .map((key) => key.substr(9)));
 
-      const graph = buildMultiFlare(this.contactsData, this.labelsData, headers);
+      const graph = buildMultiFlare(contactsData, labelsData, headers);
 
       if (this.flareplot) {
         this.model.setGraph(graph);
@@ -169,49 +170,49 @@ export class CompareManager {
   updateStructure(structureid) {
     //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
     //this.update();
-    console.log(structureid);
-
     const fileData = this.fileData.find((fd) => fd.id == structureid);
-    var stringBlob = new Blob( [ fileData.pdbFile ], { type: 'text/plain'} );
+    const pdbBlob = new Blob( [ fileData.pdbFile ], { type: 'text/plain'} );
+    // Only retain contacts with the right interaction type
+    const contactData = fileData.contacts.filter((c) => this.curItypes.has(c[1]));
+    this.nglpanel.setStructure(pdbBlob, fileData.labelToResiMap, contactData);
 
-    console.log(stringBlob);
 
-    this.structureIdx = this.pdbIds.indexOf(structureid);
-    const atomicContacts = this.contactsData[this.structureIdx];
-    const structureFile = "static_data/" + this.family + "/structures_protonated/" + structureid + ".pdb";
-    const labelFile = "static_data/" + this.family + "/residuelabels/" + structureid + ".tsv";
-    const that = this;
-
-    // Style fingerprint header
-    const headerDiv = this.fingerprintpanel.div.select(".fp-header")
-      .selectAll('.fp-headerCell')
-      .style("font-weight", function(d, i) {
-        return i == that.structureIdx ? "bold" : "normal";
-      });
-
-    // Update flareplot labels
-    this.flareplot.vertexGroup.selectAll("g.vertex text")
-      .style("opacity", function (d) {
-        // const label = that.labelToResiData[that.structureIdx][d.data.name];
-        const label = that.labelToResiData.get(d.data.name);
-        if (label) {
-          return null;
-        } else {
-          return 0.2;
-        }
-      })
-      .text(function (d) {
-        // const label = that.labelToResiData[that.structureIdx][d.data.name];
-        const label = that.labelToResiData.get(d.data.name);
-        if (label) {
-          return label.substring(label.indexOf(":") + 1);
-        } else {
-          return d.data.name;
-        }
-      });
-
-    // Change structure in ngl panel
-    this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
+    // this.structureIdx = this.pdbIds.indexOf(structureid);
+    // const atomicContacts = this.contactsData[this.structureIdx];
+    // const structureFile = "static_data/" + this.family + "/structures_protonated/" + structureid + ".pdb";
+    // const labelFile = "static_data/" + this.family + "/residuelabels/" + structureid + ".tsv";
+    // const that = this;
+    //
+    // // Style fingerprint header
+    // const headerDiv = this.fingerprintpanel.div.select(".fp-header")
+    //   .selectAll('.fp-headerCell')
+    //   .style("font-weight", function(d, i) {
+    //     return i == that.structureIdx ? "bold" : "normal";
+    //   });
+    //
+    // // Update flareplot labels
+    // this.flareplot.vertexGroup.selectAll("g.vertex text")
+    //   .style("opacity", function (d) {
+    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
+    //     const label = that.labelToResiData.get(d.data.name);
+    //     if (label) {
+    //       return null;
+    //     } else {
+    //       return 0.2;
+    //     }
+    //   })
+    //   .text(function (d) {
+    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
+    //     const label = that.labelToResiData.get(d.data.name);
+    //     if (label) {
+    //       return label.substring(label.indexOf(":") + 1);
+    //     } else {
+    //       return d.data.name;
+    //     }
+    //   });
+    //
+    // // Change structure in ngl panel
+    // this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
   }
 
 
