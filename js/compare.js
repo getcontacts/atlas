@@ -133,25 +133,7 @@ export class CompareManager {
     this._readAndParseFiles().then(() => {
       const contactsData = this.fileData.map((fd) => fd.contacts.filter((row) => this.curItypes.has(row[1])));
       const labelsData = this.fileData.map((fd) => fd.labels); // TODO: Move to readAndParseFiles
-
-      // Use annotation data to compose headers
-      // const annotationData = this.annotationData;
-      // const headerData = new Map();
-      // this.pdbIds.forEach((pdbid) => {headerData.set(pdbid, "");});
-      // annotationData.forEach((ann) => {
-      //   const key = ann.pdbid + "_" + ann.chain;
-      //   if (headerData.has(key)) {
-      //     const header = ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain;
-      //     headerData.set(key, header);
-      //   }
-      // });
-      // const headers = this.pdbIds
-      //   .map((pdbid) => headerData.get(pdbid))
-      //   .concat(this.usrIds
-      //     .map((key) => key.substr(9)));
       const headers = this.fileData.map((fd) => fd.id);
-
-      console.log(headers);
 
       const graph = buildMultiFlare(contactsData, labelsData, headers);
 
@@ -165,95 +147,58 @@ export class CompareManager {
         this.nglpanel = new NGLPanel(this.model, "auto", "auto", "#nglDiv");
         this.fingerprintpanel = new FingerprintPanel(this.model, 23, "#fingerprintDiv");
         this.updateStructure(this.fileData[0].id);
+
         this.fingerprintpanel.addHeaderClickListener((headerData) => {
           this.updateStructure(this.fileData[headerData[1]].id);
         });
+
         this.fingerprintpanel.addRowClickListener((rowData) => {
           if (rowData.fingerprint.indexOf(this.structureIdx) == -1){
             const pdb = this.fileData[rowData.fingerprint[0]].id;
             this.updateStructure(pdb);
           }
-
         });
       }
     });
   }
 
   updateStructure(structureid) {
-    console.log("updateStructure", structureid);
-    //this.pdbIds.forEach((id, idx) => {if(pdbid==id){this.curStructure = idx;}});
-    //this.update();
-    const fileData = this.fileData.find((fd) => fd.id == structureid);
+    this.structureIdx = this.fileData.findIndex((fd) => fd.id == structureid);
+    const fileData = this.fileData[this.structureIdx];
     const pdbBlob = new Blob( [ fileData.pdbFile ], { type: 'text/plain'} );
+
     // Only retain contacts with the right interaction type
     const contactData = fileData.contacts.filter((c) => this.curItypes.has(c[1]));
+
     this.nglpanel.setStructure(pdbBlob, fileData.labelToResiMap, contactData);
 
-    // // Style fingerprint header
-    // const headerDiv = this.fingerprintpanel.div.select(".fp-header")
-    //   .selectAll('.fp-headerCell')
-    //   .style("font-weight", function(d, i) {
-    //     return i == that.structureIdx ? "bold" : "normal";
-    //   });
-    //
-    // // Update flareplot labels
-    // this.flareplot.vertexGroup.selectAll("g.vertex text")
-    //   .style("opacity", function (d) {
-    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
-    //     const label = that.labelToResiData.get(d.data.name);
-    //     if (label) {
-    //       return null;
-    //     } else {
-    //       return 0.2;
-    //     }
-    //   })
-    //   .text(function (d) {
-    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
-    //     const label = that.labelToResiData.get(d.data.name);
-    //     if (label) {
-    //       return label.substring(label.indexOf(":") + 1);
-    //     } else {
-    //       return d.data.name;
-    //     }
-    //   });
+    // Style fingerprint header
+    const headerDiv = this.fingerprintpanel.div.select(".fp-header")
+      .selectAll('.fp-headerCell')
+      .style("font-weight", (d, i) => {
+        return i == this.structureIdx ? "bold" : "normal";
+      });
 
-    // this.structureIdx = this.pdbIds.indexOf(structureid);
-    // const atomicContacts = this.contactsData[this.structureIdx];
-    // const structureFile = "static_data/" + this.family + "/structures_protonated/" + structureid + ".pdb";
-    // const labelFile = "static_data/" + this.family + "/residuelabels/" + structureid + ".tsv";
-    // const that = this;
-    //
-    // // Style fingerprint header
-    // const headerDiv = this.fingerprintpanel.div.select(".fp-header")
-    //   .selectAll('.fp-headerCell')
-    //   .style("font-weight", function(d, i) {
-    //     return i == that.structureIdx ? "bold" : "normal";
-    //   });
-    //
-    // // Update flareplot labels
-    // this.flareplot.vertexGroup.selectAll("g.vertex text")
-    //   .style("opacity", function (d) {
-    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
-    //     const label = that.labelToResiData.get(d.data.name);
-    //     if (label) {
-    //       return null;
-    //     } else {
-    //       return 0.2;
-    //     }
-    //   })
-    //   .text(function (d) {
-    //     // const label = that.labelToResiData[that.structureIdx][d.data.name];
-    //     const label = that.labelToResiData.get(d.data.name);
-    //     if (label) {
-    //       return label.substring(label.indexOf(":") + 1);
-    //     } else {
-    //       return d.data.name;
-    //     }
-    //   });
-    //
-    // // Change structure in ngl panel
-    // this.nglpanel.setStructure(structureFile, labelFile, atomicContacts);
+    // Update flareplot labels
+    this.flareplot.vertexGroup.selectAll("g.vertex text")
+      .style("opacity", function (d) {
+        // const label = that.labelToResiData[that.structureIdx][d.data.name];
+        const label = fileData.labelToResiMap.get(d.data.name);
+        if (label) {
+          return null;
+        } else {
+          return 0.2;
+        }
+      })
+      .text(function (d) {
+        // const label = that.labelToResiData[that.structureIdx][d.data.name];
+        const label = fileData.labelToResiMap.get(d.data.name);
+        if (label) {
+          return label.substring(label.indexOf(":") + 1);
+        } else {
+          return d.data.name;
+        }
+      });
   }
-
 
 }
