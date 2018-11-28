@@ -11,10 +11,9 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
 
-
-
     <script src="vendor/d3/d3.min.js" type="text/javascript"></script>
     <script src="js/table.js" type="text/javascript"></script>
+    <script src="js/structure_uploader.js" type="text/javascript"></script>
 
     <link href="css/base.css" rel="stylesheet">
     <link href="css/static_table.css" rel="stylesheet">
@@ -31,9 +30,11 @@
     </div>
 </header>
 
+<div class="container" id="userTableContents"></div>
 <div class="container" id="tableContents"></div>
 
 <script>
+  createUserUpload("#userTableContents");
   createTable("galpha", "#tableContents");
 </script>
 
