@@ -201,9 +201,6 @@ export class NGLPanel {
   }
 
   _updateInteractions() {
-    if (this.interactionRepresentation) {
-      this.component.removeRepresentation(this.interactionRepresentation);
-    }
 
     const edges = this.flareModel.getEdges()
       .filter(e => this.flareModel.vertexToggled(e.v1.name) || this.flareModel.vertexToggled(e.v2.name))
@@ -217,33 +214,68 @@ export class NGLPanel {
       .filter(d => d.count > 0);
 
     let pairs = [];
+    const waterAtoms = new Set();
     if(this.atomicContacts){
       function edgeHash(r1, r2){
         return r1 < r2 ? r1 + "-" + r2 : r2 + "-" + r1;
       }
       const edgeresipairs = new Set(edges.map(e => edgeHash(e.resi1, e.resi2)));
       this.atomicContacts.forEach((e) => {
-        let atom1 = e[2].split(":");
-        let atom2 = e[3].split(":");
-        let r1 = atom1[2]+":"+atom1[0];
-        let r2 = atom2[2]+":"+atom2[0];
+        const atom1 = e[2].split(":");
+        const atom2 = e[3].split(":");
+        const r1 = atom1[2]+":"+atom1[0];
+        const r2 = atom2[2]+":"+atom2[0];
         if(edgeresipairs.has(edgeHash(r1, r2))){
-          pairs.push([r1 + "." + atom1[3], r2 + "." + atom2[3]])
+          if (e[1] == "wb" || e[1] == "lwb") {
+            const atom3 = e[4].split(":");
+            const r3 = atom3[2]+":"+atom3[0];
+            pairs.push([r1 + "." + atom1[3], r3 + "." + atom3[3]]);
+            pairs.push([r3 + "." + atom3[3], r2 + "." + atom2[3]]);
+            waterAtoms.add(r3);
+          } else if (e[1] == "wb2" || e[1] == "lwb2") {
+            const atom3 = e[4].split(":");
+            const atom4 = e[4].split(":");
+            const r3 = atom3[2]+":"+atom3[0];
+            const r4 = atom4[2]+":"+atom4[0];
+            pairs.push([r1 + "." + atom1[3], r3 + "." + atom3[3]]);
+            pairs.push([r3 + "." + atom3[3], r4 + "." + atom4[3]]);
+            pairs.push([r4 + "." + atom4[3], r2 + "." + atom2[3]]);
+            waterAtoms.add(r3);
+            waterAtoms.add(r4);
+          } else {
+            pairs.push([r1 + "." + atom1[3], r2 + "." + atom2[3]])
+          }
         }
       })
     } else {
       pairs = edges.map(d => [d.resi1 + '.CA', d.resi2 + '.CA']);
     }
-    // .map(d => [NGLPanel._resiFromName(d.edge.v1.name) + '.CA', NGLPanel._resiFromName(d.edge.v2.name) + '.CA']);
 
-    this.interactionRepresentation = this.component.addRepresentation('distance', {
+    // Add new interactions
+    const new_interactions_component = this.component.addRepresentation('distance', {
       atomPair: pairs,
       color: 'black',
       useCylinder: true,
       labelVisible: false,
       radiusSize: 0.1
     });
-    // color: '#414141',
+
+    // Remove old interactions
+    if (this.interactionRepresentation) {
+      this.component.removeRepresentation(this.interactionRepresentation);
+    }
+    this.interactionRepresentation = new_interactions_component;
+
+    // Remove old waters
+    if (this.waterRepresentation) {
+      this.component.removeRepresentation(this.waterRepresentation);
+    }
+    // Add new waters
+    if (waterAtoms.size > 0) {
+      this.component.addRepresentation('hyperball', {
+        sele: Array.from(waterAtoms).reduce((acc, atom) => atom + " " + acc, "")
+      })
+    }
   }
 
   _updateColorScheme() {
