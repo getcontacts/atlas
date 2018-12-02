@@ -272,7 +272,7 @@ export class NGLPanel {
     }
     // Add new waters
     if (waterAtoms.size > 0) {
-      this.component.addRepresentation('hyperball', {
+      this.waterRepresentation = this.component.addRepresentation('hyperball', {
         sele: Array.from(waterAtoms).reduce((acc, atom) => atom + " " + acc, "")
       })
     }
