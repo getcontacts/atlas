@@ -234,7 +234,7 @@ export class NGLPanel {
             waterAtoms.add(r3);
           } else if (e[1] == "wb2" || e[1] == "lwb2") {
             const atom3 = e[4].split(":");
-            const atom4 = e[4].split(":");
+            const atom4 = e[5].split(":");
             const r3 = atom3[2]+":"+atom3[0];
             const r4 = atom4[2]+":"+atom4[0];
             pairs.push([r1 + "." + atom1[3], r3 + "." + atom3[3]]);
