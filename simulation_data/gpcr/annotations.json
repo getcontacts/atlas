@@ -1,62 +1,710 @@
 [
   {
-    "pdbid": "4UHR (?)",
-    "chain": "A",
-    "protein": "A<sub>2A</sub> active (repl. 1)",
-    "protid": "aa2ar_human",
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3SN6",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond22-rep1",
+    "protid": "adrb2_human",
     "species": "Homo sapiens (Human)",
-    "date": "-",
+    "date": "06/19/2015",
     "method": "MD",
     "resolution": "-",
-    "doi": "unpublished",
-    "structure": "A2A-active-NEC-unpublished/active-NEC/rep_1/step5_assembly.pdb",
+    "doi": "10.1126/science.aaa5264",
     "ligands": [
-      "NEC"
-    ]
+      "P0G"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond22-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
   },
+
   {
-    "pdbid": "4UHR (?)",
-    "chain": "A",
-    "protein": "A<sub>2A</sub> active (repl. 2)",
-    "protid": "aa2ar_human",
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3SN6",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond23-rep1",
+    "protid": "adrb2_human",
     "species": "Homo sapiens (Human)",
-    "date": "-",
+    "date": "06/19/2015",
     "method": "MD",
     "resolution": "-",
-    "doi": "unpublished",
-    "structure": "A2A-active-NEC-unpublished/active-NEC/rep_2/step5_assembly.pdb",
+    "doi": "10.1126/science.aaa5264",
     "ligands": [
-      "NEC"
-    ]
+      "P0G"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond23-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
   },
+
   {
-    "pdbid": "4UHR (?)",
-    "chain": "A",
-    "protein": "A<sub>2A</sub> inactive (repl. 1)",
-    "protid": "aa2ar_human",
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3SN6",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond24-rep1",
+    "protid": "adrb2_human",
     "species": "Homo sapiens (Human)",
-    "date": "Unpublished",
+    "date": "06/19/2015",
     "method": "MD",
     "resolution": "-",
-    "doi": "-",
-    "structure": "A2A-inactive-ZMA-unpublished/inactive-ZMA/rep_1/step5_assembly.pdb",
+    "doi": "10.1126/science.aaa5264",
     "ligands": [
-      "ZMA"
-    ]
+      "P0G"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond24-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
   },
+
   {
-    "pdbid": "4N6H (?)",
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3SN6",
+    "chain": "R",
+    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond65-rep1",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "06/19/2015",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1126/science.aaa5264",
+    "ligands": [
+      "P0G"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond65-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3P0G",
     "chain": "A",
-    "protein": "&delta;-opiod inactive naltrindole (repl. 1)",
+    "protein": "&beta;<sub>2</sub>AR-active-Nb-BI-condQ-rep1",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "08/9/2011",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1073/pnas.1104614108",
+    "ligands": [
+      "BIA"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Nb-BI-condQ-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "3P0G",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>AR-active-Nb-BI-condQ-rep2",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "08/09/2011",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1073/pnas.1104614108",
+    "ligands": [
+      "BIA"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-active-Nb-BI-condQ-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "baseDir": "simulation_data/gpcr",
+    "pdbid": "2RH1",
+    "chain": "A",
+    "protein": "&beta;<sub>2</sub>AR-inactive-carazolol-cond12-rep1",
+    "protid": "adrb2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "01/31/2013",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1016/j.cell.2013.01.008",
+    "ligands": [
+      "CAU"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/???/",
+      "topology": "???",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/B2AR-inactive-carazolol/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4N6H",
+    "chain": "A",
+    "protein": "&delta;OR-inactive-naltrondiole-wLig-rep1",
     "protid": "oprd_human",
     "species": "Homo sapiens (Human)",
-    "date": "Unpublished",
+    "date": "--/--/----",
     "method": "MD",
     "resolution": "-",
     "doi": "-",
-    "structure": "DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_1/step5_assembly.pdb",
     "ligands": [
-      "Naltrindole"
-    ]
+      "EJ4"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4N6H",
+    "chain": "A",
+    "protein": "&delta;OR-inactive-naltrondiole-wLig-rep2",
+    "protid": "oprd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "EJ4"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4N6H",
+    "chain": "A",
+    "protein": "&delta;OR-inactive-naltrondiole-wLig-rep3",
+    "protid": "oprd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "EJ4"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-restrained-rep1",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-restrained-rep2",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-restrained-rep3",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-unrestrained-rep1",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-unrestrained-rep2",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4MQS",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-active-unrestrained-rep3",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "IXO"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "3UON",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-inactive-QNB-condA-rep1",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "02/22/2012",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1038/nature10867",
+    "ligands": [
+      "QNBP"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-inactive-QNB-nature2012/condition-A/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-inactive-QNB-condA-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "3UON",
+    "chain": "A",
+    "protein": "M<sub>2</sub>R-inactive-QNB-condAE-rep1",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "11/14/2013",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1038/nature12595",
+    "ligands": [
+      "QNB"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-inactive-QNB-nature2013/condition-AE/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/M2R-inactive-QNB-condAE-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-Nb-rep1",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-Nb-rep2",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-Nb-rep3",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-noNb-BU72-rep1",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-noNb-BU72-rep2",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "5C1M",
+    "chain": "A",
+    "protein": "&mu;OR-active-noNb-BU72-rep3",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4DKL",
+    "chain": "A",
+    "protein": "&mu;OR-inactive-bFNA-rep1",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "08/20/2015",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1038/nature14886",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_1/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep1/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4DKL",
+    "chain": "A",
+    "protein": "&mu;OR-inactive-bFNA-rep2",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "08/20/2015",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1038/nature14886",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
+  },
+
+  {
+    "pdbid": "4DKL",
+    "chain": "A",
+    "protein": "&mu;OR-inactive-bFNAb-rep3",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "08/20/2015",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "10.1038/nature14886",
+    "ligands": [
+      "H3B"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "???"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.pdb",
+      "contacts": "contacts.pdb"
+    }
   }
 ]
