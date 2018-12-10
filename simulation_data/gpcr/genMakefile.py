@@ -10,15 +10,22 @@ def gen_makefile(makefilename, annotation_filename):
   with open(annotation_filename) as f:
     annotations = json.load(f)
 
+  all_rules = ""
+
   for annotation in annotations:
     check_input_exists(annotation)
+    mkstr += "###########################\n"
     mkstr += dir_rule(annotation) + "\n"
     mkstr += structure_rule(annotation) + "\n"
     mkstr += labels_rule(annotation) + "\n"
     mkstr += contacts_rule(annotation) + "\n"
-    mkstr += "###########################\n"
+
+    base_dir = "../../" + ann['contactFiles']['baseDir'] 
+    out_path = base_dir + ann['contactFiles']['contacts']
+    all_rules += out_path + " "
 
   with open(makefilename, "w") as f:
+    f.write("all: " + all_rules + "\n\n")
     f.write(mkstr)
     print("Wrote makefile to " + makefilename)
     
