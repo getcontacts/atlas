@@ -1,194 +1,5 @@
 [
   {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3SN6",
-    "chain": "R",
-    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond22-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "06/19/2015",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1126/science.aaa5264",
-    "ligands": [
-      "P0G"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond22-rep1/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3SN6",
-    "chain": "R",
-    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond23-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "06/19/2015",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1126/science.aaa5264",
-    "ligands": [
-      "P0G"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond23-rep1/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3SN6",
-    "chain": "R",
-    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond24-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "06/19/2015",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1126/science.aaa5264",
-    "ligands": [
-      "P0G"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond24-rep1/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3SN6",
-    "chain": "R",
-    "protein": "&beta;<sub>2</sub>AR-active-Gs-BI-cond65-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "06/19/2015",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1126/science.aaa5264",
-    "ligands": [
-      "P0G"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Gs-BI-cond65-rep1/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3P0G",
-    "chain": "A",
-    "protein": "&beta;<sub>2</sub>AR-active-Nb-BI-condQ-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "08/9/2011",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1073/pnas.1104614108",
-    "ligands": [
-      "BIA"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Nb-BI-condQ-rep1/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "3P0G",
-    "chain": "A",
-    "protein": "&beta;<sub>2</sub>AR-active-Nb-BI-condQ-rep2",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "08/09/2011",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1073/pnas.1104614108",
-    "ligands": [
-      "BIA"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-active-Nb-BI-condQ-rep2/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
-    "baseDir": "simulation_data/gpcr",
-    "pdbid": "2RH1",
-    "chain": "A",
-    "protein": "&beta;<sub>2</sub>AR-inactive-carazolol-cond12-rep1",
-    "protid": "adrb2_human",
-    "species": "Homo sapiens (Human)",
-    "date": "01/31/2013",
-    "method": "MD",
-    "resolution": "-",
-    "doi": "10.1016/j.cell.2013.01.008",
-    "ligands": [
-      "CAU"
-    ],
-    "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/???/",
-      "topology": "???",
-      "trajectory": "???"
-    },
-    "contactFiles": {
-      "baseDir": "simulation_data/gpcr/B2AR-inactive-carazolol/",
-      "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
-    }
-  },
-
-  {
     "pdbid": "4N6H",
     "chain": "A",
     "protein": "&delta;OR-inactive-naltrondiole-wLig-rep1",
@@ -204,13 +15,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -230,13 +41,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -256,13 +67,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_3/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/DOR-inactive-naltrondiole-wLig-rep3/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -282,13 +93,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -308,13 +119,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -334,13 +145,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-restrained-unpublished/condition-prot-asp2x50-3x49/rep_3/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-restrained-rep3/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -360,13 +171,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -386,13 +197,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -412,13 +223,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-active-unrestrained-unpublished/condition-prot-asp2x50-3x49/rep_3/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-active-unrestrained-rep3/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -437,14 +248,14 @@
     ],
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-inactive-QNB-nature2012/condition-A/rep_1/",
-      "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "topology": "nature2012-A-M2-QNB-all.mae",
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-inactive-QNB-condA-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -463,14 +274,14 @@
     ],
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/M2R-inactive-QNB-nature2013/condition-AE/rep_1/",
-      "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "topology": "nature2013-AE-64-all.mae",
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/M2R-inactive-QNB-condAE-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -490,13 +301,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -516,13 +327,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -542,13 +353,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-Nb-unpublished/condition-prot-D114-D164-nb-interface-restrained/rep_3/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-Nb-rep3/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -568,13 +379,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -594,13 +405,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -620,13 +431,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-active-noNb-BU72-nature2015/condition-nb-interface-restrained-BU72/rep_3/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-active-noNb-BU72-rep3/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -646,13 +457,13 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
@@ -672,39 +483,143 @@
     "simFiles" : {
       "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_2/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
       "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep2/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   },
 
   {
-    "pdbid": "4DKL",
+    "pdbid": "5G53",
     "chain": "A",
-    "protein": "&mu;OR-inactive-bFNAb-rep3",
-    "protid": "oprm_mouse",
-    "species": "Mus musculus (Mouse)",
-    "date": "08/20/2015",
+    "protein": "A<sub>2A</sub>-active-NEC-rep1",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
     "method": "MD",
     "resolution": "-",
-    "doi": "10.1038/nature14886",
+    "doi": "-",
     "ligands": [
-      "H3B"
+      "NEC"
     ],
     "simFiles" : {
-      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/MOR-inactive-bFNA-nature2015/condition-bFNA-bound/rep_3/",
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/A2A-active-NEC-unpublished/active-NEC/rep_1/",
       "topology": "step5_assembly.pdb",
-      "trajectory": "???"
+      "trajectory": "stitched.dcd"
     },
     "contactFiles": {
-      "baseDir": "simulation_data/gpcr/MOR-inactive-bFNA-rep3/",
+      "baseDir": "simulation_data/gpcr/A2A-active-NEC-rep1/",
       "structure": "top.pdb",
-      "labels": "labels.pdb",
-      "contacts": "contacts.pdb"
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
+    }
+  },
+
+  {
+    "pdbid": "5G53",
+    "chain": "A",
+    "protein": "A<sub>2A</sub>-active-NEC-rep2",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "NEC"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/A2A-active-NEC-unpublished/active-NEC/rep_2/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "stitched.dcd"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/A2A-active-NEC-rep2/",
+      "structure": "top.pdb",
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
+    }
+  },
+
+  {
+    "pdbid": "5G53",
+    "chain": "A",
+    "protein": "A<sub>2A</sub>-active-NEC-rep3",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "NEC"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/A2A-active-NEC-unpublished/active-NEC/rep_3/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "stitched.dcd"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/A2A-active-NEC-rep3/",
+      "structure": "top.pdb",
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
+    }
+  },
+
+  {
+    "pdbid": "5G53",
+    "chain": "A",
+    "protein": "A<sub>2A</sub>-active-NEC-rep4",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "NEC"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/A2A-active-NEC-unpublished/active-NEC/rep_4/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "stitched.dcd"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/A2A-active-NEC-rep4/",
+      "structure": "top.pdb",
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
+    }
+  },
+
+  {
+    "pdbid": "5G53",
+    "chain": "A",
+    "protein": "A<sub>2A</sub>-active-NEC-rep5",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "--/--/----",
+    "method": "MD",
+    "resolution": "-",
+    "doi": "-",
+    "ligands": [
+      "NEC"
+    ],
+    "simFiles" : {
+      "baseDir": "/scratch/PI/rondror/polar_networks_subsampled_traj/A2A-active-NEC-unpublished/active-NEC/rep_5/",
+      "topology": "step5_assembly.pdb",
+      "trajectory": "stitched.dcd"
+    },
+    "contactFiles": {
+      "baseDir": "simulation_data/gpcr/A2A-active-NEC-rep5/",
+      "structure": "top.pdb",
+      "labels": "labels.tsv",
+      "contacts": "contacts.tsv"
     }
   }
 ]

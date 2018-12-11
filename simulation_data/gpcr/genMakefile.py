@@ -6,7 +6,8 @@ import json
 
 
 def gen_makefile(makefilename, annotation_filename):
-  mkstr = "GCARGS = --itypes all --hbond_cutoff_ang 180 --vdw_res_diff 5 --cores 2\n\n"
+  mkstr = "SECONDARY:\n\n"
+  mkstr += "GCARGS = --itypes all --hbond_cutoff_ang 180 --vdw_res_diff 5 --cores 2\n\n"
   with open(annotation_filename) as f:
     annotations = json.load(f)
 
@@ -20,8 +21,8 @@ def gen_makefile(makefilename, annotation_filename):
     mkstr += labels_rule(annotation) + "\n"
     mkstr += contacts_rule(annotation) + "\n"
 
-    base_dir = "../../" + ann['contactFiles']['baseDir'] 
-    out_path = base_dir + ann['contactFiles']['contacts']
+    base_dir = "../../" + annotation['contactFiles']['baseDir'] 
+    out_path = base_dir + annotation['contactFiles']['contacts']
     all_rules += out_path + " "
 
   with open(makefilename, "w") as f:
@@ -67,12 +68,13 @@ def labels_rule(ann):
 def contacts_rule(ann):
   sim_dir = ann['simFiles']['baseDir'] 
   top_path = sim_dir + ann['simFiles']['topology']
+  lig_resns = " ".join([lig for lig in ann['ligands']])
   trj_path = sim_dir + ann['simFiles']['trajectory']
   base_dir = "../../" + ann['contactFiles']['baseDir'] 
   out_path = base_dir + ann['contactFiles']['contacts']
   return (out_path + ": " + top_path + " " + trj_path + " " + base_dir + "\n\t" 
           "get_dynamic_contacts.py --topology " + top_path + " --trajectory " + trj_path + " "
-          "--output $@ --sele \"protein or ligand\" $(GCARGS)\n")
+          "--output $@ --sele \"protein or ligand\" --ligand \"resname " + lig_resns + "\" $(GCARGS)\n")
 
 
 if __name__ == "__main__":

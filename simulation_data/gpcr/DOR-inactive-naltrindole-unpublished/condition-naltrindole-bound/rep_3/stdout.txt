@@ -1,7 +1,0 @@
-Identified the following residue names as waters: TIP3
-Identified the following residue names as lipids: POPC
-Identified the following residue names as ligands: EJ4
-Processing /scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_3//stitched.dcd (frame 0 to 117 with stride of 1) as 2 fragments
-
-Finished computing contacts for fragment 1: 18 frames from 100 to 117 in strides of 1 taking 58.586654 s
-Finished computing contacts for fragment 0: 100 frames from 0 to 99 in strides of 1 taking 159.751446 s
