@@ -20,6 +20,7 @@ def gen_makefile(makefilename, annotation_filename):
     mkstr += structure_rule(annotation) + "\n"
     mkstr += labels_rule(annotation) + "\n"
     mkstr += contacts_rule(annotation) + "\n"
+    mkstr += contacts_rule(annotation) + "\n"
 
     base_dir = annotation['id'] + "/"
     out_path = base_dir + "contact_freq.tsv"
@@ -78,12 +79,12 @@ def contacts_rule(ann):
           "get_dynamic_contacts.py --topology " + top_path + " --trajectory " + trj_path + " "
           "--output $@ --sele \"protein or ligand\" --ligand \"resname " + lig_resns + "\" $(GCARGS)\n")
 
-def freq_rule(ann):
+def singleframe_rule(ann):
   base_dir = ann['id'] + "/"
   contact_path = base_dir + "contacts.tsv"
-  out_path = base_dir + "contact_freq.tsv"
+  out_path = base_dir + "contacts_singleframe.tsv"
   return (out_path + ": " + contact_path + "\n\t" 
-          "get_contact_frequencies.py --input_files " + contact_path + " --output_file " + out_path + "\n")
+          "get_contact_singleframe.py --input " + contact_path + " --output " + out_path + "\n")
 
 
 if __name__ == "__main__":

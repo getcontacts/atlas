@@ -1,7 +1,0 @@
-Identified the following residue names as waters: TIP3
-Identified the following residue names as lipids: POPC
-Identified the following residue names as ligands: ZMA
-Processing /scratch/PI/rondror/polar_networks_subsampled_traj/A2A-inactive-ZMA-unpublished/inactive-ZMA/rep_4//stitched.dcd (frame 0 to 101 with stride of 1) as 2 fragments
-
-Finished computing contacts for fragment 1: 2 frames from 100 to 101 in strides of 1 taking 5.355053 s
-Finished computing contacts for fragment 0: 100 frames from 0 to 99 in strides of 1 taking 136.46832 s

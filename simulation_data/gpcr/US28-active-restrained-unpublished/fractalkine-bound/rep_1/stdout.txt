@@ -1,8 +1,0 @@
-Identified the following residue names as waters: TIP3
-Identified the following residue names as lipids: POPC
-No ligands detected (specify manually using e.g. --sele 'not (water or lipid)')
-Processing /scratch/PI/rondror/polar_networks_subsampled_traj/US28-active-restrained-unpublished/fractalkine-bound/rep_1//stitched.dcd (frame 0 to 286 with stride of 1) as 3 fragments
-
-Finished computing contacts for fragment 1: 100 frames from 100 to 199 in strides of 1 taking 100.116172 s
-Finished computing contacts for fragment 0: 100 frames from 0 to 99 in strides of 1 taking 97.869181 s
-Finished computing contacts for fragment 2: 87 frames from 200 to 286 in strides of 1 taking 83.362315 s
