@@ -20,10 +20,14 @@ def gen_makefile(makefilename, annotation_filename):
     mkstr += structure_rule(annotation) + "\n"
     mkstr += labels_rule(annotation) + "\n"
     mkstr += contacts_rule(annotation) + "\n"
-    mkstr += contacts_rule(annotation) + "\n"
+    mkstr += singleframe_rule(annotation) + "\n"
 
     base_dir = annotation['id'] + "/"
-    out_path = base_dir + "contact_freq.tsv"
+    out_path = base_dir + "contacts_singleframe.tsv"
+    all_rules += out_path + " "
+    out_path = base_dir + "structure.pdb"
+    all_rules += out_path + " "
+    out_path = base_dir + "labels.tsv"
     all_rules += out_path + " "
 
   with open(makefilename, "w") as f:
@@ -61,7 +65,7 @@ def structure_rule(ann):
     
 
 def labels_rule(ann):
-  label_dir = 'residuelabels/'
+  label_dir = '../../static_data/gpcr/residuelabels/'
   in_path = label_dir + ann['pdbid'] + "_" + ann['chain'] + ".tsv"
   base_dir = ann['id'] + "/"
   out_path = base_dir + "labels.tsv"
@@ -74,15 +78,15 @@ def contacts_rule(ann):
   lig_resns = " ".join([lig for lig in ann['ligands']])
   trj_path = sim_dir + ann['simFiles']['trajectory']
   base_dir = ann['id'] + "/"
-  out_path = base_dir + "contacts.tsv"
+  out_path = base_dir + "contacts_multiframe.tsv"
   return (out_path + ": " + top_path + " " + trj_path + " " + base_dir + "\n\t" 
           "get_dynamic_contacts.py --topology " + top_path + " --trajectory " + trj_path + " "
           "--output $@ --sele \"protein or ligand\" --ligand \"resname " + lig_resns + "\" $(GCARGS)\n")
 
 def singleframe_rule(ann):
   base_dir = ann['id'] + "/"
-  contact_path = base_dir + "contacts.tsv"
-  out_path = base_dir + "contacts_singleframe.tsv"
+  contact_path = base_dir + "contacts_multiframe.tsv"
+  out_path = base_dir + "contacts.tsv"
   return (out_path + ": " + contact_path + "\n\t" 
           "get_contact_singleframe.py --input " + contact_path + " --output " + out_path + "\n")
 
