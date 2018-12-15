@@ -21,8 +21,8 @@ def gen_makefile(makefilename, annotation_filename):
     mkstr += labels_rule(annotation) + "\n"
     mkstr += contacts_rule(annotation) + "\n"
 
-    base_dir = "../../" + annotation['contactFiles']['baseDir'] 
-    out_path = base_dir + annotation['contactFiles']['contacts']
+    base_dir = annotation['id']
+    out_path = base_dir + "/contacts.tsv " + base_dir + "/labels.tsv " + base_dir + "/top.pdb"
     all_rules += out_path + " "
 
   with open(makefilename, "w") as f:
@@ -32,6 +32,8 @@ def gen_makefile(makefilename, annotation_filename):
     
 
 def check_input_exists(ann):
+  if True:
+    return
   base_dir = ann['simFiles']['baseDir']
   top_path = base_dir + ann['simFiles']['topology']
   trj_path = base_dir + ann['simFiles']['trajectory']
@@ -46,22 +48,22 @@ def check_input_exists(ann):
 
 
 def dir_rule(ann):
-  return "../../" + ann['contactFiles']['baseDir'] + ":\n\tmkdir -p $@\n"
+  return ann['id'] + ":\n\tmkdir -p $@\n"
   
 
 def structure_rule(ann):
   sim_dir = ann['simFiles']['baseDir'] 
   top_path = sim_dir + ann['simFiles']['topology']
-  base_dir = "../../" + ann['contactFiles']['baseDir'] 
-  struc_path = base_dir + ann['contactFiles']['structure']
+  base_dir = ann['id']
+  struc_path = base_dir + "/top.pdb"
   return struc_path + ": " + top_path + " " + base_dir + "\n\tcp $< $@\n" 
     
 
 def labels_rule(ann):
   label_dir = '../../static_data/gpcr/residuelabels/'
   in_path = label_dir + ann['pdbid'] + "_" + ann['chain'] + ".tsv"
-  base_dir = "../../" + ann['contactFiles']['baseDir'] 
-  out_path = base_dir + ann['contactFiles']['labels']
+  base_dir = ann['id']
+  out_path = base_dir + "/labels.tsv"
   return out_path + ": " + in_path + " " + base_dir + "\n\tcp $< $@\n" 
 
 
@@ -70,8 +72,8 @@ def contacts_rule(ann):
   top_path = sim_dir + ann['simFiles']['topology']
   lig_resns = " ".join([lig for lig in ann['ligands']])
   trj_path = sim_dir + ann['simFiles']['trajectory']
-  base_dir = "../../" + ann['contactFiles']['baseDir'] 
-  out_path = base_dir + ann['contactFiles']['contacts']
+  base_dir = ann['id']
+  out_path = base_dir + "/contacts.tsv"
   return (out_path + ": " + top_path + " " + trj_path + " " + base_dir + "\n\t" 
           "get_dynamic_contacts.py --topology " + top_path + " --trajectory " + trj_path + " "
           "--output $@ --sele \"protein or ligand\" --ligand \"resname " + lig_resns + "\" $(GCARGS)\n")
