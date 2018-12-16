@@ -72,7 +72,7 @@ export class FingerprintPanel {
       });
 
     headerDiv.selectAll(".fp-headerCell")
-      .text(function (d) {
+      .html(function (d) {
         return d;
       })
       .style('cursor', () => {

@@ -22,9 +22,10 @@ export class CompareManager {
    * @param structureIds a list of strings where each string is either a PDB/Chain identifier or a key for the
    * localStorage prefixed with 'USRTABLE_'.
    */
-  constructor(family, pdbIds, usrIds){
+  constructor(family, pdbIds, mdIds, usrIds){
     this.family = family;
     this.pdbIds = pdbIds;
+    this.mdIds = mdIds;
     this.usrIds = usrIds;
     this.structureIdx = 0;
     this.curItypes = ['hbss'];
@@ -34,7 +35,7 @@ export class CompareManager {
     if (this.fileData !== undefined)
       return new Promise((resolve) => {resolve();});
 
-    this.fileSelected = 0;
+    // this.fileSelected = 0;
     this.fileData = [];
 
     const parseTsvString =
@@ -71,25 +72,47 @@ export class CompareManager {
 
     // Read, parse and add builtin structures
     const n = this.pdbIds.length;
-    const contactFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/contacts/" + pdb + ".tsv");
-    const labelFiles = this.pdbIds.map((pdb) => "static_data/"+this.family+"/residuelabels/" + pdb + ".tsv");
-    const pdbFiles = this.pdbIds.map((pdb) => "static_data/" + this.family + "/structures_protonated/" + pdb + ".pdb");
-    const annotationFile = "static_data/" + this.family + "/annotations.json";
+    const pdbContactPromises = this.pdbIds
+      .map((id) => "static_data/"+this.family+"/contacts/" + id + ".tsv")
+      .map((fname) => d3.text(fname));
+    const pdbLabelPromises = this.pdbIds
+      .map((id) => "static_data/"+this.family+"/residuelabels/" + id + ".tsv")
+      .map((fname) => d3.text(fname));
+    const pdbStructurePromises = this.pdbIds
+      .map((id) => "static_data/" + this.family + "/structures_protonated/" + id + ".pdb")
+      .map((fname) => d3.text(fname));
+    const pdbAnnotationPromise = d3.json("static_data/" + this.family + "/annotations.json");
 
-    const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
-    const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
-    const pdbFilePromises = pdbFiles.map((lf) => d3.text(lf));
-    const annotationPromise = [d3.json(annotationFile)];
+    const m = this.mdIds.length;
+    const mdContactPromises = this.mdIds
+      .map((id) => "simulation_data/" + this.family + "/" + id + "/contacts.tsv")
+      .map((fname) => d3.text(fname));
+    const mdLabelPromises = this.mdIds
+      .map((id) => "simulation_data/"+this.family+"/" + id + "/labels.tsv")
+      .map((fname) => d3.text(fname));
+    const mdStructurePromises = this.mdIds
+      .map((id) => "simulation_data/" + this.family + "/" + id + "/structure.pdb")
+      .map((fname) => d3.text(fname));
+    const mdAnnotationPromise = d3.json("simulation_data/" + this.family + "/annotations.json");
 
     return new Promise(
       function(resolve) {
-        Promise.all(contactFilePromises.concat(labelFilePromises).concat(pdbFilePromises).concat(annotationPromise))
+        Promise.all(
+          pdbContactPromises
+            .concat(pdbLabelPromises)
+            .concat(pdbStructurePromises)
+            .concat(pdbAnnotationPromise)
+            .concat(mdContactPromises)
+            .concat(mdLabelPromises)
+            .concat(mdStructurePromises)
+            .concat(mdAnnotationPromise))
           .then(function (data) {
-            // that.annotationData = data[3 * n];
-            const annotationData = data[3 * n];
-            const annMap = CompareManager._parseAnnotation(annotationData);
+            console.log(data);
+            const pdbAnnotationData = data[3 * n + 0];
+            const mdAnnotationData = data[3 * n + 3 * m + 1];
+            const annMap = CompareManager._parseAnnotations(pdbAnnotationData, mdAnnotationData);
 
-            for (let i = 0; i < contactFiles.length; i++) {
+            for (let i = 0; i < n; i++) {
               that.fileData.push({
                 id: annMap.get(that.pdbIds[i]),
                 contacts: parseTsvString(data[0 * n + i]),
@@ -99,6 +122,18 @@ export class CompareManager {
               });
             }
 
+            for (let i = 0; i < m; i++) {
+              console.log(0+3*i+3*n+1);
+              that.fileData.push({
+                id: annMap.get(that.mdIds[i]),
+                contacts: parseTsvString(data[0 * m + i + 3 * n + 1]),
+                labels: parseLabelString(data[1 * m + i + 3 * n + 1]),
+                labelToResiMap: labelToResi(data[1 * m + i + 3 * n + 1]),
+                pdbFile: data[2 * m + i + 3 * n + 1]
+              });
+            }
+
+            console.log(that.fileData);
             resolve();
           });
       }
@@ -108,15 +143,18 @@ export class CompareManager {
   /**
    *
    * @param {Object} annotationJson
+   * @param {Object} annotationJson_sim
    * @returns {Map<string, string>}
    * @private
    */
-  static _parseAnnotation(annotationJson) {
-    const kvArray = annotationJson.map((ann) => [
+  static _parseAnnotations(pdbAnnotationJson, mdAnnotationJson) {
+    const kvArray = pdbAnnotationJson.map((ann) => [
       ann.pdbid + "_" + ann.chain,
       ann['protid'].split("_")[0].toUpperCase() + ":" + ann.pdbid + ":" + ann.chain
-      ]);
-    return new Map(kvArray);
+    ]);
+    console.log(mdAnnotationJson);
+    const mdKvArray = mdAnnotationJson.map((ann) => [ann['id'], ann['protein']]);
+    return new Map(kvArray.concat(mdKvArray));
   }
 
   updateItypes(itypes) {
@@ -173,7 +211,7 @@ export class CompareManager {
     this.nglpanel.setStructure(pdbBlob, fileData.labelToResiMap, contactData);
 
     // Style fingerprint header
-    const headerDiv = this.fingerprintpanel.div.select(".fp-header")
+    this.fingerprintpanel.div.select(".fp-header")
       .selectAll('.fp-headerCell')
       .style("font-weight", (d, i) => {
         return i == this.structureIdx ? "bold" : "normal";

@@ -247,22 +247,27 @@ function hideLigandTooltip(){
 
 /** Extract selected structures and go to comparison page */
 function navigateToComparison(family){
-  let selPdbs = existingStructures.filter((s) => s.selected)
-    .map(function(s) {
-      if(s.hasOwnProperty("structure"))
-        return s.structure;
-      else
-        return (s.pdbid + "_" + s.chain).toUpperCase();
-    })
+  const selIds = existingStructures.filter((s) => s.selected);
+  const selPdbs = selIds
+    .filter((s) => !s.hasOwnProperty("id"))
+    .map((s) => (s.pdbid + "_" + s.chain).toUpperCase())
+    .join(",");
+  const selMDs = selIds
+    .filter((s) => s.hasOwnProperty("id"))
+    .map((s) => s.id)
     .join(",");
   const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
-  let selUploaded = us.filter((s) => s.selected)
+  const selUploaded = us
+    .filter((s) => s.selected)
     .map((s) => encodeURIComponent("USRTABLE_" + s.name))
     .join(",");
 
   let urlArgs = "family=" + family;
   if (selPdbs.length > 0){
-    urlArgs += "&pdbids=" + selPdbs;
+    urlArgs += "&pdbs=" + selPdbs;
+  }
+  if (selMDs.length > 0){
+    urlArgs += "&mds=" + selMDs;
   }
   if (selUploaded.length > 0){
     urlArgs += "&usrkeys=" + selUploaded;
