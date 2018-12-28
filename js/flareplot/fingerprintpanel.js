@@ -18,7 +18,6 @@ export class FingerprintPanel {
 
     this.numCols = flareModel.getNumFrames();
 
-
     this.div.append('div')
       .classed('fp-header', true);
     this._updateHeaders();

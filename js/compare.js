@@ -47,7 +47,7 @@ export class CompareManager {
         (s) => new Map(
           parseTsvString(s)
             .filter((row) => row.length >= 2)
-            .map((row) => [row[0], row.slice(1)]));
+            .map((row) => [row[0].trim(), row.slice(1)]));
 
     const labelToResi =
       (s) => new Map(
@@ -107,7 +107,6 @@ export class CompareManager {
             .concat(mdStructurePromises)
             .concat(mdAnnotationPromise))
           .then(function (data) {
-            console.log(data);
             const pdbAnnotationData = data[3 * n + 0];
             const mdAnnotationData = data[3 * n + 3 * m + 1];
             const annMap = CompareManager._parseAnnotations(pdbAnnotationData, mdAnnotationData);

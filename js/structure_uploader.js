@@ -177,13 +177,17 @@ class UploadManager {
 
     rows.select("td:nth-of-type(2)")
       .html(function (d) {
-        return d.contactFileName;
+        return d.name;
       });
     rows.select("td:nth-of-type(3)")
       .html(function (d) {
-        return d.labelFileName;
+        return d.contactFileName;
       });
     rows.select("td:nth-of-type(4)")
+      .html(function (d) {
+        return d.labelFileName;
+      });
+    rows.select("td:nth-of-type(5)")
       .html(function (d) {
         return d.pdbFileName;
       });
@@ -317,7 +321,6 @@ class UploadManager {
   }
 
   _removeFromTable(name) {
-    console.log("removeFromTable("+name+")");
     localStorage.removeItem("USRTABLE_" + name);
     this._reloadTableFromSessionStorage();
   }

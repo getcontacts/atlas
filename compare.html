@@ -160,11 +160,11 @@
     }
   }
 
-  const usrkeys = parseArgFromURL("usrkeys").split(",")
+  const usrkeys = parseArgFromURL("usrkeys").split(",").filter((key) => key.length > 0)
     .filter((key) => key.substr(0, 9) === "USRTABLE_")
     .map((key) => decodeURIComponent(key));
-  const pdbIds = parseArgFromURL("pdbs").split(",");
-  const mdIds = parseArgFromURL("mds").split(",");
+  const pdbIds = parseArgFromURL("pdbs").split(",").filter((key) => key.length > 0);
+  const mdIds = parseArgFromURL("mds").split(",").filter((key) => key.length > 0);
   if (pdbIds.length === 0 && usrkeys === 0 && mdIds.length === 0){
     pdbIds.push("3SN6_R");
   }

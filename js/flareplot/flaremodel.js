@@ -197,6 +197,7 @@ export class Flaremodel {
         for (let i = 0; i < frameInfo.length; i += 1) {
           this.frameInfo.set(i, frameInfo[i]);
         }
+        this.lastFrame = frameInfo.length - 1;
       } else if (typeof frameInfo === 'object') {
         for (let f in frameInfo) {
           if (frameInfo.hasOwnProperty(f)) {
@@ -205,6 +206,7 @@ export class Flaremodel {
             }
             f = parseInt(f, 10);
             this.frameInfo.set(f, frameInfo[f]);
+            this.lastFrame = Math.max(this.lastFrame, f);
           }
         }
       }

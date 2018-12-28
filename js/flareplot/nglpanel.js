@@ -145,6 +145,9 @@ export class NGLPanel {
       this.flareModel.getVertices().forEach((v) => {
         const modelResi = v.name.match(/[0-9]+$/)[0];
         const strucResi = modelResi + ':A';
+        if (strucResi.indexOf(" ") >= 0) {
+          console.log("WARNING: Theres a space in your label: '" + strucResi + "'");
+        }
 
         this.modelToStrucResiMap.set(v.name, strucResi);
         this.strucToModelResiMap.set(strucResi, v.name);
@@ -157,6 +160,9 @@ export class NGLPanel {
         const strucChain = keyTokens[0];
         const strucResi = keyTokens[2] + ':' + strucChain;
         const modelResi = k.substr(k.lastIndexOf('.') + 1);
+        if (strucResi.indexOf(" ") >= 0) {
+          console.log("WARNING: Theres a space in your label: '" + strucResi + "'");
+        }
 
         this.modelToStrucResiMap.set(modelResi, strucResi);
         this.strucToModelResiMap.set(strucResi, modelResi);
