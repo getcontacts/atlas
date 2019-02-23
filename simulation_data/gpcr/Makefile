@@ -22,7 +22,10 @@ DOR-inactive-naltrondiole-wLig-rep2:
 	mkdir -p $@
 
 DOR-inactive-naltrondiole-wLig-rep2/top.pdb: /scratch/PI/rondror/polar_networks_subsampled_traj/DOR-inactive-naltrindole-unpublished/condition-naltrindole-bound/rep_2/step5_assembly.pdb DOR-inactive-naltrondiole-wLig-rep2
-	cp $< $@
+	pymol -c $< -d "remove resn POPC; h_add; load ref.pdb; alignto ref; delete ref; save $@; quit" > /dev/null; 
+#	cp $< $@
+
+
 
 DOR-inactive-naltrondiole-wLig-rep2/labels.tsv: ../../static_data/gpcr/residuelabels/4N6H_A.tsv DOR-inactive-naltrondiole-wLig-rep2
 	cp $< $@
