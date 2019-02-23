@@ -119,13 +119,7 @@ function createMdTable(family, containerSelector) {
     rows.append("td").html(function (d) {
       return d.chain;
     });
-    rows.append("td").html(function (d) {
-      return d.method;
-    });
-    rows.append("td").html(function (d) {
-      return d.resolution;
-    });
-//        rows.append("td").html(function(d){ return publicationHtml(d.publication); });
+
     rows.append("td").html(function (d) {
       const text = d.date;
 
