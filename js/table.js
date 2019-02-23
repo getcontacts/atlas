@@ -1,30 +1,196 @@
 
-var existingStructures;
+const existingStructures = [];
 
-function createTable(family, containerSelector) {
-  // const structureJson = "static_data/"+family+"/annotations.json";
-  const staticJson = "static_data/"+family+"/annotations.json";
+
+function createMdTable(family, containerSelector) {
   const dynamicJson = "simulation_data/"+family+"/annotations.json";
 
   d3.select(containerSelector).append("div")
     .style("text-align", "center")
     .append("h3")
-    .text("Pre-generated contacts");
+    .text("Contacts from Molecular Dynamics");
 
-  // const contactFilePromises = contactFiles.map((cf) => d3.text(cf));
-  // const labelFilePromises = labelFiles.map((lf) => d3.text(lf));
-  // const annotationPromise = [d3.json(annotationFile)];
-  // const that = this;
-  //
-  // Promise.all(contactFilePromises.concat(labelFilePromises).concat(annotationPromise))
-  //   .then(function (data) {
+  d3.json(dynamicJson).then(function (structures) {
+    existingStructures.push(...structures);
 
-  // d3.json(staticJson).then(function (structures) {
-  // const staticPromise = d3.json(staticJson);
-  // const dynamicPromise = d3.json(dynamicJson);
-  Promise.all([d3.json(staticJson), d3.json(dynamicJson)]).then(function (strucArrs) {
-    const structures = strucArrs[0].concat(strucArrs[1]);
-    existingStructures = structures;
+    const table = d3.select(containerSelector)
+      .append("table");
+
+    const headData = [
+      {id: "select", text: ""},
+      {id: "protein", text: "Protein"},
+      {id: "protId", text: "Gene"},
+      {id: "species", text: "Species"},
+      {id: "pdbid", text: "PDB"},
+      {id: "chain", text: "Chain"},
+      {id: "date", text: "Pub. date"},
+      {id: "ligands", text: "Ligands"},
+      {id: "gotoContactDL", text: ""},
+      {id: "gotoSingle", text: ""}
+    ];
+
+    let sortAscending = true;
+
+    let headRow = table.append("thead")
+      .append("tr")
+      .selectAll("th").data(headData).enter().append("th")
+      .attr("class", function (d) {
+        return "col-" + d.id;
+      })
+      .text(function (d) {
+        return d.text;
+      })
+      .on("click", function (d) {
+        if (d3.select(this).classed("col-ascending") || d3.select(this).classed("col-descending")) {
+          sortAscending = !sortAscending;
+        } else {
+          sortAscending = true;
+        }
+
+
+        let cmp = function (a, b) {
+          return (sortAscending ? d3.ascending : d3.descending)(a[d.id], b[d.id]);
+        };
+
+        if (d.id === "ligands") {
+          cmp = function (a, b) {
+            let la = a.ligands.length > 0 ? a.ligands[0].name : "";
+            let lb = b.ligands.length > 0 ? b.ligands[0].name : "";
+            return (sortAscending ? d3.ascending : d3.descending)(la, lb);
+          };
+        }
+        rows.sort(cmp);
+
+        headRow.classed("col-ascending", false);
+        headRow.classed("col-descending", false);
+        d3.select(this).classed(sortAscending ? "col-ascending" : "col-descending", true);
+      });
+
+    const tbody = table.append("tbody");
+
+    const rows = tbody.selectAll("tr")
+      .data(structures)
+      .enter()
+      .append("tr")
+      .sort(function (a, b) {
+        return d3.ascending(a.protid, b.protid);
+      })
+      .style("cursor", "pointer")
+      .on("click", function (d) {
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
+        const checkInput = d3.select(this).select("input");
+        const currentlyChecked = checkInput.property("checked");
+        d.selected = !currentlyChecked;
+        checkInput.property("checked", !currentlyChecked);
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = us.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
+        d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
+      });
+
+    rows.append("td").append("input").attr("type", "checkbox")
+      .on("click", function () {
+        d3.event.stopPropagation();
+      })
+      .on("change", function (d) {
+        d.selected = this.checked;
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
+        const numExistingChecked = existingStructures.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numUploadedChecked = us.reduce((acc, s) => acc + (s.selected ? 1 : 0), 0);
+        const numChecked = numExistingChecked + numUploadedChecked;
+        d3.select("#compare-button").classed("btn-compare-inactive", numChecked == 0);
+      });
+    rows.append("td").html(function (d) {
+      return d.protein;
+    });
+    rows.append("td").html(function (d) {
+      return d.protid.split("_")[0].toUpperCase();
+    });
+    rows.append("td").html(function (d) {
+      return d.species;
+    });
+    rows.append("td").html(function (d) {
+      const text = d.pdbid;
+
+      return text + " <a href='https://www.rcsb.org/structure/"+d.pdbid+"' target='_new'>" +
+        "<i class=\"fas fa-external-link-alt\"></i>" +
+        "</a>";
+    });
+    rows.append("td").html(function (d) {
+      return d.chain;
+    });
+    rows.append("td").html(function (d) {
+      return d.method;
+    });
+    rows.append("td").html(function (d) {
+      return d.resolution;
+    });
+//        rows.append("td").html(function(d){ return publicationHtml(d.publication); });
+    rows.append("td").html(function (d) {
+      const text = d.date;
+
+      if (d.doi) {
+        return text + " <a href='https://doi.org/" + d.doi + "' target='_new'>" +
+          "<i class=\"fas fa-external-link-alt\"></i>" +
+          "</a>";
+      } else {
+        return text;
+      }
+    });
+    rows.append("td").html(function (d) {
+      return ligandHtml(d.ligands);
+    });
+    rows.append("td").append("a")
+      .attr("target", "_blank")
+      .attr("href", function (d) { return "simulation_data/"+family+"/"+d.id+"/contacts.tsv"; })
+      .append("span")
+      .attr("class", "glyphicon glyphicon-download-alt")
+      .style("color", "#AAA");
+    rows.append("td").append("span")
+      .attr("class", "glyphicon glyphicon-chevron-right")
+      .style("color", "#AAA")
+      .on("click", function (d) {
+        structures.forEach(function (s) {
+          s.selected = false;
+        });
+        const us = typeof uploadedStructures === 'undefined' ? [] : uploadedStructures;
+        us.forEach(function (s) {
+          s.selected = false;
+        });
+        d.selected = true;
+        navigateToComparison(family, structures);
+      });
+
+
+    // Set up compare button
+    d3.select("body")
+      .append("div")
+      .attr("id", "compare-button")
+      .classed("btn", true)
+      .classed("btn-compare", true)
+      .classed("btn-compare-inactive", true)
+      .text("Compare selected structures")
+      .on("click", function () {
+        navigateToComparison(family, structures);
+      });
+  });
+}
+
+
+
+
+function createTable(family, containerSelector) {
+  // const structureJson = "static_data/"+family+"/annotations.json";
+  const staticJson = "static_data/"+family+"/annotations.json";
+
+  d3.select(containerSelector).append("div")
+    .style("text-align", "center")
+    .append("h3")
+    .text("Contacts from PDB-deposited structures");
+
+  d3.json(staticJson).then(function (structures) {
+    //const structures = strucArrs[0].concat(strucArrs[1]);
+    existingStructures.push(...structures);
 
     const table = d3.select(containerSelector)
       .append("table");
