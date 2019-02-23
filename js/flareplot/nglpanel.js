@@ -190,7 +190,7 @@ export class NGLPanel {
         //   sele: 'ligand'
         // });
         this.component.addRepresentation('ball+stick', {
-          sele: 'ligand'
+          sele: 'ligand and not hydrogen'
         });
         this.cartoonRepresentation = this.component.addRepresentation('cartoon', {
           opacity: 0.7, // Minimum opacity at which you can still pick
@@ -279,7 +279,7 @@ export class NGLPanel {
     // Add new waters
     if (waterAtoms.size > 0) {
       this.waterRepresentation = this.component.addRepresentation('hyperball', {
-        sele: Array.from(waterAtoms).reduce((acc, atom) => atom + " " + acc, "")
+        sele: '(' + Array.from(waterAtoms).reduce((acc, atom) => atom + " " + acc, "") + ') and not hydrogen'
       })
     }
   }
@@ -376,13 +376,13 @@ export class NGLPanel {
 
     const resis = toggledNames.map(n => this.modelToStrucResiMap.get(n)).filter(n => n !== undefined);
     if (resis.length > 0) {
-      const nglselection = resis.join(' or ');
+      const nglselection = '(' + resis.join(' or ') + ') and not hydrogen';
       this.toggleRepresentation = this.component.addRepresentation('hyperball', {sele: nglselection});
     }
 
     const neighborresis = neighborNames.map(n => this.modelToStrucResiMap.get(n)).filter(n => n !== undefined);
     if (neighborresis.length > 0) {
-      const nglselection = neighborresis.join(' or ');
+      const nglselection = '(' + neighborresis.join(' or ') + ') and not hydrogen';
       this.neighborRepresentation = this.component.addRepresentation('hyperball', {
         sele: nglselection,
         opacity: 0.4, // Minimum opacity at which you can still pick
@@ -402,7 +402,7 @@ export class NGLPanel {
       this.component.removeRepresentation(this.highlightRepresentation);
     }
     if (resis.length > 0) {
-      const nglselection = resis.join(' or ');
+      const nglselection = '(' + resis.join(' or ') + ') and not hydrogen';
 
       // this.highlightRepresentation = this.component.addRepresentation('ball+stick', {
       this.highlightRepresentation = this.component.addRepresentation('hyperball', {
