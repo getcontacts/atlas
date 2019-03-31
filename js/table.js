@@ -157,6 +157,7 @@ function createMdTable(family, containerSelector) {
 
 
     // Set up compare button
+    d3.select("body").select("#compare-button").remove();
     d3.select("body")
       .append("div")
       .attr("id", "compare-button")
@@ -338,6 +339,7 @@ function createTable(family, containerSelector) {
 
 
     // Set up compare button
+    d3.select("body").select("#compare-button").remove();
     d3.select("body")
       .append("div")
       .attr("id", "compare-button")

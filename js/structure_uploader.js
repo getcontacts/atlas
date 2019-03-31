@@ -148,18 +148,18 @@ class UploadManager {
         that._addToTable();
       });
 
-    // d3.select(containerSelector)
-    //   .append("div")
-    //   .style("position", "relative")
-    //   .append("div")
-    //   .attr("id", "upload-button")
-    //   .classed("btn", true)
-    //   .classed("btn-upload", true)
-    //   .classed("btn-upload-inactive", true)
-    //   .text("Add to table")
-    //   .on("click", function () {
-    //     that._addToTable();
-    //   });
+    // Set up compare button
+    d3.select("body").select("#compare-button").remove();
+    d3.select("body")
+      .append("div")
+      .attr("id", "compare-button")
+      .classed("btn", true)
+      .classed("btn-compare", true)
+      .classed("btn-compare-inactive", true)
+      .text("Compare selected structures")
+      .on("click", function () {
+        navigateToComparison("User", []);
+      });
   }
 
   _createUserTable(containerSelector) {
@@ -253,7 +253,7 @@ class UploadManager {
           s.selected = false;
         });
         d.selected = true;
-        navigateToComparison(family, []);
+        navigateToComparison("User", []);
       });
 
     rows.exit().remove();

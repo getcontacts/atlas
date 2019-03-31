@@ -68,6 +68,10 @@ export class CompareManager {
         });
     });
 
+    if (!["gpcr", "kinase", "galpha"].includes(this.family)) {
+      return new Promise(function(resolve){resolve();});
+    }
+
     const that = this;
 
     // Read, parse and add builtin structures
