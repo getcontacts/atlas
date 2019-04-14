@@ -186,6 +186,7 @@ export class CompareManager {
         this.flareplot = new fp.Flareplot(graph, "auto", "#flareDiv", {});
         this.model = this.flareplot.getModel();
         this.nglpanel = new NGLPanel(this.model, "auto", "auto", "#nglDiv");
+        window.nglpanel = this.nglpanel;
         this.fingerprintpanel = new FingerprintPanel(this.model, 23, "#fingerprintDiv");
         this.updateStructure(this.fileData[0].id);
 

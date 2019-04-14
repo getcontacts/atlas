@@ -183,27 +183,40 @@ export class NGLPanel {
 
     // Set up the promise to load pdb-file into stage
     this.stage.loadFile(pdbFile, {ext: "pdb"})
-      .then((pdbComponent) => {
+      .then((component) => {
         // Set up component
-        this.component = pdbComponent;
+        //this.oldComponent = this.component;
+        //this.component = pdbComponent;
         // this.ligandRepresentation = this.component.addRepresentation('ball+stick', {
         //   sele: 'ligand'
         // });
-        this.component.addRepresentation('ball+stick', {
-          sele: 'ligand and not hydrogen'
+        component.addRepresentation('ball+stick', {
+          sele: 'ligand and not hydrogen and not (POPC or CLA or SOD or OLA or OLC)'
         });
-        this.cartoonRepresentation = this.component.addRepresentation('cartoon', {
+        this.cartoonRepresentation = component.addRepresentation('cartoon', {
           opacity: 0.7, // Minimum opacity at which you can still pick
           side: 'front',
           quality: 'high',
           aspectRatio: 3
         });
         // Remove component except the one that was just added
-        this.stage.eachComponent((c) => { if (c != pdbComponent) { this.stage.removeComponent(c); }});
+        //this.stage.eachComponent((c) => { if (c != pdbComponent) { this.stage.removeComponent(c); }});
+        // this._updateColorScheme();
+        // this._updateInteractions();
+        // this._updateToggle();
+        return component;
+      })
+      .then((component) => {
+        if (this.component) {
+          component.superpose(this.component);
+          this.stage.removeComponent(this.component);
+        }
+        this.component = component;
+
         this._updateColorScheme();
         this._updateInteractions();
         this._updateToggle();
-      });
+      })
   }
 
   _updateInteractions() {
