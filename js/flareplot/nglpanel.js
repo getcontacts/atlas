@@ -210,6 +210,9 @@ export class NGLPanel {
         if (this.component) {
           component.superpose(this.component);
           this.stage.removeComponent(this.component);
+        } else {
+          //AUTOview
+          component.autoView();
         }
         this.component = component;
 
