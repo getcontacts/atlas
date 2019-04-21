@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact comparison atlas - G-proteins</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact comparison atlas - G-proteins</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap css and javascript -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
+  <!-- Bootstrap css and javascript -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
 
-    <script src="vendor/d3/d3.min.js" type="text/javascript"></script>
-    <script src="js/table.js" type="text/javascript"></script>
-    <script src="js/structure_uploader.js" type="text/javascript"></script>
+  <script src="vendor/d3/d3.min.js" type="text/javascript"></script>
+  <script src="js/table.js" type="text/javascript"></script>
+  <script src="js/structure_uploader.js" type="text/javascript"></script>
 
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/static_table.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/static_table.css" rel="stylesheet">
 
 </head>
 <body>
 
 <header>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Contact comparison atlas</h1>
-            <p>Table of user-defined structures</p>
-        </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Contact comparison atlas</h1>
+      <p>Table of user-defined structures</p>
     </div>
+  </div>
 </header>
 
 <div class="container" id="userTableContents"></div>
@@ -36,6 +36,51 @@
 <script>
   createUserUpload("#userTableContents");
 </script>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <h4>How to compare your structures and identify interaction patterns?</h4>
+      <p>
+        You can do this in three simple steps:
+      </p>
+      <ol>
+        <li>Generate structural alignment and map structurally equivalent positions</li>
+        <li>Compute interactions</li>
+        <li>Interactively visualize interaction patterns</li>
+      </ol>
+      <p>
+        The following example compares the two structures with PDB ids 2RH1 and 3UON:
+      </p>
+      <ol>
+        <li>Generate structural alignment and map structurally equivalent positions</li>
+        <ul>
+          <li>Prepare your structures by adding hydrogen. This can be done using e.g. pymol.</li>
+          <li>Save the structures that have hydrogens added to them: 3UON_h_added.pdb
+            and 2RH1_h_added.pdb.</li>
+          <li>Generate a multiple sequence alignment using Gesamt (v1.09/v1.15) from
+            CCP4 (<a href="http://www.ccp4.ac.uk/">www.ccp4.ac.uk</a>) and save the output:<br>
+            <code>$ gesamt 3UON_h_added.pdb 2RH1_h_added.pdb &gt; output.txt</code>
+          </li>
+          <li>Generate residue-label files using <code>get_resilabels.py</code><br>
+            <code>$ get_resilabels.py --input_gesamt output.txt --output_path label_files/
+              --proteins 3UON 2RH1</code>
+          </li>
+        </ul>
+        <li>Compute interactions using Getcontacts:</li>
+        <ul>
+          <li><code>$ get_static_contacts.py --structure 3UON_h_added.pdb --output
+            3UON_contacts.tsv --itypes all</code></li>
+          <li><code>$ get_static_contacts.py --structure 2RH1_h_added.pdb --output
+            2RH1_contacts.tsv --itypes all</code></li>
+        </ul>
+        <li>Using this webpage, upload the the pdb files and the above-generated interaction
+          files and label files.</li>
+      </ol>
+      </p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
