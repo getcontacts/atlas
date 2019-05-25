@@ -119,6 +119,13 @@ export class NGLPanel {
     });
   }
 
+  _nglSelectionFromResiMap() {
+    if (this.strucToModelResiMap == undefined) {
+      return "";
+    }
+    return Array.from(this.strucToModelResiMap.keys()).join(" OR ");
+  }
+
   /**
    * Associate labels with NGL residue selections and put two-way mappings in the `modelToStrucResiMap` and
    * `strucToModelResiMap` fields.
@@ -179,7 +186,9 @@ export class NGLPanel {
    */
   setStructure(pdbFile, labelFile, atomicContacts) {
     this.atomicContacts = atomicContacts;
+    const oldAlignSelection = this._nglSelectionFromResiMap();
     this._parseLabels(labelFile);
+    const newAlignSelection = this._nglSelectionFromResiMap();
 
     // Set up the promise to load pdb-file into stage
     this.stage.loadFile(pdbFile, {ext: "pdb"})
@@ -208,7 +217,8 @@ export class NGLPanel {
       })
       .then((component) => {
         if (this.component) {
-          component.superpose(this.component);
+          component.superpose(this.component, true, newAlignSelection, oldAlignSelection);
+          // component.superpose(this.component);
           this.stage.removeComponent(this.component);
         } else {
           //AUTOview
