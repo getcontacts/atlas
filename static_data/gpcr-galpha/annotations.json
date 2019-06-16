@@ -1,0 +1,238 @@
+[
+  {
+    "pdbid": "3SN6",
+    "chain": "R+A",
+    "protein": "&beta;<sub>2</sub>-adrenoceptor : Ga(s)",
+    "protid": "GNAS2_BOVIN",
+    "species": "Bos taurus (Bovine)",
+    "pfamid": "PF00503",
+    "date": "2011-07-20",
+    "doi": "10.1038/nature10361",
+    "method": "XC",
+    "resolution": "3.2",
+    "ligands": [
+      "P0G"
+    ]
+  },
+  {
+    "pdbid": "5G53",
+    "chain": "A+C",
+    "protein": "A<sub>2A</sub> receptor : Ga(s)",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2016-08-03",
+    "method": "XC",
+    "resolution": 3.4,
+    "doi": "10.1038/NATURE18966",
+    "ligands": [
+      "NECA",
+      "GDP"
+    ]
+  },
+  {
+    "pdbid": "5UZ7",
+    "chain": "R+A+B+G",
+    "protein": "CT receptor : G(s)",
+    "protid": "calcr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2017-05-03",
+    "method": "EM",
+    "resolution": 4.1,
+    "doi": "10.1038/NATURE22327",
+    "ligands": []
+  },
+  {
+    "pdbid": "5VAI",
+    "chain": "R+A+B+G",
+    "protein": "GLP-1 receptor : G(s)",
+    "protid": "g1sgd4_rabit",
+    "species": "Oryctolagus cuniculus (Rabbit)",
+    "date": "2017-05-24",
+    "method": "EM",
+    "resolution": 4.1,
+    "doi": "10.1038/NATURE22394",
+    "ligands": [
+      "GLP-1"
+    ]
+  },
+  {
+    "pdbid": "6B3J",
+    "chain": "R+A+B+G",
+    "protein": "GLP-1 receptor : G(s)",
+    "protid": "glp1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-02-21",
+    "method": "EM",
+    "resolution": 3.3,
+    "doi": "10.1038/NATURE25773",
+    "ligands": [
+      "Exendin-P5"
+    ]
+  },
+  {
+    "pdbid": "6CMO",
+    "chain": "R+A+B+G",
+    "protein": "Rhodopsin : G(i)",
+    "protid": "opsd_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-06-13",
+    "method": "EM",
+    "resolution": 4.5,
+    "doi": "10.1038/s41586-018-0215-y",
+    "ligands": []
+  },
+  {
+    "pdbid": "6D9H",
+    "chain": "R+A+B+G",
+    "protein": "A<sub>1</sub> receptor : G(i)2",
+    "protid": "aa1r_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-06-20",
+    "method": "EM",
+    "resolution": 3.6,
+    "doi": "10.1038/s41586-018-0215-y",
+    "ligands": [
+      "ADN"
+    ]
+  },
+  {
+    "pdbid": "6DDE",
+    "chain": "R+A+B+G",
+    "protein": "&mu; receptor : G(i)",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "2018-06-13",
+    "method": "EM",
+    "resolution": 3.5,
+    "doi": "10.1038/S41586-018-0219-7",
+    "ligands": [
+      "DAMGO"
+    ]
+  },
+  {
+    "pdbid": "6DDF",
+    "chain": "R+A+B+G",
+    "protein": "&mu; receptor : G(i)",
+    "protid": "oprm_mouse",
+    "species": "Mus musculus (Mouse)",
+    "date": "2018-06-13",
+    "method": "EM",
+    "resolution": 3.5,
+    "doi": "10.1038/S41586-018-0219-7",
+    "ligands": [
+      "DAMGO"
+    ]
+  },
+  {
+    "pdbid": "6E3Y",
+    "chain": "R+A+B+G",
+    "protein": "Calcitonin-like receptor : G(s)",
+    "protid": "calrl_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-09-19",
+    "method": "EM",
+    "resolution": 3.3,
+    "doi": "10.1038/S41586-018-0535-Y",
+    "ligands": [
+    ]
+  },
+  {
+    "pdbid": "6G79",
+    "chain": "S+A+B+G",
+    "protein": "5-HT<sub>1B</sub> receptor : G(o)",
+    "protid": "5ht1b_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-06-20",
+    "method": "EM",
+    "resolution": 3.78,
+    "doi": "10.1038/S41586-018-0241-9",
+    "ligands": [
+      "EP5"
+    ]
+  },
+  {
+    "pdbid": "6GDG",
+    "chain": "A+B+C+D",
+    "protein": "A<sub>2A</sub> receptor : G(s)",
+    "protid": "aa2ar_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2018-05-16",
+    "method": "EM",
+    "resolution": 4.11,
+    "doi": "10.7554/eLife.35946",
+    "ligands": [
+      "NEC"
+    ]
+  },
+  {
+    "pdbid": "6N4B",
+    "chain": "R+A+B+G",
+    "protein": "CB<sub>1</sub> receptor : G(i)",
+    "protid": "cnr1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2019-01-30",
+    "method": "EM",
+    "resolution": 3.0,
+    "doi": "10.1016/J.CELL.2018.11.040",
+    "ligands": [
+      "KCA"
+    ]
+  },
+  {
+    "pdbid": "6NIY",
+    "chain": "R+A+B+G",
+    "protein": "CT receptor : G(s)",
+    "protid": "calcr_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2019-01-23",
+    "method": "EM",
+    "resolution": 3.34,
+    "doi": "",
+    "ligands": [
+    ]
+  },
+  {
+    "pdbid": "6OIJ",
+    "chain": "R+A+B+G",
+    "protein": "M<sub>1</sub> receptor : G(i)",
+    "protid": "acm1_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2019-05-10",
+    "method": "EM",
+    "resolution": 3.3,
+    "doi": "10.1126/science.aaw5188",
+    "ligands": [
+      "Y01",
+      "IXO"
+    ]
+  },
+  {
+    "pdbid": "6OIK",
+    "chain": "R+A+B+G",
+    "protein": "M<sub>2</sub> receptor : G(o)",
+    "protid": "acm2_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2019-05-10",
+    "method": "EM",
+    "resolution": 3.3,
+    "doi": "10.1126/science.aaw5188",
+    "ligands": [
+      "2CU",
+      "IXO"
+    ]
+  },
+  {
+    "pdbid": "6OT0",
+    "chain": "R+A+B+G",
+    "protein": "SMO receptor : G(i)",
+    "protid": "smo_human",
+    "species": "Homo sapiens (Human)",
+    "date": "2019",
+    "method": "EM",
+    "resolution": 3.84,
+    "doi": "",
+    "ligands": [
+      "CO1"
+    ]
+  }
+]

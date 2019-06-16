@@ -68,7 +68,7 @@ export class CompareManager {
         });
     });
 
-    if (!["gpcr", "kinase", "galpha"].includes(this.family)) {
+    if (!["gpcr", "kinase", "galpha", "gpcr-galpha"].includes(this.family)) {
       return new Promise(function(resolve){resolve();});
     }
 

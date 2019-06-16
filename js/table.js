@@ -412,7 +412,13 @@ function navigateToComparison(family){
   const selIds = existingStructures.filter((s) => s.selected);
   const selPdbs = selIds
     .filter((s) => !s.hasOwnProperty("id"))
-    .map((s) => (s.pdbid + "_" + s.chain).toUpperCase())
+    .map((s) => {
+      console.log(s);
+      if (s.pdbid.includes("+"))
+        return s.pdbid.toUpperCase();
+      else
+        return (s.pdbid + "_" + s.chain).toUpperCase();
+    })
     .join(",");
   const selMDs = selIds
     .filter((s) => s.hasOwnProperty("id"))
