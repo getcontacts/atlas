@@ -57,7 +57,9 @@ residuelabels/dummy: KLIFS_updated.csv
 
 
 contacts/%.tsv: structures_protonated/%.pdb
-	ligs=`python ../get_ligands.py $<`; get_static_contacts.py --structure $< --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $@
+	ligs=`python ../get_ligands.py $<`; \
+  if [ -z "$$ligs" ]; then ligs="LLLL"; fi; \
+  get_static_contacts.py --structure $< --itype all --ligand "resname $$ligs" --solv 'resname HOH' --hbond_cutoff_ang 180 --vdw_res_diff 5 --sele 'protein or not protein' --output $@
 
 contacts/dummy: $(subst .pdb,.tsv,$(subst structures_protonated,contacts,$(wildcard structures_protonated/*.pdb)))
 	touch $@

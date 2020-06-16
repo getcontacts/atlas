@@ -1,2 +1,6 @@
-# total_frames:1 beg:0 end:0 stride:1 interaction_types:sb,pc,ps,ts,vdw,hb,lhb
+# total_frames:1 beg:0 end:0 stride:1 interaction_types:hp,sb,pc,ps,ts,vdw,hb
 # Columns: frame, interaction_type, atom_1, atom_2[, atom_3[, atom_4]]
+0	vdw	A:D13:393:C10	A:SER:254:CA
+0	vdw	A:D13:393:C7	A:TYR:258:CA
+0	vdw	A:D13:391:N9	A:MET:109:CA
+0	vdw	A:D13:391:N9	A:LEU:108:CA
