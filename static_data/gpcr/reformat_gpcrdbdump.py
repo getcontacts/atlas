@@ -9,7 +9,7 @@ with open(sys.argv[1]) as f:
 
 def reformat(gpcrdb_entry):
     pdbid = gpcrdb_entry['pdb_code'],
-    sys.stderr.write('Reformating ' + str(pdbid) + '\n')
+    sys.stderr.write('Reformatting ' + str(pdbid) + '\n')
     protid = gpcrdb_entry['protein']
     url = 'http://gpcrdb.org/services/protein/'+protid+'/'
     response = requests.get(url)
