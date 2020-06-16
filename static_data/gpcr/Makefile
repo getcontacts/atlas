@@ -2,10 +2,10 @@
 all: annotations.json structures/dummy residuelabels/dummy contacts/dummy
 
 clean:
-	rm annotations.json structures/dummy residuelabels/dummy contacts/dummy pdbids.txt gpcrdb_dump.json
+	rm annotations.json structures_protonated/dummy structures/dummy residuelabels/dummy contacts/dummy pdbids.txt gpcrdb_dump.json
 
 gpcrdb_dump.json:
-	curl -X GET --header 'Accept: application/json' 'http://gpcrdb.org/services/structure/' > $@
+	curl -X GET --header 'Accept: application/json' 'https://gpcrdb.org/services/structure/?format=json' | jq '.' > $@
 
 pdbids.txt: gpcrdb_dump.json
 	python pdbids_from_gpcrdbdump.py > $@
@@ -30,7 +30,7 @@ structures_protonated/dummy: structures/dummy
 	touch $@
 
 
-residuelabels/dummy: annotations.json
+residuelabels/dummy: annotations.json structures_protonated/dummy
 	mkdir -p $(dir $@)
 	python fetch_residuelabels.py $< residuelabels
 	touch $@
@@ -43,8 +43,9 @@ contacts/dummy: structures_protonated/dummy
 	  out_file=$(dir $@)$$out_file.tsv; \
 	  if [ ! -e $$out_file ]; then \
 	    ligs=`python ../get_ligands.py $$f`; \
-	    echo get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $$out_file; \
-	    get_static_contacts.py --structure $$f --itype all --ligand $$ligs --solv HOH --hbond_cutoff_ang 180 --vdw_res_diff 5 --output $$out_file; \
+            if [ -z "$$ligs" ]; then ligs="LLLL"; fi; \
+	    echo get_static_contacts.py --structure $$f --itype all --ligand "resname $$ligs" --solv 'resname HOH' --hbond_cutoff_ang 180 --vdw_res_diff 5 --sele 'protein or not protein' --output $$out_file; \
+	    get_static_contacts.py --structure $$f --itype all --ligand "resname $$ligs" --solv 'resname HOH' --hbond_cutoff_ang 180 --vdw_res_diff 5 --sele 'protein or not protein' --output $$out_file; \
 	  fi; \
 	done
 	touch $@
