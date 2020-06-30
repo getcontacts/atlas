@@ -1,15 +1,15 @@
 # total_frames:1 beg:0 end:0 stride:1 interaction_types:hp,sb,pc,ps,ts,vdw,hb
 # Columns: frame, interaction_type, atom_1, atom_2[, atom_3[, atom_4]]
 0	sb	R:ARG:252:NH2	R:GLU:249:OE1
-0	pc	R:HIS:65:NE2	R:TYR:60:CE1
 0	pc	R:ARG:147:NH2	R:PHE:148:CE1
 0	pc	R:HIS:100:NE2	R:TYR:102:CE1
+0	pc	R:HIS:65:NE2	R:TYR:60:CE1
 0	pc	R:HIS:100:ND1	R:TYR:102:CE1
-0	ps	R:HIS:100:CD2	R:TYR:102:CE1
-0	ps	R:PHE:203:CE1	R:TRP:175:CD2
-0	ps	R:PHE:115:CE1	R:PHE:116:CE1
-0	ps	R:PHE:208:CE1	R:PHE:212:CE1
 0	ps	R:TYR:257:CE1	R:TYR:306:CE1
+0	ps	R:PHE:208:CE1	R:PHE:212:CE1
+0	ps	R:PHE:203:CE1	R:TRP:175:CD2
+0	ps	R:HIS:100:CD2	R:TYR:102:CE1
+0	ps	R:PHE:115:CE1	R:PHE:116:CE1
 0	vdw	R:HIS:152:NE2	R:PHE:146:CE1
 0	vdw	R:PHE:203:CE2	R:TRP:175:CD1
 0	vdw	R:PHE:203:CZ	R:TRP:175:CD1
