@@ -67,7 +67,7 @@
               --proteins 3UON 2RH1</code>
           </li>
         </ul>
-        <li>Compute interactions using Getcontacts:</li>
+        <li>Compute interactions using GetContacts:</li>
         <ul>
           <li><code>$ get_static_contacts.py --structure 3UON_h_added.pdb --output
             3UON_contacts.tsv --itypes all</code></li>
@@ -77,6 +77,19 @@
         <li>Using this webpage, upload the the pdb files and the above-generated interaction
           files and label files.</li>
       </ol>
+      </p>
+    </div>
+
+    <div class="row">
+      <h4>How to compare to simulations?</h4>
+      <p>
+        When using a simulation in the comparison, the approach is similar to the one described above. The only difference is that the contact file now contains multiple frames so it has to be reduced to a single frame based on frequency of interactions. 
+      </p>
+        <ul>
+          <li><code>$ get_dynamic_contacts.py --topology top.pdb --trajectory trj.xtc --output sim_contacts.tsv --itypes all</code></li>
+          <li><code>$ get_contact_singleframe.py --input sim_contacts.tsv --output sim_single.tsv --min_frequency 0.6</code></li>
+        </ul>
+        Using this webpage, upload the the pdb files and the above-generated interaction files and label files.
       </p>
     </div>
   </div>
