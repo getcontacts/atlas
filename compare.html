@@ -267,6 +267,7 @@
     "<div class='btn-group-vertical' role='group'>" +
     "<button type='button' onclick='fpDownloadSVG()' class='btn btn-secondary'>Download as SVG</button>" +
     "<button type='button' onclick='fpDownloadPNG()' class='btn btn-secondary'>Download as PNG</button>" +
+    "<button type='button' onclick='fpSwitchLabel()' class='btn btn-secondary'>Switch labels</button>" +
     "</div>";
   new HoverInfo("#flareMenu", flareMenuHTML, undefined, 'fas fa-bars');
   window.fpDownloadSVG = function() {
@@ -276,6 +277,9 @@
   window.fpDownloadPNG = function() {
     const fpSVG = manager.flareplot.svg.node();
     downloadPNG(fpSVG);
+  };
+  window.fpSwitchLabel = function() {
+    manager.switchLabelType();
   };
 
   const nglMenuHTML =

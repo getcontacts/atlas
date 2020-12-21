@@ -29,6 +29,7 @@ export class CompareManager {
     this.usrIds = usrIds;
     this.structureIdx = 0;
     this.curItypes = ['hbss'];
+    this.labelWithAlignment = false;
   }
 
   _readAndParseFiles() {
@@ -204,6 +205,11 @@ export class CompareManager {
     });
   }
 
+  switchLabelType() {
+    this.labelWithAlignment = !this.labelWithAlignment;
+    this.updateStructure(this.fileData[this.structureIdx].id);
+  }
+
   updateStructure(structureid) {
     this.structureIdx = this.fileData.findIndex((fd) => fd.id == structureid);
     const fileData = this.fileData[this.structureIdx];
@@ -232,13 +238,17 @@ export class CompareManager {
           return 0.2;
         }
       })
-      .text(function (d) {
+      .text((d) => {
         // const label = that.labelToResiData[that.structureIdx][d.data.name];
-        const label = fileData.labelToResiMap.get(d.data.name);
-        if (label) {
-          return label.substring(label.indexOf(":") + 1);
+        if (this.labelWithAlignment) {
+          const label = fileData.labelToResiMap.get(d.data.name);
+          if (label) {
+            return label.substring(label.indexOf(":") + 1);
+          } else {
+            return d.data.name;
+          }
         } else {
-          return d.data.name;
+            return d.data.name;
         }
       });
   }
